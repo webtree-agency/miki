@@ -15,8 +15,6 @@
 “Manchmal musst du Dinge tun, die andere für unmöglich halten, um das Unmögliche möglich zu machen.
 - Zinedine Zidane”
 
-“Manchmal musst du Dinge tun, die andere für unmöglich halten, um das Unmögliche möglich zu machen.
-- Zinedine Zidane”
 
 # WAS BEDEUTET FÜR MICH DER FUSSBALL?
 Fussball ist mehr als nur ein Spiel - es ist eine Leidenschaft, die Menschen auf der ganzen Welt verbindet. In den Stadien spürt man die Energie und das Herzschlagtempo der Fans, die jede Bewegung auf dem Spielfeld verfolgen. Es ist diese einzigartige Atmosphäre, die den Fussball so besonders macht. Für mich persönlich ist Fussball nicht nur ein Sport, sondern eine Lebensweise, die Disziplin, Teamarbeit und Hingabe erfordert. Jeder Moment auf dem Spielfeld ist eine Gelegenheit, Grenzen zu überschreiten und Geschichte zu schreiben. Mit meiner Begleitung gebe ich mein Bestes, um den Spieler auf sein höchstes Level zu bringen. Gemeinsam setzen wir uns ambitionierte Ziele und arbeiten hart daran, sie zu erreichen.
