@@ -3375,6 +3375,7 @@ footer .row {
 
 .footer-title {
     color: white;
+    margin-top: 0 !important;
 }
 
 .footer-subscribe .subscribe-form {
