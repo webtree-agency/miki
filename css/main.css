@@ -1466,6 +1466,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 501;
+    margin-top: 10px;
 }
 
 .header-logo a {
