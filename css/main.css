@@ -66,7 +66,9 @@
     --light-gold: rgba(189, 178, 133, 0.539);
     --green: #076210;
     --white: #F7F7F7;
-    --grey: #757575;
+    --light-grey: #e6e6e6;
+    --normal-grey: #757575;
+    --dark-grey: #555555;
     --black: #0E0E0E;
  }
 html {
