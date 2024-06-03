@@ -59,8 +59,22 @@
  * # base style overrides
  *
  * ------------------------------------------------------------------- */
+
+ :root {
+    --primary-gold: #9C8321;
+    --secondary-gold: #C2A329;
+    --light-gold: rgba(189, 178, 133, 0.539);
+    --green: #076210;
+    --white: #F7F7F7;
+    --grey: #757575;
+    --black: #0E0E0E;
+ }
 html {
     font-size: 10px;
+}
+
+*::selection {
+    background-color: var(--light-gold);
 }
 
 @media only screen and (max-width: 400px) {
