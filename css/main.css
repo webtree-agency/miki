@@ -2961,6 +2961,7 @@ html.no-csstransitions .home-content__main {
     background-color: #151515;
     background-image: url("../images/contact-bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center, center;
     padding-top: 15rem;
     padding-bottom: 12rem;
@@ -2986,6 +2987,10 @@ html.no-csstransitions .home-content__main {
     content: "";
     display: table;
     clear: both;
+}
+
+.form-field input::placeholder, .form-field textarea::placeholder {
+    color: var(--light-grey) !important;
 }
 
 .s-contact .form-field label {
@@ -3142,6 +3147,10 @@ html.no-csstransitions .home-content__main {
 
 .contact-secondary .cinfo {
     margin-bottom: 4.8rem;
+}
+
+.cinfo p {
+    color: var(--light-grey) ;
 }
 
 .contact-social {
