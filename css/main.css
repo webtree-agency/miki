@@ -910,6 +910,18 @@ input[type="button"].btn--primary:focus {
     color: var(--black);
 }
 
+.btn--black, button.btn--black {
+    background: transparent !important;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+}
+
+.btn--black:hover, button.btn--black:hover {
+    border: 0.2rem solid var(--black);
+    color: var(--white);
+    background-color: var(--black) !important;
+}
+
 .btn--pill, button.btn--pill {
     padding-left: 3rem !important;
     padding-right: 3rem !important;
