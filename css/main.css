@@ -3632,7 +3632,7 @@ footer .row {
 }
 
 /* PRICE CARDS HOME */
-  .over-hide {
+  /* .over-hide {
     overflow: hidden;
   }
   .size-22{
@@ -3884,4 +3884,4 @@ footer .row {
     pointer-events: auto;
     transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
     transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
-  }
+  } */
