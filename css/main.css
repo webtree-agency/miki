@@ -1499,15 +1499,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-logo a {
     display: block;
-    font-family: "montserrat-semibold", sans-serif;
-    color: var(--white);
-    font-size: 1.8rem;
     margin: 9px 0 0 0;
     padding: 0;
     outline: 0;
     border: none;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+.header-logo a img {
+    width: 200px !important;
 }
 /* ------------------------------------------------------------------- 
  * ## main navigation 
