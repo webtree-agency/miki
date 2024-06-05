@@ -3391,7 +3391,25 @@ footer a:hover, footer a:focus, footer a:active {
 }
 
 footer .row {
-    max-width: 980px;
+    max-width: 1200px;
+}
+
+.footer-nav__list {
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.4rem;
+    margin: 1.8rem 0 1.5rem 0;
+    padding: 0 0 1.8rem 0;
+    list-style: none;
+}
+
+.footer-nav__list li {
+    padding-left: 0;
+    line-height: 4.5rem;
+}
+
+.footer-nav__list a,
+.footer-nav__list a:visited {
+    color: var(--normal-grey);
 }
 
 
