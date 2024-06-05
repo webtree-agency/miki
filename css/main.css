@@ -1582,6 +1582,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: 4.5rem;
 }
 
+.header-nav__list li a:hover {
+    color: var(--primary-gold);
+}
+
+.header-nav__list li.current a {
+    color: var(--primary-gold);
+}
+
 .header-nav__list a,
 .header-nav__list a:visited {
     color: var(--white);
@@ -3405,6 +3413,10 @@ footer .row {
 .footer-nav__list li {
     padding-left: 0;
     line-height: 4.5rem;
+}
+
+.footer-nav__list li a:hover {
+    color: var(--primary-gold);
 }
 
 .footer-nav__list a,
