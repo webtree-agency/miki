@@ -2555,8 +2555,10 @@ html.no-csstransitions .home-content__main {
 .works-content {
     max-width: 1160px;
     margin-top: -23.4rem;
+    display: flex; /* Flexbox hinzufügen */
+    flex-wrap: wrap; /* Zeilenumbruch ermöglichen */
+    justify-content: space-between; /* Platz zwischen den Items */
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## bricks/masonry
@@ -2572,7 +2574,8 @@ html.no-csstransitions .home-content__main {
 }
 
 .masonry__brick {
-    float: left;
+    width: 50%;
+    box-sizing: border-box;
     padding: 0;
 }
 
@@ -2582,11 +2585,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .item-folio__thumb img {
+    width: 100%;
+    height: auto;
     vertical-align: bottom;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-
 .item-folio__thumb a {
     display: block;
 }
