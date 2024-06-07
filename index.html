@@ -61,10 +61,10 @@
                   BE THE GAME!
                </h1>
                <div class="home-content__buttons">
-                  <a href="#contact" class="smoothscroll btn btn--stroke">
+                  <a href="#contact" class="btn btn--white">
                   Kostenloses Probetraining
                   </a>
-                  <a href="#about" class="smoothscroll btn btn--stroke">
+                  <a href="#about" class="btn btn--white">
                   Über mich
                   </a>
                </div>
@@ -91,7 +91,7 @@
       <div id="popup" class="popup">
          <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
          <h3>Kostenloses Probetraining!</h3>
-         <div class="home-content__buttons">
+         <div class="home-content__buttons popup-div">
             <a class="btn btn--gold-full">
             Jetzt buchen
             </a>
@@ -565,7 +565,7 @@
              };
          
              if (!isPopupHidden) {
-                 setTimeout(showPopup, 100);
+                 setTimeout(showPopup, 10000);
              }
          
              document.getElementById('close-popup').addEventListener('click', () => {

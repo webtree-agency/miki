@@ -905,13 +905,25 @@ input[type="button"].btn--primary:focus {
 
 .btn--stroke, button.btn--stroke {
     background: transparent !important;
-    border: 0.2rem solid var(--primary-gold);
-    color: var(--primary-gold);
+    border: 0.2rem solid var(--primary-gold) !important;
+    color: var(--primary-gold) !important;
 }
 
 .btn--stroke:hover, button.btn--stroke:hover {
-    border: 0.2rem solid var(--black);
-    color: var(--black);
+    border: 0.2rem solid var(--black)!important;
+    color: var(--black) !important;
+}
+
+.btn--white, button.btn--white {
+    background: transparent !important;
+    border: 0.2rem solid var(--white) !important;
+    color: var(--white) !important;
+}
+
+.btn--white:hover, button.btn--white:hover {
+    border: 0.2rem solid var(--white)!important;
+    background: var(--white) !important;
+    color: var(--black) !important;
 }
 
 .btn--black, button.btn--black {
@@ -1917,12 +1929,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-content__buttons .btn:last-child {
     margin-right: 0;
-}
-
-.home-content__buttons .btn:hover, 
-.home-content__buttons .btn:focus {
-    background: var(--white) !important;
-    color: var(--black);
 }
 
 .home-content__scroll {
@@ -3745,7 +3751,8 @@ footer .row {
 }
 
 .popup h3 {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 
