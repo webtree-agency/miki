@@ -1741,6 +1741,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
+.header-menu-icon.agb {
+    background-color: var(--black);
+}
+
 
 .header-menu-icon::before, .header-menu-icon::after {
     content: '';
