@@ -922,6 +922,42 @@ input[type="button"].btn--primary:focus {
     background-color: var(--black) !important;
 }
 
+.btn--grey, button.btn--grey {
+    background: transparent !important;
+    border: 0.2rem solid var(--normal-grey);
+    color: var(--normal-grey);
+}
+
+.btn--grey:hover, button.btn--grey:hover {
+    border: 0.2rem solid var(--normal-grey);
+    color: var(--white);
+    background-color: var(--normal-grey) !important;
+}
+
+.btn--gold, button.btn--gold {
+    background: transparent !important;
+    border: 0.2rem solid var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.btn--gold:hover, button.btn--gold:hover {
+    border: 0.2rem solid var(--primary-gold);
+    color: var(--white);
+    background-color: var(--primary-gold) !important;
+}
+
+.btn--gold-full, button.btn--gold-full {
+    background: var(--primary-gold);
+    border: 0.2rem solid var(--primary-gold);
+    color: var(--white);
+}
+
+.btn--gold-full:hover, button.btn--gold-full:hover {
+    border-color: 0.2rem var(--primary-gold-full);
+    color: var(--white);
+    background-color: var(--secondary-gold) !important;
+}
+
 .btn--pill, button.btn--pill {
     padding-left: 3rem !important;
     padding-right: 3rem !important;
@@ -3682,277 +3718,30 @@ footer .row {
     color: #fff;
 }
 
-/* PRICE CARDS HOME */
-  /* .over-hide {
-    overflow: hidden;
-  }
-  .size-22{
-    font-size: 22px;
-  }
-  .section{
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .full-height{
-    min-height: 100vh;
-  }
-  
-  .card-3d-wrap {
-    width: 340px;
-    max-width: calc(100% - 20px);
-    height: 510px;
-    perspective: 1000px;
-    margin: 50px 100px;
-  }
-  .card-3d-wrapper {
-    width: 100%;
-    height: 100%;
-    position:absolute;    
-    top: 0;
-    left: 0;  
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: transform 700ms 400ms ease-out; 
-  }
-  .card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-    box-shadow: 0 12px 35px 0 rgba(16, 39, 112,.07);
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper {
-    transform: rotateY(180deg);
-    transition: transform 700ms 400ms ease-out; 
-  }
-  .pricing-wrap{
-    position: relative;
-    padding-top: 160px;
-    width: 100%;
-    display: block;
-    z-index: 1;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  .pricing-wrap h4{
-    position: relative;
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 22px;
-    line-height: 1.7;
-    color: var(--black);
-    transform: translate3d(0, 0, 35px) perspective(100px);
-  }
-  .pricing-wrap h4:before{
-    position: absolute;
-    content: '';
-    z-index: -1;
-    background: linear-gradient(217deg, var(--primary-gold), var(--light-grey));
-    width: 70px;
-    height: 70px;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 6px 20px 0 rgba(16, 39, 112,.3);
-    animation: border-transform 6s linear infinite;
-  }
-  @keyframes border-transform{
-      0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
-    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
-    28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
-    42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
-    56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
-    70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
-    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
-  }
-  .pricing-wrap h2{
-    position: relative;
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: 1px;
-    line-height: 1.1;
-    color: var(--primary-gold);
-    transform: translate3d(0, 0, 30px) perspective(100px);
-  }
-  .pricing-wrap p{
-    position: relative;
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    color: var(--black);
-    transform: translate3d(0, 0, 30px) perspective(100px);
-  }
-  .link {
-    color: var(--black);
-    border-color: var(--black);
-    background-color: var(--white);
-    transform: translate3d(0, 0, 30px) perspective(100px);
-  }
-  .link:hover {
-    background-color: var(--black);
-    color: var(--white);
-    border-color: var(--black);
-  }
-  .img-wrap img{
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .img-1{
-    position: absolute;
-    display: block;
-    left: -50px;
-    top: 20px;
-    z-index: 5;
-    width: 80%;
-    transform: translate3d(0, 0, 45px) perspective(100px);
-    opacity: 1;
-    pointer-events: auto;
-    transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
-  }
-  .img-2 {
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    overflow: hidden;
-    width: 100%;
-    transform: translate3d(0, 0, 15px) perspective(100px);
-  }
-  .img-3{
-    position: absolute;
-    display: block;
-    right: -20px;
-    top: -40px;
-    z-index: 5;
-    width: calc(60% + 20px);
-    transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
-    opacity: 1;
-    pointer-events: auto;
-    transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-3 {
-    opacity: 0;
-    transform: translate3d(-50px, 5px, 55px) perspective(100px) scale(0.4);
-    pointer-events: none;
-    transition: transform 400ms ease, opacity 200ms 150ms ease;
-  }
-  .img-6{
-    position: absolute;
-    display: block;
-    right: -20px;
-    bottom: 10px;
-    z-index: 5;
-    width: calc(20% + 30px);
-    transform: translate3d(0, 0, 25px) perspective(100px) scale(1);
-    opacity: 1;
-    pointer-events: auto;
-    transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-6 {
-    opacity: 0;
-    transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
-    pointer-events: none;
-    transition: transform 400ms ease, opacity 200ms 150ms ease;
-  }
-  
-  .img-4{
-    position: absolute;
-    display: block;
-    left: -60px;
-    top: -60px;
-    z-index: 5;
-    width: calc(65% + 60px);
-    transform: translate3d(0, 0, 45px) perspective(100px) scale(0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 400ms ease, opacity 200ms 150ms ease;
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-4 {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
-    transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
-  }
-  .img-5{
-    position: absolute;
-    display: block;
-    right: -70px;
-    top: -50px;
-    z-index: 6;
-    width: calc(60% + 70px);
-    transform: translate3d(0, 0, 35px) perspective(100px) scale(0.5) rotate(0deg);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 400ms 100ms ease, opacity 200ms 250ms ease;
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-5 {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate3d(0, 0, 35px) perspective(100px) scale(1) rotate(10deg);
-    transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
-  }
-  .img-7{
-    position: absolute;
-    display: block;
-    right: -30px;
-    bottom: -65px;
-    z-index: 6;
-    width: calc(25% + 30px);
-    transform: translate3d(0, 0, 35px) perspective(100px) scale(0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 400ms 100ms ease, opacity 200ms 250ms ease;
-  }
-  .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-7 {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate3d(0, 0, 35px) perspective(100px) scale(1);
-    transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
-  } */
+/* POPUP */
+
   .popup {
-    display: none; /* Anfangs versteckt */
+    display: none;
     position: fixed;
     bottom: 10px;
     left: 10px;
+    max-width: 600px;
     background-color: white;
-    padding: 20px;
+    padding: 10px 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .popup .close {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 10px;
     font-size: 30px;
     cursor: pointer;
+}
+
+.popup h3 {
+    margin-top: 10px;
 }
 
 
