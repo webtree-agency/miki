@@ -33,7 +33,6 @@
                   <li><a href="#services">Services / Preise</a></li>
                   <li><a href="#works">Buchen</a></li>
                </ul>
-               <!-- <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> -->
                <ul class="header-nav__social">
                   <li>
                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -46,15 +45,12 @@
                   </li>
                </ul>
             </div>
-            <!-- end header-nav__content -->
          </nav>
-         <!-- end header-nav -->
          <a class="header-menu-toggle agb" href="#0">
          <span class="header-menu-text agb">Menu</span>
          <span class="header-menu-icon"></span>
          </a>
       </header>
-      <!-- end s-about -->
       <section id='services' class="s-services">
          <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -107,11 +103,10 @@
                </ul>
             </div>
          </div>
-         <!-- end footer-main -->
          <div class="row footer-bottom">
             <div class="col-twelve">
                <div class="copyright">
-                  <span>© Amzy Legacy Football Training</span> 
+                  <span>© Amzi Legacy Football Training</span> 
                   <span>Designed By <a href="https://webtree.ch" target="_blank">WebTree</a></span>	
                </div>
                <div class="go-top">
@@ -119,10 +114,7 @@
                </div>
             </div>
          </div>
-         <!-- end footer-bottom -->
       </footer>
-      >
-      <!-- end footer -->
       <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
          <div class="pswp__bg"></div>
          <div class="pswp__scroll-wrap">
@@ -156,7 +148,6 @@
             </div>
          </div>
       </div>
-      <!-- end photoSwipe background -->
       <div id="preloader">
          <div id="loader">
             <div class="line-scale-pulse-out">
@@ -168,41 +159,6 @@
             </div>
          </div>
       </div>
-      <div id="popup" class="popup">
-        <span id="close-popup" class="close">&times;</span>
-        <h3>Einmaliges Probetraining!</h3>
-        <a href="#about" class="smoothscroll btn btn--black">Erkunden!</a>               
-        <button id="hide-popup" class="btn btn--black">Nicht mehr anzeigen</button>
-     </div>
-     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
-        
-            const showPopup = () => {
-                const popup = document.getElementById('popup');
-                popup.style.display = 'block';
-            };
-        
-            const closePopup = () => {
-                const popup = document.getElementById('popup');
-                popup.style.display = 'none';
-            };
-        
-            if (!isPopupHidden) {
-                setTimeout(showPopup, 5000); // 5000 Millisekunden = 5 Sekunden
-            }
-        
-            document.getElementById('close-popup').addEventListener('click', () => {
-                closePopup();
-            });
-        
-            document.getElementById('hide-popup').addEventListener('click', () => {
-                closePopup();
-                localStorage.setItem('hidePopup', 'true');
-            });
-        });
-         
-     </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
