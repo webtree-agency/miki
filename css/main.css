@@ -2359,6 +2359,16 @@ html.no-csstransitions .home-content__main {
     top: 0;
 }
 
+.works__line {
+    display: block;
+    width: 2px;
+    height: 10.2rem;
+    background-color: var(--primary-gold);
+    position: absolute;
+    right: 7.2rem;
+    top: 0;
+}
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -2404,6 +2414,10 @@ html.no-csstransitions .home-content__main {
     .about__line {
         right: 5.5rem;
     }
+
+    .works__line {
+        right: 5.5rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2440,6 +2454,10 @@ html.no-csstransitions .home-content__main {
         border: none;
     }
     .about__line {
+        height: 7.2rem;
+    }
+
+    .works__line {
         height: 7.2rem;
     }
 }
