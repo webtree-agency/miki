@@ -54,41 +54,6 @@
          <span class="header-menu-icon"></span>
          </a>
       </header>
-      <div id="popup" class="popup">
-         <span id="close-popup" class="close">&times;</span>
-         <h3>Einmaliges Probetraining!</h3>
-         <a href="#about" class="smoothscroll btn btn--black">Erkunden!</a>               
-         <button id="hide-popup" class="btn btn--black">Nicht mehr anzeigen</button>
-      </div>
-      <script>
-         document.addEventListener('DOMContentLoaded', (event) => {
-             const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
-         
-             const showPopup = () => {
-                 const popup = document.getElementById('popup');
-                 popup.style.display = 'block';
-             };
-         
-             const closePopup = () => {
-                 const popup = document.getElementById('popup');
-                 popup.style.display = 'none';
-             };
-         
-             if (!isPopupHidden) {
-                 setTimeout(showPopup, 5000); // 5000 Millisekunden = 5 Sekunden
-             }
-         
-             document.getElementById('close-popup').addEventListener('click', () => {
-                 closePopup();
-             });
-         
-             document.getElementById('hide-popup').addEventListener('click', () => {
-                 closePopup();
-                 localStorage.setItem('hidePopup', 'true');
-             });
-         });
-          
-      </script>
       <!-- end s-about -->
       <section id='services' class="s-services">
          <div class="row section-header" data-aos="fade-up">
@@ -203,6 +168,41 @@
             </div>
          </div>
       </div>
+      <div id="popup" class="popup">
+        <span id="close-popup" class="close">&times;</span>
+        <h3>Einmaliges Probetraining!</h3>
+        <a href="#about" class="smoothscroll btn btn--black">Erkunden!</a>               
+        <button id="hide-popup" class="btn btn--black">Nicht mehr anzeigen</button>
+     </div>
+     <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
+        
+            const showPopup = () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+            };
+        
+            const closePopup = () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'none';
+            };
+        
+            if (!isPopupHidden) {
+                setTimeout(showPopup, 5000); // 5000 Millisekunden = 5 Sekunden
+            }
+        
+            document.getElementById('close-popup').addEventListener('click', () => {
+                closePopup();
+            });
+        
+            document.getElementById('hide-popup').addEventListener('click', () => {
+                closePopup();
+                localStorage.setItem('hidePopup', 'true');
+            });
+        });
+         
+     </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
