@@ -1704,13 +1704,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: var(--primary-gold);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-}
-
-.header-menu-toggle.opaque {
-    background-color: var(--black);
-}
-
-.header-menu-toggle.opaque .header-menu-text {
     background-color: var(--black);
 }
 
@@ -1725,6 +1718,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: -70px;
     width: 70px;
     padding-left: 12px;
+    background-color: var(--black);
+
 }
 
 .header-menu-icon {
@@ -1740,11 +1735,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: var(--white);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    
 }
-.header-menu-icon.agb {
-    background-color: var(--black);
-}
-
 
 .header-menu-icon::before, .header-menu-icon::after {
     content: '';

@@ -44,27 +44,6 @@
         });
     };
 
-
-   /* Menu on Scrolldown
-    * ------------------------------------------------------ */
-    var clMenuOnScrolldown = function() {
-        
-        var menuTrigger = $('.header-menu-toggle');
-
-        $WIN.on('scroll', function() {
-
-            if ($WIN.scrollTop() > 150) {
-                menuTrigger.addClass('opaque');
-                menuTrigger.addClass('opaque');
-            }
-            else {
-                menuTrigger.removeClass('opaque');
-            }
-
-        });
-    };
-
-
    /* OffCanvas Menu
     * ------------------------------------------------------ */
     var clOffCanvas = function() {
@@ -453,7 +432,6 @@
     (function ssInit() {
         
         clPreloader();
-        clMenuOnScrolldown();
         clOffCanvas();
         clPhotoswipe();
         clStatCount();
