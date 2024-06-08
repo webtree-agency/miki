@@ -9,8 +9,7 @@
       <link rel="stylesheet" href="css/base.css">
       <link rel="stylesheet" href="css/vendor.css">
       <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
-      <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
       <script src="js/modernizr.js"></script>
       <link rel="shortcut icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="icon" href="svg/favicon.svg" type="image/x-icon">
@@ -33,7 +32,6 @@
                   <li><a href="angebot.html">Angebot / Preise</a></li>
                   <li class="current"><a href="#">Buchen</a></li>
                </ul>
-               <!-- <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> -->
                <ul class="header-nav__social">
                   <li>
                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -46,9 +44,7 @@
                   </li>
                </ul>
             </div>
-            <!-- end header-nav__content -->
          </nav>
-         <!-- end header-nav -->
          <a class="header-menu-toggle" href="#0">
          <span class="header-menu-text">Menu</span>
          <span class="header-menu-icon"></span>
@@ -71,7 +67,6 @@
             </div>
             <div class="home-content__line"></div>
          </div>
-         <!-- end home-content -->
          <ul class="home-social">
             <li>
                <a href="#0"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
@@ -83,12 +78,10 @@
                <a href="#0"><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span>TikTok</span></a>
             </li>
          </ul>
-         <!-- end home-social -->
       </section>
-      <!-- end s-about -->
       <section id="contact" class="s-contact">
          <div class="overlay"></div>
-         <div class="contact__line"></div>
+         <div class="about__line"></div>
          <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                <h3 class="subhead">Kontaktieren</h3>
@@ -148,8 +141,7 @@
                      <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
                      <p>
                         Umkreis Zürich<br>
-                        Umkreis Stäfa<br>
-                        Umkreis Rapperswil
+                        Umkreis Goldküste<br>
                      </p>
                   </div>
                   <div class="cinfo">
@@ -179,37 +171,6 @@
             </div>
          </div>
       </section>
-      <script>
-         function showPricing(pricingType) {
-             var cards = document.querySelectorAll('.pricing-col');
-             cards.forEach(function(card) {
-                 card.style.display = 'none';
-             });
-         
-             var selectedCard = document.getElementById(pricingType + '-card');
-             
-             if (selectedCard) {
-                 selectedCard.style.display = 'block';
-             }
-         
-             var buttons = document.querySelectorAll('.btn.btn--black');
-             buttons.forEach(function(button) {
-                 if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
-                     button.classList.add('active');
-                 } else {
-                     button.classList.remove('active');
-                 }
-             });
-         }
-         
-         window.onload = function() {
-             showPricing('futsal');
-             var futsalButton = document.querySelector('button[data-type="futsal"]');
-             futsalButton.classList.add('active');
-         };
-         
-                     
-      </script>
       <footer>
          <div class="row footer-main">
             <div class="col-1-2 tab-full left footer-desc">
@@ -237,7 +198,6 @@
                </ul>
             </div>
          </div>
-         <!-- end footer-main -->
          <div class="row footer-bottom">
             <div class="col-twelve">
                <div class="copyright">
@@ -249,9 +209,7 @@
                </div>
             </div>
          </div>
-         <!-- end footer-bottom -->
       </footer>
-      <!-- end footer -->
       <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
          <div class="pswp__bg"></div>
          <div class="pswp__scroll-wrap">
@@ -337,6 +295,35 @@
              });
          });
           
+      </script>
+      <script>
+         function showPricing(pricingType) {
+             var cards = document.querySelectorAll('.pricing-col');
+             cards.forEach(function(card) {
+                 card.style.display = 'none';
+             });
+         
+             var selectedCard = document.getElementById(pricingType + '-card');
+             
+             if (selectedCard) {
+                 selectedCard.style.display = 'block';
+             }
+         
+             var buttons = document.querySelectorAll('.btn.btn--black');
+             buttons.forEach(function(button) {
+                 if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
+                     button.classList.add('active');
+                 } else {
+                     button.classList.remove('active');
+                 }
+             });
+         }
+         
+         window.onload = function() {
+             showPricing('futsal');
+             var futsalButton = document.querySelector('button[data-type="futsal"]');
+             futsalButton.classList.add('active');
+         };      
       </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>

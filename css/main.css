@@ -2495,6 +2495,10 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
+.s-services.angebot {
+    padding: 0;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## services list
@@ -2624,6 +2628,10 @@ html.no-csstransitions .home-content__main {
 }
 
 .about-start .intro-wrap {
+    padding: 15rem 0 10rem;
+}
+
+.angebot .intro-wrap {
     padding: 15rem 0 10rem;
 }
 
@@ -3076,7 +3084,7 @@ html.no-csstransitions .home-content__main {
     clear: both;
 }
 
-.form-field input::placeholder, .form-field textarea::placeholder {
+.form-field input::placeholder, .form-field textarea::placeholder, .form-field #contactOffer option::placeholder {
     color: var(--light-grey) !important;
 }
 
