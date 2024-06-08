@@ -93,14 +93,19 @@
                      <h1 class="display-2">Meine Premium-Trainingsangebote</h1>
                   </div>
                </div> 
+               <div class="btn-container align-center">
+                  <button class="btn btn--black" onclick="showPricing('futsal')">Futsal-Training</button>
+                  <button class="btn btn--black" onclick="showPricing('rasen')">Rasen-Training</button>
+                  <button class="btn btn--black" onclick="showPricing('kombo')">Kombo-Training</button>
+              </div> 
                <div class="pricing-container">
                   <div class="pricing-row">
                       <!-- Futsal-Training -->
-                      <div class="pricing-col">
+                      <div class="pricing-col" id="futsal-card">
                           <div class="wrap-price">
-                              <div class="price-innerdetail">
+                              <div>
                                   <h3>Futsal-Training</h3>
-                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <h4 class="service-pricing">ab 50.-</h4>
                                   <table class="pricing-table">
                                       <tr>
                                           <th>Einzeltraining</th>
@@ -134,11 +139,11 @@
                       </div>
                       
                       <!-- Rasen-Training -->
-                      <div class="pricing-col">
+                      <div class="pricing-col" id="rasen-card">
                           <div class="wrap-price">
-                              <div class="price-innerdetail">
+                              <div>
                                   <h3>Rasen-Training</h3>
-                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <h4 class="service-pricing">ab 50.-</h4>
                                   <table class="pricing-table">
                                       <tr>
                                           <th>Einzeltraining</th>
@@ -172,11 +177,11 @@
                       </div>
                       
                       <!-- Kombo-Training -->
-                      <div class="pricing-col">
+                      <div class="pricing-col" id="kombo-card">
                           <div class="wrap-price">
-                              <div class="price-innerdetail">
+                              <div>
                                   <h3>Kombo-Training</h3>
-                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <h4 class="service-pricing">ab 50.-</h4>
                                   <table class="pricing-table">
                                       <tr>
                                           <th>Einzeltraining</th>
@@ -209,10 +214,41 @@
                           </div>
                       </div>
                   </div>
-              </div>
-              
-                            
+              </div>        
             </section>
+            <script>
+function showPricing(pricingType) {
+    // Alle Karten ausblenden
+    var cards = document.querySelectorAll('.pricing-col');
+    cards.forEach(function(card) {
+        card.style.display = 'none';
+    });
+
+    // Die ausgewählte Karte anzeigen
+    var selectedCard = document.getElementById(pricingType + '-card');
+    if (selectedCard) {
+        selectedCard.style.display = 'block';
+    }
+
+    // Aktiven Button-Stil anpassen
+    var buttons = document.querySelectorAll('.btn.btn--black');
+    buttons.forEach(function(button) {
+        if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// Standardmäßig das Futsal-Training anzeigen und den entsprechenden Button aktivieren
+window.onload = function() {
+    showPricing('futsal');
+    var futsalButton = document.querySelector('button[data-type="futsal"]');
+    futsalButton.classList.add('active');
+};
+
+            </script>
             <footer>
                <div class="row footer-main">
                   <div class="col-1-2 tab-full left footer-desc">

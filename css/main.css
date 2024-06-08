@@ -938,6 +938,13 @@ input[type="button"].btn--primary:focus {
     color: var(--white);
     background-color: var(--black) !important;
 }
+.btn--black.active,
+button.btn--black.active {
+    border: 0.2rem solid var(--black);
+    color: var(--white);
+    background-color: var(--black) !important;
+}
+
 
 .btn--grey, button.btn--grey {
     background: transparent !important;
@@ -4082,11 +4089,12 @@ footer .row {
 }
 
 .pricing-col {
-    flex: 1;
-    max-width: 32%;
+    flex: 1 1 100%; /* Änderung der Flex-Eigenschaften */
     box-sizing: border-box;
     min-width: 300px;
+    max-width: calc(100% - 40px); /* Abstand von 20px an den Seiten */
 }
+
 
 @media (max-width: 768px) {
     .pricing-col {
@@ -4097,18 +4105,12 @@ footer .row {
 .wrap-price {
     background: rgba(32, 33, 36, 0.1);
     padding: 50px 20px;
-    border-radius: 10px;
+    border: 0.2rem solid var(--black);
     text-align: center;
     overflow-x: auto; /* Allow horizontal scrolling if content overflows */
 }
 
-.price-innerdetail {
-    margin-bottom: 20px;
-}
-
 .service-pricing {
-    font-size: 24px;
-    color: #333;
     margin: 10px 0;
 }
 
@@ -4141,6 +4143,6 @@ footer .row {
 .pricing-table th {
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: #4CAF50;
+    background-color: var(--green);
     color: white;
 }
