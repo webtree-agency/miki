@@ -4107,22 +4107,58 @@ footer .row {
 }
 
 .wrap-price {
-    background: rgba(32, 33, 36, 0.1);
+    background: transparent;
     padding: 10px 20px;
-    border: 0.2rem solid var(--black);
     text-align: center;
     overflow-x: auto; 
 }
 
 .service-pricing {
-    margin: 10px 0;
+    margin-bottom: 50px;
+    margin-top: 0 !important;
 }
 
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     table-layout: fixed; 
+}
+.service-title {
+    margin-top: 4rem !important;
+    position: relative;
+    display: inline-block;
+}
+
+.service-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -3px; 
+}
+@media (max-width: 768px) {
+    .service-pricing {
+        margin-bottom: 30px;
+    }
+
+    .pricing-table {
+        margin-bottom: 30px;
+
+    }
+
+    .service-title {
+        margin-top: 1rem !important;
+
+    }
+    .wrap-price{
+        padding: 0 !important;
+    }
+    .pricing-container{
+        padding: 10px;
+    }
 }
 
 .pricing-table th, .pricing-table td {
