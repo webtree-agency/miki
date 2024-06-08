@@ -2366,7 +2366,6 @@ html.no-csstransitions .home-content__main {
     background-color: var(--primary-gold);
     position: absolute;
     right: 7.2rem;
-    top: 0;
 }
 
 
@@ -2611,6 +2610,10 @@ html.no-csstransitions .home-content__main {
 .s-works .intro-wrap {
     padding: 15rem 0 25.2rem;
     background: #111111;
+}
+
+.about-start .intro-wrap {
+    padding: 15rem 0 10rem;
 }
 
 .works-content {
@@ -3871,7 +3874,7 @@ footer .row {
     height: 50px;
     line-height: 50px;
     width: 50px;
-    border: 3px solid var(--primary-gold);
+    border: 3px solid var(--light-grey);
     background-color: var(--white);
   
     -webkit-border-radius: 50%;
@@ -3880,7 +3883,7 @@ footer .row {
   }
   .js-ag-active .ag-timeline-card_point {
     background-color: var(--primary-gold);
-    border-color: var(--black);
+    border-color: var(--primary-gold);
   }
   .ag-timeline-card_meta-box {
     display: inline-block;
@@ -3933,12 +3936,12 @@ footer .row {
   .ag-timeline-card_arrow {
     height: 18px;
     width: 18px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     background-color: var(--white);
   
     z-index: -1;
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
   
     -webkit-transform: rotate(45deg);
@@ -4063,3 +4066,12 @@ footer .row {
     }
   
   }
+
+  /* ABOUT ME */
+
+.square-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
