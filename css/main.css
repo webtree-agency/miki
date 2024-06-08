@@ -4073,8 +4073,8 @@ footer .row {
   /* ABOUT ME */
 
 .square-image {
-    width: 400px;
-    height: 400px;
+    width: 261px; /* 290,7px * 0,9 = 261,63px */
+    height: 388px; /* 432px * 0,9 = 388,8px */ 
     object-fit: cover;
     display: block;
 }
