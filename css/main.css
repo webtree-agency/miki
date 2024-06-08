@@ -3788,7 +3788,7 @@ footer .row {
 /* TIMELINE */
 
 .ag-format-container {
-    width: 1160px;
+    max-width: 1200px;
     margin: 0 auto;
   
     position: relative;
@@ -3806,7 +3806,6 @@ footer .row {
     color: rgb(84, 89, 95);
   }
   .ag-timeline_title {
-    background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
   
@@ -4078,7 +4077,16 @@ footer .row {
     object-fit: cover;
     display: block;
 }
-
+.year-title{
+    margin: 0 !important;
+}
+.year-subtitle{
+    margin-bottom: 10px !important;
+    }
+    
+.year-title.right{
+    text-align: left !important;
+}
 /* Services */
 .pricing-container {
     width: 100%;
