@@ -4079,24 +4079,7 @@ footer .row {
 
   /* ABOUT ME */
 
-.square-image {
-    width: 261px; /* 290,7px * 0,9 = 261,63px */
-    height: 388px; /* 432px * 0,9 = 388,8px */ 
-    object-fit: cover;
-    display: block;
-}
-.year-title{
-    margin: 0 !important;
-}
-.year-subtitle{
-    margin-bottom: 10px !important;
-    }
-    
-.year-title.right{
-    text-align: left !important;
-}
-/* Services */
-.pricing-container {
+  .pricing-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -4111,12 +4094,11 @@ footer .row {
 }
 
 .pricing-col {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
     box-sizing: border-box;
     min-width: 300px;
-    max-width: calc(100% - 40px); 
+    max-width: calc(100% - 40px);
 }
-
 
 @media (max-width: 768px) {
     .pricing-col {
@@ -4128,7 +4110,8 @@ footer .row {
     background: transparent;
     padding: 10px 20px;
     text-align: center;
-    overflow-x: auto; 
+    overflow-x: auto;
+    padding: 0; /* Remove any padding */
 }
 
 .service-pricing {
@@ -4136,12 +4119,19 @@ footer .row {
     margin-top: 0 !important;
 }
 
+.pricing-table-container {
+    overflow-x: auto; /* Ensures horizontal scrolling */
+    margin: 0; /* Remove any margins */
+}
+
 .pricing-table {
     width: 100%;
+    min-width: 860px; /* Ensures table is at least 1000px wide */
     border-collapse: collapse;
     margin-bottom: 50px;
-    table-layout: fixed; 
+    table-layout: fixed;
 }
+
 .service-title {
     margin-top: 4rem !important;
     position: relative;
@@ -4155,8 +4145,9 @@ footer .row {
     height: 3px;
     background: black;
     position: absolute;
-    bottom: -3px; 
+    bottom: -3px;
 }
+
 @media (max-width: 768px) {
     .service-pricing {
         margin-bottom: 30px;
@@ -4164,43 +4155,36 @@ footer .row {
 
     .pricing-table {
         margin-bottom: 30px;
-
     }
 
     .service-title {
         margin-top: 1rem !important;
-
     }
-    .wrap-price{
+
+    .wrap-price {
         padding: 0 !important;
     }
-    .pricing-container{
+
+    .pricing-container {
         padding: 10px;
     }
 }
 
-.pricing-table th, .pricing-table td {
-    border: 1px solid #ddd;
+.pricing-table th,
+.pricing-table td {
+    border-bottom: 1px solid var(--normal-grey);
     padding: 8px;
     text-align: center;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 .pricing-table th {
-    background-color: #f2f2f2;
-}
-
-.pricing-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--light-grey);
+    color: var(--black);
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .pricing-table tr:hover {
-    background-color: #ddd;
-}
-
-.pricing-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--light-grey);
 }

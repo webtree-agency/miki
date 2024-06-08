@@ -932,3 +932,7 @@ textarea {
 
 
 /*# sourceMappingURL=base.css.map */
+
+.font-italic {
+    font-style: italic;
+}
