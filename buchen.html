@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Angebot - Amzi Legacy Football Training</title>
+      <title>Buchen - Amzi Legacy Football Training</title>
       <meta name="description" content="">
       <meta name="author" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +30,8 @@
                <ul class="header-nav__list">
                   <li><a href="./">Home</a></li>
                   <li><a href="about.html">Über mich</a></li>
-                  <li class="current"><a href="#">Angebot / Preise</a></li>
-                  <li><a href="buchen.html">Buchen</a></li>
+                  <li><a href="angebot.html">Angebot / Preise</a></li>
+                  <li class="current"><a href="#">Buchen</a></li>
                </ul>
                <!-- <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> -->
                <ul class="header-nav__social">
@@ -59,9 +59,9 @@
          <div class="shadow-overlay"></div>
          <div class="home-content">
             <div class="row home-content__main">
-               <h3>#spielerentwicklung</h3>
+               <h3>#startyourprocess</h3>
                <h1>
-                  MEIN ANGEBOT
+                  BUCHEN
                </h1>
             </div>
             <div class="home-content__scroll">
@@ -86,152 +86,95 @@
          <!-- end home-social -->
       </section>
       <!-- end s-about -->
-      <section id='services' class="s-services">
-         <div class="row section-header has-bottom-sep" data-aos="fade-up">
+      <section id="contact" class="s-contact">
+         <div class="overlay"></div>
+         <div class="contact__line"></div>
+         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-               <h3 class="subhead">Angebote</h3>
-               <h1 class="display-2">Meine Premium-Trainingsangebote</h1>
+               <h3 class="subhead">Kontaktieren</h3>
+               <h1 class="display-2 display-2--light">Entscheide dich für ein Angebot!</h1>
             </div>
          </div>
-         <div class="btn-container align-center">
-            <button class="btn btn--black max" onclick="showPricing('futsal')">Futsal-Training</button>
-            <button class="btn btn--black max" onclick="showPricing('rasen')">Rasen-Training</button>
-            <button class="btn btn--black max" onclick="showPricing('kombo')">Kombo-Training</button>
-            <button class="btn btn--black max" onclick="showPricing('camp')">Camp-Training</button> 
-         </div>
-         <div class="pricing-container">
-            <div class="pricing-row">
-               <!-- Futsal-Training -->
-               <div class="pricing-col" id="futsal-card">
-                  <div class="wrap-price">
-                     <div>
-                        <h3 class="service-title">Futsal-Training</h3>
-                        <h4 class="service-pricing">ab 50.-</h4>
-                        <table class="pricing-table">
-                           <tr>
-                              <th>Einzeltraining</th>
-                              <th>Training zu zweit</th>
-                              <th>Gruppentraining (3 - 6 Personen)</th>
-                           </tr>
-                           <tr>
-                              <td>Einmalig 90.-</td>
-                              <td>Einmalig 70.- pro Person</td>
-                              <td>Einmalig 50.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>6er Abo 490.-</td>
-                              <td>6er Abo 390.- pro Person</td>
-                              <td>6er Abo 270.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>10er Abo 750.-</td>
-                              <td>10er Abo 600.- pro Person</td>
-                              <td>10er Abo 400.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                           </tr>
-                        </table>
-                        <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
+         <div class="row contact-content" data-aos="fade-up">
+            <div class="contact-primary">
+               <h3 class="h6">Sende mir eine Nachricht</h3>
+               <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                  <fieldset>
+                     <div class="form-field">
+                         <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
                      </div>
-                  </div>
+                     <div class="form-field">
+                         <input name="contactEmail" type="email" id="contactEmail" placeholder="E-Mail" value="" required="" aria-required="true" class="full-width">
+                     </div>
+                     <div class="form-field">
+                         <input name="contactPhone" type="tel" id="contactPhone" placeholder="Telefonnummer" value="" required="" aria-required="true" class="full-width">
+                     </div>
+                     <div class="form-field">
+                         <label for="contactOffer">Wähle ein Angebot aus</label>
+                         <select name="contactOffer" id="contactOffer" class="full-width select-text" required="" aria-required="true">
+                             <option value="Futsal-Training">Futsal-Training</option>
+                             <option value="Rasen-Training">Rasen-Training</option>
+                             <option value="Kombi-Training">Kombi-Training</option>
+                             <option value="Camp-Training">Camp-Training</option>
+                         </select>
+                     </div>
+                     <div class="form-field">
+                         <textarea name="contactMessage" id="contactMessage" placeholder="Nachricht" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                     </div>
+                     <div class="form-field">
+                         <button class="full-width btn--primary">Senden</button>
+                         <div class="submit-loader">
+                             <div class="text-loader">Sending...</div>
+                             <div class="s-loader">
+                                 <div class="bounce1"></div>
+                                 <div class="bounce2"></div>
+                                 <div class="bounce3"></div>
+                             </div>
+                         </div>
+                     </div>
+                 </fieldset>
+               </form>
+               <div class="message-warning">
+                  Something went wrong. Please try again.
                </div>
-               <!-- Rasen-Training -->
-               <div class="pricing-col" id="rasen-card">
-                  <div class="wrap-price">
-                     <div>
-                        <h3 class="service-title">Rasen-Training</h3>
-                        <h4 class="service-pricing">ab 50.-</h4>
-                        <table class="pricing-table">
-                           <tr>
-                              <th>Einzeltraining</th>
-                              <th>Training zu zweit</th>
-                              <th>Gruppentraining (3 - 6 Personen)</th>
-                           </tr>
-                           <tr>
-                              <td>Einmalig 90.-</td>
-                              <td>Einmalig 70.- pro Person</td>
-                              <td>Einmalig 50.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>6er Abo 490.-</td>
-                              <td>6er Abo 390.- pro Person</td>
-                              <td>6er Abo 270.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>10er Abo 750.-</td>
-                              <td>10er Abo 600.- pro Person</td>
-                              <td>10er Abo 400.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                           </tr>
-                        </table>
-                        <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
-                     </div>
-                  </div>
+               <div class="message-success">
+                  Your message was sent, thank you!<br>
                </div>
-               <!-- Kombo-Training -->
-               <div class="pricing-col" id="kombo-card">
-                  <div class="wrap-price">
-                     <div>
-                        <h3 class="service-title">Kombo-Training</h3>
-                        <h4 class="service-pricing">ab 50.-</h4>
-                        <table class="pricing-table">
-                           <tr>
-                              <th>Einzeltraining</th>
-                              <th>Training zu zweit</th>
-                              <th>Gruppentraining (3 - 6 Personen)</th>
-                           </tr>
-                           <tr>
-                              <td>Einmalig 90.-</td>
-                              <td>Einmalig 70.- pro Person</td>
-                              <td>Einmalig 50.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>6er Abo 490.-</td>
-                              <td>6er Abo 390.- pro Person</td>
-                              <td>6er Abo 270.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>10er Abo 750.-</td>
-                              <td>10er Abo 600.- pro Person</td>
-                              <td>10er Abo 400.- pro Person</td>
-                           </tr>
-                           <tr>
-                              <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                              <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
-                           </tr>
-                        </table>
-                        <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
-                     </div>
+            </div>
+            <div class="contact-secondary">
+               <div class="contact-info">
+                  <h3 class="h6 hide-on-fullwidth">Kontakt Info</h3>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
+                     <p>
+                        Umkreis Zürich<br>
+                        Umkreis Stäfa<br>
+                        Umkreis Rapperswil
+                     </p>
                   </div>
-               </div>
-               <div class="pricing-col" id="camp-card">
-                  <div class="wrap-price">
-                     <div>
-                        <h3 class="service-title">Camp-Training</h3>
-                        <h4 class="service-pricing">ab 40.-</h4>
-                        <table class="pricing-table">
-                           <tr>
-                              <th>Teilnehmerzahl</th>
-                              <th>Dauer</th>
-                              <th>Preis pro Person</th>
-                           </tr>
-                           <tr>
-                              <td>Mindestens 6 Personen</td>
-                              <td>90 Minuten</td>
-                              <td>Einmalig 40.- pro Person<br>10er Abo 300.- pro Person</td>
-                           </tr>
-                        </table>
-                        <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
-                     </div>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-envelope"></i> E-Mail</h5>
+                     <p>
+                        amzilegacyfootball@gmail.com<br>
+                     </p>
                   </div>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-phone"></i> Telefon</h5>
+                     <p>
+                        +41 78 917 64 36
+                     </p>
+                  </div>
+                  <ul class="contact-social">
+                     <li>
+                        <a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                     </li>
+                  </ul>
                </div>
             </div>
          </div>
@@ -282,7 +225,7 @@
                <ul class="footer-nav__list">
                   <li><a href="#">Angebot / Preise</a></li>
                   <li><a href="about.html">Über mich</a></li>
-                  <li><a href="buchen.html">Buchen</a></li>
+                  <li><a href="#works">Buchen</a></li>
                </ul>
             </div>
             <div class="col-1-4 tab-full left footer-desc">

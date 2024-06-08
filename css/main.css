@@ -3216,7 +3216,9 @@ html.no-csstransitions .home-content__main {
 .contact-secondary {
     width: 35%;
 }
-
+.select-text option {
+    color: black !important; /* Farbe des Platzhalters */
+}
 .contact-secondary::before {
     content: "";
     display: block;
