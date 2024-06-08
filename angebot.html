@@ -94,9 +94,11 @@
                   </div>
                </div> 
                <div class="btn-container align-center">
-                  <button class="btn btn--black" onclick="showPricing('futsal')">Futsal-Training</button>
-                  <button class="btn btn--black" onclick="showPricing('rasen')">Rasen-Training</button>
-                  <button class="btn btn--black" onclick="showPricing('kombo')">Kombo-Training</button>
+                  <button class="btn btn--black max" onclick="showPricing('futsal')">Futsal-Training</button>
+                  <button class="btn btn--black max" onclick="showPricing('rasen')">Rasen-Training</button>
+                  <button class="btn btn--black max" onclick="showPricing('kombo')">Kombo-Training</button>
+                  <button class="btn btn--black max" onclick="showPricing('camp')">Camp-Training</button> 
+
               </div> 
                <div class="pricing-container">
                   <div class="pricing-row">
@@ -213,24 +215,43 @@
                               </div>
                           </div>
                       </div>
+                      <div class="pricing-col" id="camp-card">
+                        <div class="wrap-price">
+                           <div>
+                               <h3>Camp-Training</h3>
+                               <h4 class="service-pricing">ab 40.-</h4>
+                               <table class="pricing-table">
+                                   <tr>
+                                       <th>Teilnehmerzahl</th>
+                                       <th>Dauer</th>
+                                       <th>Preis pro Person</th>
+                                   </tr>
+                                   <tr>
+                                       <td>Mindestens 6 Personen</td>
+                                       <td>90 Minuten</td>
+                                       <td>Einmalig 40.- pro Person<br>10er Abo 300.- pro Person</td>
+                                   </tr>
+                               </table>
+                               <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
+                           </div>
+                       </div>
+                    </div>
                   </div>
               </div>        
             </section>
             <script>
 function showPricing(pricingType) {
-    // Alle Karten ausblenden
     var cards = document.querySelectorAll('.pricing-col');
     cards.forEach(function(card) {
         card.style.display = 'none';
     });
 
-    // Die ausgewählte Karte anzeigen
     var selectedCard = document.getElementById(pricingType + '-card');
+    
     if (selectedCard) {
         selectedCard.style.display = 'block';
     }
 
-    // Aktiven Button-Stil anpassen
     var buttons = document.querySelectorAll('.btn.btn--black');
     buttons.forEach(function(button) {
         if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
@@ -241,7 +262,6 @@ function showPricing(pricingType) {
     });
 }
 
-// Standardmäßig das Futsal-Training anzeigen und den entsprechenden Button aktivieren
 window.onload = function() {
     showPricing('futsal');
     var futsalButton = document.querySelector('button[data-type="futsal"]');
