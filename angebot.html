@@ -85,64 +85,133 @@
                </ul>
                <!-- end home-social -->
             </section>
-            <div id="popup" class="popup">
-               <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
-               <h3>Kostenloses Probetraining!</h3>
-               <div class="home-content__buttons popup-div">
-                  <a class="btn btn--gold-full">
-                  Jetzt buchen
-                  </a>
-                  <a href="#about" id="hide-popup" class="btn btn--grey">
-                  Verbergen
-                  </a>
-               </div>
-            </div>
-           <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Überprüfen, ob das Popup im LocalStorage gespeichert wurde
-    const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
-
-    // Funktion zum Anzeigen des Popups
-    const showPopup = () => {
-        const popup = document.getElementById('popup');
-        popup.style.display = 'block';
-    };
-
-    // Funktion zum Schließen des Popups
-    const closePopup = () => {
-        const popup = document.getElementById('popup');
-        popup.style.display = 'none';
-    };
-
-    // Überprüfen, ob das Popup angezeigt werden soll
-    if (!isPopupHidden) {
-        setTimeout(showPopup, 5000); // 5000 Millisekunden = 5 Sekunden
-    }
-
-    // Event-Listener für das Schließen des Popups durch Klicken auf das Schließen-Symbol
-    document.getElementById('close-popup').addEventListener('click', () => {
-        closePopup();
-    });
-
-    // Event-Listener für das Schließen des Popups durch Klicken auf "Nicht mehr anzeigen"
-    document.getElementById('hide-popup').addEventListener('click', () => {
-        // Popup schließen
-        closePopup();
-        // Wert im localStorage speichern
-        localStorage.setItem('hidePopup', 'true');
-    });
-});
- </script>
-
             <!-- end s-about -->
             <section id='services' class="s-services">
                <div class="row section-header has-bottom-sep" data-aos="fade-up">
                   <div class="col-full">
-                     <h3 class="subhead">Dienstleistungen</h3>
-                     <h1 class="display-2">Hol dir dein kostenloses Probetraining!</h1>
+                     <h3 class="subhead">Angebote</h3>
+                     <h1 class="display-2">Meine Premium-Trainingsangebote</h1>
                   </div>
-               </div>          
-               
+               </div> 
+               <div class="pricing-container">
+                  <div class="pricing-row">
+                      <!-- Futsal-Training -->
+                      <div class="pricing-col">
+                          <div class="wrap-price">
+                              <div class="price-innerdetail">
+                                  <h3>Futsal-Training</h3>
+                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <table class="pricing-table">
+                                      <tr>
+                                          <th>Einzeltraining</th>
+                                          <th>Training zu zweit</th>
+                                          <th>Gruppentraining (3 - 6 Personen)</th>
+                                      </tr>
+                                      <tr>
+                                          <td>Einmalig 90.-</td>
+                                          <td>Einmalig 70.- pro Person</td>
+                                          <td>Einmalig 50.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>6er Abo 490.-</td>
+                                          <td>6er Abo 390.- pro Person</td>
+                                          <td>6er Abo 270.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>10er Abo 750.-</td>
+                                          <td>10er Abo 600.- pro Person</td>
+                                          <td>10er Abo 400.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                      </tr>
+                                  </table>
+                                  <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-- Rasen-Training -->
+                      <div class="pricing-col">
+                          <div class="wrap-price">
+                              <div class="price-innerdetail">
+                                  <h3>Rasen-Training</h3>
+                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <table class="pricing-table">
+                                      <tr>
+                                          <th>Einzeltraining</th>
+                                          <th>Training zu zweit</th>
+                                          <th>Gruppentraining (3 - 6 Personen)</th>
+                                      </tr>
+                                      <tr>
+                                          <td>Einmalig 90.-</td>
+                                          <td>Einmalig 70.- pro Person</td>
+                                          <td>Einmalig 50.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>6er Abo 490.-</td>
+                                          <td>6er Abo 390.- pro Person</td>
+                                          <td>6er Abo 270.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>10er Abo 750.-</td>
+                                          <td>10er Abo 600.- pro Person</td>
+                                          <td>10er Abo 400.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                      </tr>
+                                  </table>
+                                  <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-- Kombo-Training -->
+                      <div class="pricing-col">
+                          <div class="wrap-price">
+                              <div class="price-innerdetail">
+                                  <h3>Kombo-Training</h3>
+                                  <h4 class="service-pricing">ab 350.-</h4>
+                                  <table class="pricing-table">
+                                      <tr>
+                                          <th>Einzeltraining</th>
+                                          <th>Training zu zweit</th>
+                                          <th>Gruppentraining (3 - 6 Personen)</th>
+                                      </tr>
+                                      <tr>
+                                          <td>Einmalig 90.-</td>
+                                          <td>Einmalig 70.- pro Person</td>
+                                          <td>Einmalig 50.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>6er Abo 490.-</td>
+                                          <td>6er Abo 390.- pro Person</td>
+                                          <td>6er Abo 270.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>10er Abo 750.-</td>
+                                          <td>10er Abo 600.- pro Person</td>
+                                          <td>10er Abo 400.- pro Person</td>
+                                      </tr>
+                                      <tr>
+                                          <td>20er Abo 1400.- <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 1100.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                          <td>20er Abo 700.- pro Person <br>Einmalig 1x Trikot gratis</td>
+                                      </tr>
+                                  </table>
+                                  <a href="#" class="btn btn--gold-full schedule-button">Anfragen</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+                            
             </section>
             <footer>
                <div class="row footer-main">
@@ -231,6 +300,46 @@ document.addEventListener('DOMContentLoaded', (event) => {
                   </div>
                </div>
             </div>
+            <div id="popup" class="popup">
+               <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
+               <h3>Kostenloses Probetraining!</h3>
+               <div class="home-content__buttons popup-div">
+                  <a class="btn btn--gold-full">
+                  Jetzt buchen
+                  </a>
+                  <a id="hide-popup" class="btn btn--grey">
+                  Verbergen
+                  </a>
+               </div>
+            </div>
+           <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
+
+    const showPopup = () => {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+    };
+
+    const closePopup = () => {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    };
+
+    if (!isPopupHidden) {
+        setTimeout(showPopup, 5000); 
+    }
+
+    document.getElementById('close-popup').addEventListener('click', () => {
+        closePopup();
+    });
+
+    document.getElementById('hide-popup').addEventListener('click', () => {
+        closePopup();
+        localStorage.setItem('hidePopup', 'true');
+    });
+});
+ </script>
             <script src="js/jquery-3.2.1.min.js"></script>
             <script src="js/plugins.js"></script>
             <script src="js/main.js"></script>
