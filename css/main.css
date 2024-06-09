@@ -3893,8 +3893,8 @@ footer .row {
     border-radius: 50%;
   }
   .js-ag-active .ag-timeline-card_point {
-    background-color: var(--primary-gold);
-    border-color: var(--dark-gold);
+    background-color: var(--white);
+    border-color: var(--primary-gold);
   }
   .ag-timeline-card_meta-box {
     display: inline-block;
@@ -3910,40 +3910,12 @@ footer .row {
     width: 45%;
     margin: -77px 0 0;
     background-color: var(--white);
-    border: 2px solid var(--dark-gold);
-    opacity: 0;
+    opacity: 1;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  
-    -webkit-transition: -webkit-transform .5s, opacity .5s;
-    -moz-transition: -moz-transform .5s, opacity .5s;
-    -o-transition: -o-transform .5s, opacity .5s;
-    transition: transform .5s, opacity .5s;
-  
     position: relative;
   }
-  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
-    -webkit-transform: translateX(-200%);
-    -moz-transform: translateX(-200%);
-    -ms-transform: translateX(-200%);
-    -o-transform: translateX(-200%);
-    transform: translateX(-200%);
-  }
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-    -webkit-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
-    transform: translateX(200%);
-  }
-  .js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-  .js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-    opacity: 1;
-  
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+  .ag-timeline-card_img-box img {
+    border: 4px solid var(--dark-gold);
   }
   .ag-timeline-card_arrow {
     height: 18px;
@@ -4028,14 +4000,6 @@ footer .row {
     .ag-timeline-card_item {
       width: auto;
       margin: -65px 0 0 75px
-    }
-    .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-    .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-      -webkit-transform: translateX(200%);
-      -moz-transform: translateX(200%);
-      -ms-transform: translateX(200%);
-      -o-transform: translateX(200%);
-      transform: translateX(200%);
     }
     .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
       right: auto;
