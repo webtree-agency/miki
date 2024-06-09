@@ -4155,7 +4155,3 @@ footer .row {
     padding-top: 12px;
     padding-bottom: 12px;
 }
-
-.pricing-table tr:hover {
-    background-color: var(--light-grey);
-}
