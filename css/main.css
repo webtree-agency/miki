@@ -3978,7 +3978,12 @@ footer .row {
   }
   .ag-timeline-card_info h3 {
     text-align: left;
+    margin: 0 0 10px 0;
+  }
+  .ag-timeline-card_info h4 {
     margin: 0;
+    text-align: right;
+    color: var(--primary-gold);
   }
   .ag-timeline-card_title {
     display: none;
@@ -3990,7 +3995,7 @@ footer .row {
   .ag-timeline-card_desc {
     line-height: 1.45;
     text-align: left;
-    color: var(--black);
+    color: var(--normal-grey);
   }
   
   @media only screen and (max-width: 979px) {
