@@ -62,6 +62,7 @@
 
  :root {
     --primary-gold: #9c8321;
+    --dark-gold: #695816;
     --secondary-gold: #C2A329;
     --light-gold: rgba(189, 178, 133, 0.539);
     --green: #076210;
@@ -3893,7 +3894,7 @@ footer .row {
   }
   .js-ag-active .ag-timeline-card_point {
     background-color: var(--primary-gold);
-    border-color: var(--primary-gold);
+    border-color: var(--dark-gold);
   }
   .ag-timeline-card_meta-box {
     display: inline-block;
@@ -3909,6 +3910,7 @@ footer .row {
     width: 45%;
     margin: -77px 0 0;
     background-color: var(--white);
+    border: 2px solid var(--dark-gold);
     opacity: 0;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   
@@ -3947,7 +3949,7 @@ footer .row {
     height: 18px;
     width: 18px;
     margin-top: 20px;
-    background-color: var(--white);
+    background-color: var(--dark-gold);
   
     z-index: -1;
     position: absolute;
