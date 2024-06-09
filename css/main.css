@@ -4103,6 +4103,11 @@ footer .row {
     table-layout: fixed;
 }
 
+.location-service {
+    margin: 10px 0;
+    color: var(--primary-gold);
+}
+
 .service-title {
     margin-top: 4rem !important;
     position: relative;
