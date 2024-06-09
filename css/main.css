@@ -2969,12 +2969,12 @@ html.no-csstransitions .home-content__main {
 
 .clients-testimonials .testimonials .slick-prev {
     left: -130px;
-    background-image: url("../images/left-arrow.png");
+    background-image: url("../images/left-arrow.webp");
 }
 
 .clients-testimonials .testimonials .slick-next {
     right: -130px;
-    background-image: url("../images/right-arrow.png");
+    background-image: url("../images/right-arrow.webp");
 }
 
 .clients-testimonials .testimonials .slick-dots {
@@ -3055,7 +3055,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-contact {
     background-color: #151515;
-    background-image: url("../images/contact-bg.jpg");
+    background-image: url("../images/contact-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center, center;
