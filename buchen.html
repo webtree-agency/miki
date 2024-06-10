@@ -84,13 +84,13 @@
          <div class="about__line"></div>
          <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-               <h3 class="subhead">Kontaktieren</h3>
-               <h1 class="display-2 display-2--light">Entscheide dich für ein Angebot!</h1>
+               <h3 class="subhead">Buchen</h3>
+               <h1 class="display-2 display-2--light">Was hält dich fest, deinen Traum zu verwirklichen?</h1>
             </div>
          </div>
          <div class="row contact-content" data-aos="fade-up">
             <div class="contact-primary">
-               <h3 class="h6">Sende mir eine Nachricht</h3>
+               <h3 class="h6">Entscheide dich für ein Angebot!</h3>
                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
                   <fieldset>
                      <div class="form-field">
@@ -115,7 +115,7 @@
                          <textarea name="contactMessage" id="contactMessage" placeholder="Nachricht" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
                      </div>
                      <div class="form-field">
-                         <button class="full-width btn--primary">Senden</button>
+                         <button class="full-width btn--primary">Buchen</button>
                          <div class="submit-loader">
                              <div class="text-loader">Sending...</div>
                              <div class="s-loader">
@@ -140,8 +140,9 @@
                   <div class="cinfo">
                      <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
                      <p>
-                        Umkreis Zürich<br>
-                        Umkreis Goldküste<br>
+                        Zürich<br>
+                        Goldküste<br>
+                        Rapperswil
                      </p>
                   </div>
                   <div class="cinfo">
@@ -254,76 +255,6 @@
             </div>
          </div>
       </div>
-      <div id="popup" class="popup">
-         <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
-         <h3>Kostenloses Probetraining!</h3>
-         <div class="home-content__buttons popup-div">
-            <a class="btn btn--gold-full" href="#">
-            Jetzt buchen
-            </a>
-            <a id="hide-popup" class="btn btn--grey">
-            Verbergen
-            </a>
-         </div>
-      </div>
-      <script>
-         document.addEventListener('DOMContentLoaded', (event) => {
-             const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
-         
-             const showPopup = () => {
-                 const popup = document.getElementById('popup');
-                 popup.style.display = 'block';
-             };
-         
-             const closePopup = () => {
-                 const popup = document.getElementById('popup');
-                 popup.style.display = 'none';
-             };
-         
-             if (!isPopupHidden) {
-                 setTimeout(showPopup, 5000); 
-             }
-         
-             document.getElementById('close-popup').addEventListener('click', () => {
-                 closePopup();
-             });
-         
-             document.getElementById('hide-popup').addEventListener('click', () => {
-                 closePopup();
-                 localStorage.setItem('hidePopup', 'true');
-             });
-         });
-          
-      </script>
-      <script>
-         function showPricing(pricingType) {
-             var cards = document.querySelectorAll('.pricing-col');
-             cards.forEach(function(card) {
-                 card.style.display = 'none';
-             });
-         
-             var selectedCard = document.getElementById(pricingType + '-card');
-             
-             if (selectedCard) {
-                 selectedCard.style.display = 'block';
-             }
-         
-             var buttons = document.querySelectorAll('.btn.btn--black');
-             buttons.forEach(function(button) {
-                 if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
-                     button.classList.add('active');
-                 } else {
-                     button.classList.remove('active');
-                 }
-             });
-         }
-         
-         window.onload = function() {
-             showPricing('futsal');
-             var futsalButton = document.querySelector('button[data-type="futsal"]');
-             futsalButton.classList.add('active');
-         };      
-      </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
