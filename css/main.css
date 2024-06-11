@@ -2515,9 +2515,19 @@ html.no-csstransitions .home-content__main {
 
 .background-service-div {
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 80px 50px;
     max-width: 1200px;
+}
+
+.s-services .overlay {
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
 }
 
 .service-header h1 {
@@ -2529,7 +2539,8 @@ html.no-csstransitions .home-content__main {
 }
 
 .background-section {
-    background-size: cover !important; /* Bild skalieren, um den gesamten Bereich zu füllen */
+    background-size: cover !important;
+    background-position: center;
     width: 100%;
 }
 
@@ -4120,6 +4131,7 @@ footer .row {
 .service-pricing {
     margin-bottom: 50px;
     margin-top: 0 !important;
+    color: var(--white);
 }
 
 .pricing-table-container {
