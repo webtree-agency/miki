@@ -369,37 +369,50 @@
          });
           
       </script>
-            <script>
-               function showPricing(pricingType) {
-                   var cards = document.querySelectorAll('.pricing-col');
-                   cards.forEach(function(card) {
-                       card.style.display = 'none';
-                   });
-               
-                   var selectedCard = document.getElementById(pricingType + '-card');
-                   
-                   if (selectedCard) {
-                       selectedCard.style.display = 'block';
-                   }
-               
-                   var buttons = document.querySelectorAll('.btn--white');
-                   buttons.forEach(function(button) {
-                       if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
-                           button.classList.add('active');
-                       } else {
-                           button.classList.remove('active');
-                       }
-                   });
-               }
-               
-               window.onload = function() {
-                   showPricing('hallen');
-                   var futsalButton = document.querySelector('button[data-type="hallen"]');
-                   futsalButton.classList.add('active');
-               };
-               
-                           
-            </script>
+    <script>
+        function showPricing(pricingType) {
+            var cards = document.querySelectorAll('.pricing-col');
+            cards.forEach(function(card) {
+                card.style.display = 'none';
+            });
+
+            var selectedCard = document.getElementById(pricingType + '-card');
+            if (selectedCard) {
+                selectedCard.style.display = 'block';
+            }
+
+            var buttons = document.querySelectorAll('.btn--white');
+            buttons.forEach(function(button) {
+                if (button.textContent.trim() === pricingType.charAt(0).toUpperCase() + pricingType.slice(1) + '-Training') {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Change background image based on pricingType
+            var backgroundSection = document.querySelector('.background-section');
+            var backgroundImages = {
+                hallen: '/images/halle-bg.webp',
+                rasen: '/images/rasen-bg.webp',
+                kombo: '/images/combo-bg.webp',
+                camp: '/images/football-pitch.webp'
+                // Add more mappings as needed
+            };
+
+            if (backgroundImages[pricingType]) {
+                backgroundSection.style.backgroundImage = 'url(' + backgroundImages[pricingType] + ')';
+            }
+        }
+
+        window.onload = function() {
+            showPricing('hallen');
+            var hallenButton = document.querySelector('button[data-type="hallen"]');
+            if (hallenButton) {
+                hallenButton.classList.add('active');
+            }
+        };
+    </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>

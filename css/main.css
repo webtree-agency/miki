@@ -2529,7 +2529,6 @@ html.no-csstransitions .home-content__main {
 }
 
 .background-section {
-    background: url('/images/football-pitch-black-white.webp') no-repeat center center !important;
     background-size: cover !important; /* Bild skalieren, um den gesamten Bereich zu füllen */
     width: 100%;
 }
