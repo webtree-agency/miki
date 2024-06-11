@@ -2540,11 +2540,12 @@ html.no-csstransitions .home-content__main {
 
 .services-list .service-icon {
     float: left;
-    color: var(--primary-gold);
-    font-size: 4.8rem;
     margin-top: -.6rem;
 }
 
+.fussball-icon {
+    width: 60px;
+}
 
 /* ------------------------------------------------------------------- 
  * responsive:
