@@ -2510,6 +2510,12 @@ html.no-csstransitions .home-content__main {
     padding: 0;
 }
 
+.background-section {
+    background: url('/images/football-pitch-black-white.webp') no-repeat center center !important;
+    background-size: cover !important; /* Bild skalieren, um den gesamten Bereich zu füllen */
+    width: 100%;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## services list
