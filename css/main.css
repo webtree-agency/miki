@@ -4201,3 +4201,14 @@ footer .row {
     padding-top: 12px;
     padding-bottom: 12px;
 }
+
+/* AGB */
+
+.agb-link {
+    color: var(--black);
+    font-weight: bold;
+}
+
+.agb-link:hover {
+    color: var(--primary-gold);
+}
