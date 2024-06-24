@@ -96,20 +96,19 @@
          <div class="row contact-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-aos="fade-up">
             <div class="contact-primary">
                <h3 class="h6">Entscheide dich für ein Angebot!</h3>
-               <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactForm" method="post"novalidate="novalidate">
-                  <fieldset>
+               <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
                      <div class="form-field">
-                         <input name="Name" type="text" id="Name" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                         <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" pattern="[a-zA-Z\s\-]+" required>
                      </div>
                      <div class="form-field">
-                         <input name="email" type="email" id="email" placeholder="E-Mail" value="" required="" aria-required="true" class="full-width">
+                         <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
                      </div>
                      <div class="form-field">
-                         <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" value="" required="" aria-required="true" class="full-width">
+                         <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
                      </div>
                      <div class="form-field">
                          <label for="gewähltes Angebot">Wähle ein Angebot aus</label>
-                         <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required="" aria-required="true">
+                         <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required>
                              <option value="Hallen-Training">Hallen-Training</option>
                              <option value="Rasen-Training">Rasen-Training</option>
                              <option value="Kombi-Training">Kombi-Training</option>
@@ -120,7 +119,6 @@
                          <textarea name="Nachricht / Anliegen" id="Nachricht / Anliegen" placeholder="Nachricht / Anliegen" rows="10" cols="50" class="full-width"></textarea>
                      </div>
                         <button type="submit" class="full-width btn--primary">Buchen</button>
-                 </fieldset>
                </form>
             </div>
             <div class="contact-secondary">
@@ -244,8 +242,8 @@
             </div>
          </div>
       </div>
-      <script type="text/javascript">
-         var form = document.getElementById("contactForm");
+      <script>
+         var form = document.getElementById("contactFormBuchen");
          form.onsubmit = function(event) {
              event.preventDefault();
              var formData = new FormData(form);
