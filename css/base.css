@@ -930,6 +930,10 @@ textarea {
     align-items: center;
 }
 
+.content-center.flex-column {
+    flex-direction: column !important;
+}
+
 
 /*# sourceMappingURL=base.css.map */
 
