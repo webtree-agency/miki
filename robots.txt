@@ -1,2 +1,3 @@
 User-agent: *
+Allow: /
 Sitemap: https://www.amzilegacyfootballtraining.ch/sitemap.xml
