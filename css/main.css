@@ -4142,6 +4142,10 @@ footer .row {
     table-layout: fixed;
 }
 
+.info-pricing {
+    display: none;
+}
+
 .location-service {
     margin: 10px 0;
     color: var(--primary-gold);
@@ -4170,6 +4174,11 @@ footer .row {
     }
 
     .pricing-table {
+        margin-bottom: 0;
+    }
+
+    .info-pricing {
+        display: block;
         margin-bottom: 30px;
     }
 
