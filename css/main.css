@@ -4221,3 +4221,6 @@ footer .row {
 .agb-link:hover {
     color: var(--primary-gold);
 }
+.nowrap{
+    white-space: nowrap;
+}
