@@ -4151,6 +4151,11 @@ footer .row {
     color: var(--primary-gold);
 }
 
+.price-reduction {
+    color: var(--white);
+    margin: 10px 0;
+}
+
 .service-title {
     margin-top: 4rem !important;
     position: relative;
