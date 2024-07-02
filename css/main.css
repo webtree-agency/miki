@@ -2658,7 +2658,6 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-works {
     background: var(--white);
-    padding: 0 0 15rem 0;
     min-height: 800px;
     position: relative;
 }
@@ -2880,27 +2879,6 @@ html.no-csstransitions .home-content__main {
         font-size: 1.3rem;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .s-works {
-        padding-bottom: 12rem;
-    }
-    .s-works .intro-wrap {
-        padding: 12rem 0 25.2rem;
-    }
-    .works-content {
-        margin-top: -25.2rem;
-    }
-    .masonry__brick {
-        float: none;
-        width: 100%;
-    }
-    .item-folio__title, .item-folio__cat {
-        font-size: 1.4rem;
-    }
-}
-
-
 
 /* ===================================================================
  * # clients
@@ -4231,4 +4209,37 @@ footer .row {
 }
 .w-100 {
     width: 100%;
+}
+/* Splide */
+.custom-splide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-splide {
+    max-width: 800px; /* Maximale Breite des Sliders */
+    width: 100%;
+}
+
+.custom-splide-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-splide .splide__slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .custom-splide .splide__slide {
+        display: flex;
+        justify-content: center;
+    }
+    .custom-splide .splide__slide img {
+        width: 90%;
+    }
 }
