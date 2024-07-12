@@ -33,7 +33,7 @@
                   <li><a href="./">Home</a></li>
                   <li><a href="about.html">Über mich</a></li>
                   <li class="current"><a href="#">Angebot / Preise</a></li>
-                  <!-- <li><a href="vision.html">Meine Vision</a></li> -->
+                  <li><a href="vision.html">Meine Vision</a></li>
                   <li><a href="buchen.html">Buchen</a></li>
                </ul>
                <ul class="header-nav__social">
@@ -95,14 +95,14 @@
                   </div>
                </div>
                <div class="btn-container align-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                  <!-- <button class="btn btn--white max" onclick="showPricing('futsal')">Futsal-Training</button> -->
+                  <button class="btn btn--white max" onclick="showPricing('futsal')">Futsal-Training</button>
                   <button class="btn btn--white max" onclick="showPricing('rasen')">Rasen-Training</button>
-                  <!-- <button class="btn btn--white max" onclick="showPricing('kombo')">Kombo-Training</button> -->
+                  <button class="btn btn--white max" onclick="showPricing('kombo')">Kombo-Training</button>
                   <button class="btn btn--white max" onclick="showPricing('camp')">Camp-Training</button> 
                </div>
                <div class="pricing-container pricing-container-background">
                   <div class="pricing-row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                     <!-- <div class="pricing-col" id="futsal-card">
+                     <div class="pricing-col" id="futsal-card">
                         <div class="wrap-price">
                            <div>
                               <h3 class="service-title">Futsal-Training</h3>
@@ -142,7 +142,7 @@
                               <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a>
                            </div>
                         </div>
-                     </div> -->
+                     </div>
                      <div class="pricing-col" id="rasen-card">
                         <div class="wrap-price">
                            <div>
@@ -184,7 +184,7 @@
                            </div>
                         </div>
                      </div>
-                     <!-- <div class="pricing-col" id="kombo-card">
+                     <div class="pricing-col" id="kombo-card">
                         <div class="wrap-price">
                            <div>
                               <h3 class="service-title">Kombo-Training</h3>
@@ -224,7 +224,7 @@
                               <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a>
                            </div>
                         </div>
-                     </div> -->
+                     </div>
                      <div class="pricing-col" id="camp-card">
                         <div class="wrap-price">
                            <div>
@@ -434,8 +434,8 @@
          }
          
          window.onload = function() {
-             showPricing('rasen');
-             var futsalButton = document.querySelector('button[data-type="rasen"]');
+             showPricing('futsal');
+             var futsalButton = document.querySelector('button[data-type="futsal"]');
              if (futsalButton) {
                futsalButton.classList.add('active');
              }
