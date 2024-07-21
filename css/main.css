@@ -4243,3 +4243,37 @@ footer .row {
         width: 90%;
     }
 }
+
+/* Tooltip */
+.info-icon {
+    align-self: baseline;
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.info-icon:hover .tooltip {
+    display: block;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: grey;
+    font-size: smaller;
+    white-space: nowrap;
+}
+
+.tooltip a {
+    color: grey;
+    text-decoration: none;
+}
+
+.tooltip a:hover {
+    text-decoration: underline;
+}
