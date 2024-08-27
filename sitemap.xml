@@ -1,27 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://www.amzilegacyfootballtraining.ch/impressum.html</loc>
-    </url>
-    <url>
-        <loc>https://www.amzilegacyfootballtraining.ch/agb.html</loc>
-    </url>
+
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/index.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>1.00</priority>
     </url>
+
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/about.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.80</priority>
     </url>
-    <url>
-        <loc>https://www.amzilegacyfootballtraining.ch/datenschutz.html</loc>
-    </url>
-    <url>
-        <loc>https://www.amzilegacyfootballtraining.ch/buchen.html</loc>
-    </url>
-    <url>
-        <loc>https://www.amzilegacyfootballtraining.ch/angebot.html</loc>
-    </url>
+
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/vision.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.80</priority>
     </url>
+
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/angebot.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/buchen.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/impressum.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.50</priority>
+    </url>
+
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/agb.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.50</priority>
+    </url>
+
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/datenschutz.html</loc>
+        <lastmod>2024-08-27</lastmod>
+        <priority>0.50</priority>
+    </url>
+
 </urlset>
