@@ -1890,6 +1890,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: var(--black);
 }
 
+@media (min-width: 992px) {
+    .s-home .overlay {
+        opacity: .1 !important;
+    }
+}
+
 .no-js .s-home {
     background: var(--black);
 }
