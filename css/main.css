@@ -121,6 +121,10 @@ body {
     border-radius: 10px;
 }
 
+.display-none {
+    display: none;
+}
+
 /* ------------------------------------------------------------------- 
  * ## links
  * ------------------------------------------------------------------- */
@@ -936,7 +940,7 @@ input[type="button"].btn--primary:focus {
 .btn--black.max,
 button.btn--black.max, .btn--white.max,
 button.btn--white.max {
-    width: 220px;
+    width: 250px;
 }
 
 .btn--black:hover, button.btn--black:hover {

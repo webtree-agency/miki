@@ -116,7 +116,7 @@
                           <option value="Futsal-Training">Futsal-Training</option>
                           <option value="Rasen-Training">Rasen-Training</option>
                           <option value="Kombi-Training">Kombi-Training</option>
-                          <option value="Camp-Training">Camp-Training</option>
+                          <option value="Geburtstag-Special">Geburtstag-Special</option>
                       </select>
                   </div>
                   <div class="form-field" id="personen-div">
@@ -127,7 +127,7 @@
                           <option value="Gruppentraining">Gruppentraining (3-6)</option>
                       </select>
                   </div>
-                  <div class="form-field">
+                  <div class="form-field" id="abo-div">
                       <label for="gewähltes Abo">Wähle ein Abo aus</label>
                       <select name="gewähltes Abo" id="gewähltes Abo" class="full-width select-text" required>
                           <option value="Einmaliges-Training">Einmaliges-Training</option>
@@ -136,11 +136,18 @@
                           <option value="20er Abo + gratis Trikot">20er Abo + gratis Trikot</option>
                       </select>
                   </div>
+                  <div class="form-field display-none" id="terminwunsch-geburtstag">
+                      <input name="Terminwunsch" type="date" id="Terminwunsch" class="full-width" required>
+                  </div>
+                  <div class="form-field display-none" id="teilnehmer-geburtstag">
+                     <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Anzahl Teilnehmer" class="full-width" min="5" required>
+                 </div>
                   <div class="form-field">
                       <textarea name="Nachricht / weitere Personen anmerken" id="Nachricht / weitere Personen anmerken" placeholder="Nachricht / weitere Personen anmerken" rows="10" cols="50" class="full-width"></textarea>
                   </div>
                   <button type="submit" class="full-width btn--primary">Buchen</button>
               </form>
+              
             </div>
             <div class="contact-secondary">
                <div class="contact-info">
@@ -268,39 +275,14 @@ function toggleOptions() {
     const angebot = document.getElementById('gewähltes Angebot').value;
     const personenDiv = document.getElementById('personen-div');
     const aboSelect = document.getElementById('gewähltes Abo');
+    const aboDiv = document.getElementById('abo-div');
+    const anzahlTeilnehmer = document.getElementById('teilnehmer-geburtstag');
+    const terminwunschGeburtstag = document.getElementById('terminwunsch-geburtstag');
 
-    if (angebot === 'Camp-Training') {
+    if (angebot === 'Geburtstag-Special') {
         personenDiv.style.display = 'none';
-
-        // Remove all options
-        while (aboSelect.options.length > 0) {
-            aboSelect.remove(0);
-        }
-
-        // Add "Einmaliges-Training" and "10er Abo" options
-        const option1 = new Option('Einmaliges-Training', 'Einmaliges-Training');
-        const option2 = new Option('10er Abo', '10er Abo');
-        aboSelect.add(option1);
-        aboSelect.add(option2);
-
-        personenDiv.value = 'Camp-Training';
-    } else {
-        personenDiv.style.display = 'block';
-
-        // Remove all options
-        while (aboSelect.options.length > 0) {
-            aboSelect.remove(0);
-        }
-
-        // Add all original options
-        const options = [
-            new Option('Einmaliges-Training', 'Einmaliges-Training'),
-            new Option('6er Abo', '6er Abo'),
-            new Option('10er Abo', '10er Abo'),
-            new Option('20er Abo + gratis Trikot', '20er Abo + gratis Trikot')
-        ];
-        options.forEach(option => aboSelect.add(option));
-    }
+        aboDiv.style.display = 'none';
+    } 
 }
         toggleOptions();
       </script>
