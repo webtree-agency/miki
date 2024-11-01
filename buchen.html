@@ -99,7 +99,7 @@
                <h3 class="h6">Entscheide dich für ein Angebot!</h3>
                <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
                   <div class="form-field">
-                      <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" pattern="[a-zA-Z\s\-]+" required>
+                      <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
                   </div>
                   <div class="form-field">
                       <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
@@ -108,7 +108,7 @@
                       <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
                   </div>
                   <div class="form-field">
-                      <input name="Standortwunsch" type="text" id="Standortwunsch" placeholder="Standortwunsch" class="full-width" pattern="[a-zA-Z\s\-]+" required>
+                      <input name="Standortwunsch" type="text" id="Standortwunsch" placeholder="Standortwunsch" class="full-width" required>
                   </div>
                   <div class="form-field">
                       <label for="gewähltes Angebot">Wähle ein Angebot aus</label>
@@ -137,9 +137,20 @@
                       </select>
                   </div>
                   <div class="form-field display-none" id="terminwunsch-geburtstag">
-                      <input name="Terminwunsch" type="date" id="Terminwunsch" class="full-width" required>
-                  </div>
-                  <div class="form-field display-none" id="teilnehmer-geburtstag">
+                     <label for="Terminwunsch">Bitte im Format: Wochentag TT.MM.JJJJ HH:MM</label>
+                     <input 
+                         name="Terminwunsch" 
+                         type="text" 
+                         placeholder="Terminwunsch z.B. Samstag 01.01.2024 09:00" 
+                         id="Terminwunsch" 
+                         class="full-width" 
+                         required 
+                         pattern="^[A-Za-zäöüÄÖÜß]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
+                         title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00"
+                     >
+                 </div>
+                 
+                  <div class="form-field" id="teilnehmer-geburtstag">
                      <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Anzahl Teilnehmer" class="full-width" min="5" required>
                  </div>
                   <div class="form-field">
@@ -282,7 +293,14 @@ function toggleOptions() {
     if (angebot === 'Geburtstag-Special') {
         personenDiv.style.display = 'none';
         aboDiv.style.display = 'none';
-    } 
+        anzahlTeilnehmer.style.display = 'block';
+        terminwunschGeburtstag.style.display = 'block';
+    } else {
+         personenDiv.style.display = 'block';
+         aboDiv.style.display = 'block';
+         anzahlTeilnehmer.style.display = 'none';
+         terminwunschGeburtstag.style.display = 'none';
+    }
 }
         toggleOptions();
       </script>
