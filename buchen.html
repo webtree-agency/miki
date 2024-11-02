@@ -14,7 +14,6 @@
       <link rel="stylesheet" href="css/vendor.css">
       <link rel="stylesheet" href="css/animated.css">
       <link rel="stylesheet" href="css/main.css">
-
       <script src="js/modernizr.js"></script>
       <link rel="shortcut icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="icon" href="svg/favicon.svg" type="image/x-icon">
@@ -58,7 +57,6 @@
       </header>
       <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/football-pitch.webp" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
          <div class="overlay"></div>
-         
          <div class="home-content">
             <div class="row home-content__main">
                <h3>#startyourprocess</h3>
@@ -99,66 +97,64 @@
                <h3 class="h6">Entscheide dich für ein Angebot!</h3>
                <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
                   <div class="form-field">
-                      <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
+                     <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
                   </div>
                   <div class="form-field">
-                      <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
+                     <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
                   </div>
                   <div class="form-field">
-                      <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
+                     <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
                   </div>
                   <div class="form-field">
-                      <input name="Standortwunsch" type="text" id="Standortwunsch" placeholder="Standortwunsch" class="full-width" required>
+                     <input name="Standortwunsch" type="text" id="Standortwunsch" placeholder="Standortwunsch" class="full-width" required>
                   </div>
                   <div class="form-field">
-                      <label for="gewähltes Angebot">Wähle ein Angebot aus</label>
-                      <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="toggleOptions()">
-                          <option value="Futsal-Training">Futsal-Training</option>
-                          <option value="Rasen-Training">Rasen-Training</option>
-                          <option value="Kombi-Training">Kombi-Training</option>
-                          <option value="Geburtstag-Special">Geburtstag-Special</option>
-                      </select>
+                     <label for="gewähltes Angebot">Wähle ein Angebot aus</label>
+                     <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="toggleOptions()">
+                        <option value="Futsal-Training">Futsal-Training</option>
+                        <option value="Rasen-Training">Rasen-Training</option>
+                        <option value="Kombi-Training">Kombi-Training</option>
+                        <option value="Geburtstag-Special">Geburtstag-Special</option>
+                     </select>
                   </div>
                   <div class="form-field" id="personen-div">
-                      <label for="Anzahl Personen">Wähle die Anzahl Personen aus</label>
-                      <select name="Anzahl Personen" id="Anzahl Personen" class="full-width select-text" required>
-                          <option value="Einzeltraining">Einzeltraining</option>
-                          <option value="Training zu zweit">Training zu zweit</option>
-                          <option value="Gruppentraining">Gruppentraining (3-6)</option>
-                      </select>
+                     <label for="Anzahl Personen">Wähle die Anzahl Personen aus</label>
+                     <select name="Anzahl Personen" id="Anzahl Personen" class="full-width select-text" required>
+                        <option value="Einzeltraining">Einzeltraining</option>
+                        <option value="Training zu zweit">Training zu zweit</option>
+                        <option value="Gruppentraining">Gruppentraining (3-6)</option>
+                     </select>
                   </div>
                   <div class="form-field" id="abo-div">
-                      <label for="gewähltes Abo">Wähle ein Abo aus</label>
-                      <select name="gewähltes Abo" id="gewähltes Abo" class="full-width select-text" required>
-                          <option value="Einmaliges-Training">Einmaliges-Training</option>
-                          <option value="6er Abo">6er Abo</option>
-                          <option value="10er Abo">10er Abo</option>
-                          <option value="20er Abo + gratis Trikot">20er Abo + gratis Trikot</option>
-                      </select>
+                     <label for="gewähltes Abo">Wähle ein Abo aus</label>
+                     <select name="gewähltes Abo" id="gewähltes Abo" class="full-width select-text" required>
+                        <option value="Einmaliges-Training">Einmaliges-Training</option>
+                        <option value="6er Abo">6er Abo</option>
+                        <option value="10er Abo">10er Abo</option>
+                        <option value="20er Abo + gratis Trikot">20er Abo + gratis Trikot</option>
+                     </select>
                   </div>
                   <div class="form-field display-none" id="terminwunsch-geburtstag">
                      <label for="Terminwunsch">Bitte im Format: Wochentag TT.MM.JJJJ HH:MM</label>
                      <input 
-                         name="Terminwunsch" 
-                         type="text" 
-                         placeholder="Terminwunsch z.B. Samstag 01.01.2024 09:00" 
-                         id="Terminwunsch" 
-                         class="full-width" 
-                         required 
-                         pattern="^[A-Za-zäöüÄÖÜß]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
-                         title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00"
-                     >
-                 </div>
-                 
+                        name="Terminwunsch" 
+                        type="text" 
+                        placeholder="Terminwunsch z.B. Samstag 01.01.2024 09:00" 
+                        id="Terminwunsch" 
+                        class="full-width" 
+                        required 
+                        pattern="^[A-Za-zäöüÄÖÜß]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
+                        title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00"
+                        >
+                  </div>
                   <div class="form-field" id="teilnehmer-geburtstag">
                      <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Anzahl Teilnehmer" class="full-width" min="5" required>
-                 </div>
+                  </div>
                   <div class="form-field">
-                      <textarea name="Nachricht / weitere Personen anmerken" id="Nachricht / weitere Personen anmerken" placeholder="Nachricht / weitere Personen anmerken" rows="10" cols="50" class="full-width"></textarea>
+                     <textarea name="Nachricht / weitere Personen anmerken" id="Nachricht / weitere Personen anmerken" placeholder="Nachricht / weitere Personen anmerken" rows="10" cols="50" class="full-width"></textarea>
                   </div>
                   <button type="submit" class="full-width btn--primary">Buchen</button>
-              </form>
-              
+               </form>
             </div>
             <div class="contact-secondary">
                <div class="contact-info">
@@ -282,27 +278,28 @@
          </div>
       </div>
       <script>
-function toggleOptions() {
-    const angebot = document.getElementById('gewähltes Angebot').value;
-    const personenDiv = document.getElementById('personen-div');
-    const aboSelect = document.getElementById('gewähltes Abo');
-    const aboDiv = document.getElementById('abo-div');
-    const anzahlTeilnehmer = document.getElementById('teilnehmer-geburtstag');
-    const terminwunschGeburtstag = document.getElementById('terminwunsch-geburtstag');
-
-    if (angebot === 'Geburtstag-Special') {
-        personenDiv.style.display = 'none';
-        aboDiv.style.display = 'none';
-        anzahlTeilnehmer.style.display = 'block';
-        terminwunschGeburtstag.style.display = 'block';
-    } else {
-         personenDiv.style.display = 'block';
-         aboDiv.style.display = 'block';
-         anzahlTeilnehmer.style.display = 'none';
-         terminwunschGeburtstag.style.display = 'none';
-    }
-}
-        toggleOptions();
+         function toggleOptions() {
+             const angebot = document.getElementById('gewähltes Angebot').value;
+             const personenDiv = document.getElementById('personen-div');
+             const aboSelect = document.getElementById('gewähltes Abo');
+             const aboDiv = document.getElementById('abo-div');
+             const anzahlTeilnehmer = document.getElementById('teilnehmer-geburtstag');
+             const terminwunschGeburtstag = document.getElementById('terminwunsch-geburtstag');
+         
+             if (angebot === 'Geburtstag-Special') {
+                 personenDiv.style.display = 'none';
+                 aboDiv.style.display = 'none';
+                 anzahlTeilnehmer.style.display = 'block';
+                 terminwunschGeburtstag.style.display = 'block';
+             } else {
+                  personenDiv.style.display = 'block';
+                  aboDiv.style.display = 'block';
+                  anzahlTeilnehmer.style.display = 'none';
+                  terminwunschGeburtstag.style.display = 'none';
+             }
+         }
+                 toggleOptions();
+               
       </script>
       <script>
          var form = document.getElementById("contactFormBuchen");
@@ -323,7 +320,7 @@ function toggleOptions() {
                  }
              };
          };
-     </script> 
+      </script> 
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
