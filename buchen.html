@@ -8,7 +8,7 @@
       <meta name="author" content="">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name=""mobile-web-app-capable" content="yes">
       <meta http-equiv="Cache-control" content="public, max-age=2629746">
       <link rel="stylesheet" href="css/base.css">
       <link rel="stylesheet" href="css/vendor.css">
@@ -115,6 +115,7 @@
                         <option value="Rasen-Training">Rasen-Training</option>
                         <option value="Kombi-Training">Kombi-Training</option>
                         <option value="Geburtstag-Special">Geburtstag-Special</option>
+                        <option value="Probetraining">Probetraining</option>
                      </select>
                   </div>
                   <div class="form-field" id="personen-div">
@@ -151,7 +152,7 @@
                      <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Anzahl Teilnehmer" class="full-width" min="5" required>
                   </div>
                   <div class="form-field">
-                     <textarea name="Nachricht / weitere Personen anmerken" id="Nachricht / weitere Personen anmerken" placeholder="Nachricht / weitere Personen anmerken" rows="10" cols="50" class="full-width"></textarea>
+                     <textarea name="Nachricht" id="Nachricht / weitere Personen anmerken" placeholder="Nachricht" rows="10" cols="50" class="full-width"></textarea>
                   </div>
                   <button type="submit" class="full-width btn--primary">Buchen</button>
                </form>
@@ -278,28 +279,43 @@
          </div>
       </div>
       <script>
-         function toggleOptions() {
-             const angebot = document.getElementById('gewähltes Angebot').value;
-             const personenDiv = document.getElementById('personen-div');
-             const aboSelect = document.getElementById('gewähltes Abo');
-             const aboDiv = document.getElementById('abo-div');
-             const anzahlTeilnehmer = document.getElementById('teilnehmer-geburtstag');
-             const terminwunschGeburtstag = document.getElementById('terminwunsch-geburtstag');
-         
-             if (angebot === 'Geburtstag-Special') {
-                 personenDiv.style.display = 'none';
-                 aboDiv.style.display = 'none';
-                 anzahlTeilnehmer.style.display = 'block';
-                 terminwunschGeburtstag.style.display = 'block';
-             } else {
-                  personenDiv.style.display = 'block';
-                  aboDiv.style.display = 'block';
-                  anzahlTeilnehmer.style.display = 'none';
-                  terminwunschGeburtstag.style.display = 'none';
-             }
-         }
-                 toggleOptions();
-               
+function toggleOptions() {
+    const angebot = document.getElementById('gewähltes Angebot').value;
+    const personenDiv = document.getElementById('personen-div');
+    const aboSelect = document.getElementById('gewähltes Abo');
+    const aboDiv = document.getElementById('abo-div');
+    const anzahlTeilnehmer = document.getElementById('teilnehmer-geburtstag');
+    const terminwunschGeburtstag = document.getElementById('terminwunsch-geburtstag');
+    const terminwunschInput = document.getElementById('Terminwunsch');
+    const geburtstagPersonen = document.getElementById('geburtstag-personen');
+
+    if (angebot === 'Geburtstag-Special') {
+        personenDiv.style.display = 'none';
+        aboDiv.style.display = 'none';
+        anzahlTeilnehmer.style.display = 'block';
+        terminwunschGeburtstag.style.display = 'block';
+
+        // `required` hinzufügen
+        geburtstagPersonen.setAttribute('required', 'true');
+        terminwunschInput.setAttribute('required', 'true');
+    } else {
+        personenDiv.style.display = 'block';
+        aboDiv.style.display = 'block';
+        anzahlTeilnehmer.style.display = 'none';
+        terminwunschGeburtstag.style.display = 'none';
+
+        // `required` entfernen
+        geburtstagPersonen.removeAttribute('required');
+        terminwunschInput.removeAttribute('required');
+    }
+}
+
+// Initiale Anzeige anpassen
+toggleOptions();
+
+// Event-Listener für Änderungen am Dropdown hinzufügen
+document.getElementById('gewähltes Angebot').addEventListener('change', toggleOptions);
+
       </script>
       <script>
          var form = document.getElementById("contactFormBuchen");
