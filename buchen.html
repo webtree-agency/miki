@@ -298,6 +298,11 @@ function toggleOptions() {
         // `required` hinzufügen
         geburtstagPersonen.setAttribute('required', 'true');
         terminwunschInput.setAttribute('required', 'true');
+    } else if(angebot === 'Probetraining') {
+        personenDiv.style.display = 'none';
+        aboDiv.style.display = 'none';
+        anzahlTeilnehmer.style.display = 'none';
+        terminwunschGeburtstag.style.display = 'none';
     } else {
         personenDiv.style.display = 'block';
         aboDiv.style.display = 'block';
