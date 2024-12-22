@@ -2492,7 +2492,7 @@ html.no-csstransitions .home-content__main {
         padding-top: 12rem;
     }
     .about-desc {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .about-stats {
         padding-top: 0;
@@ -2531,7 +2531,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 400px) {
     .about-desc {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     .stats__count {
         font-size: 7.8rem;
@@ -3116,7 +3116,7 @@ html.no-csstransitions .home-content__main {
         font-size: 2rem;
     }
     .clients-testimonials .testimonials p.text-small {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 }
 
@@ -3125,7 +3125,7 @@ html.no-csstransitions .home-content__main {
         font-size: 1.9rem;
     }
     .clients-testimonials .testimonials p.text-small {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
 
