@@ -1468,9 +1468,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 @media only screen and (max-width: 800px) {
-    .s-clients {
-        padding-bottom: 17.4rem;
-    }
+
     .section-header.has-bottom-sep::before {
         width: 400px;
     }
@@ -2315,7 +2313,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
  .s-sponsor {
     padding-top: 16.2rem;
-    padding-bottom: 16.8rem;
+    padding-bottom: 9rem;
     background-color: var(--primary-gold);
     color: var(--normal-grey);
     position: relative;
@@ -2545,8 +2543,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-    padding-top: 11.2rem;
-    padding-bottom: 11.2rem;
+        padding-top: 16.2rem;
+    padding-bottom: 9rem;
     background-color: var(--white);
     color: var(--normal-grey);
     position: relative;
@@ -2672,9 +2670,6 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 600px) {
-    .s-services {
-        padding-top: 12rem;
-    }
     .services-list .service-item:nth-child(n) {
         padding-right: 10px;
         padding-left: 10px;
@@ -2702,21 +2697,24 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-works {
     background: var(--white);
-    min-height: 800px;
+    /* min-height: 800px; */
     position: relative;
 }
 
 .s-works .intro-wrap {
-    padding: 15rem 0 15rem;
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
     background: #111111;
 }
 
 .about-start .intro-wrap {
-    padding: 15rem 0 10rem;
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
 }
 
 .angebot .intro-wrap {
-    padding: 15rem 0 10rem;
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
 }
 
 .works-content {
@@ -3103,11 +3101,20 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 600px) {
+    .clients-testimonials::before {
+        width: 250px;
+    }
     .s-clients {
         padding-top: 12rem;
     }
-    .clients-testimonials::before {
-        width: 250px;
+    .s-services {
+        padding-top: 12rem;
+    }
+    .s-works .intro-wrap {
+        padding-top: 12rem;
+    }
+    .s-sponsor {
+        padding-top: 12rem;
     }
     .clients-testimonials .testimonials {
         margin: 0;
