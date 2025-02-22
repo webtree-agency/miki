@@ -1885,10 +1885,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .4;
-    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: .1;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='var(--black)00', endColorstr='#cc000000', GradientType=0);
 }
 
@@ -1898,13 +1898,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .3;
+    opacity: .1;
     background-color: var(--black);
 }
 
 @media (min-width: 992px) {
     .s-home .overlay {
-        opacity: .1 !important;
+        opacity: .001 !important;
     }
 }
 
