@@ -4395,6 +4395,7 @@ footer .row {
 
     .sponsor-logo img {
         max-height: 300px;  
+        width: 25vw !important;
     }
 }
 
