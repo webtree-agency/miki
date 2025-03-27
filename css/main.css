@@ -3877,24 +3877,6 @@ footer .row {
     z-index: 1000;
 }
 
-.popup .close {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.popup h3 {
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-
-.popup button {
-    margin: 5px;
-}
-
 /* TIMELINE */
 
 .ag-format-container {

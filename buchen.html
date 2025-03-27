@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <title>Buche dein Training | Amzilegacyfootballtraining.ch</title>
-      <meta content="Football Training, Amzi Legacy, Futsal Training, Rasen Training, Kombi Training, Geburtstag Special, Probetraining, Zürichsee, Stäfa, Hombrechtikon, Rapperswil" name="keywords">
+      <meta content="Football Training, Amzi Legacy, Futsal Training, Rasen Training, Kombi Training, Geburtstag Special, Zürichsee, Stäfa, Hombrechtikon, Rapperswil" name="keywords">
       <meta content="Buche dein Training bei Amzi Legacy Football Training und starte deinen Prozess." name="description">
       <meta property="og:title" content="Buche dein Training | Amzilegacyfootballtraining.ch">
       <meta property="og:description" content="Buche dein Training bei Amzi Legacy Football Training und starte deinen Prozess.">
@@ -120,7 +120,6 @@
                         <option value="Rasen-Training">Rasen-Training</option>
                         <option value="Kombi-Training">Kombi-Training</option>
                         <option value="Geburtstag-Special">Geburtstag-Special</option>
-                        <option value="Probetraining">Probetraining</option>
                      </select>
                   </div>
                   <div class="form-field" id="personen-div">
@@ -303,12 +302,8 @@ function toggleOptions() {
         // `required` hinzufügen
         geburtstagPersonen.setAttribute('required', 'true');
         terminwunschInput.setAttribute('required', 'true');
-    } else if(angebot === 'Probetraining') {
-        personenDiv.style.display = 'none';
-        aboDiv.style.display = 'none';
-        anzahlTeilnehmer.style.display = 'none';
-        terminwunschGeburtstag.style.display = 'none';
-    } else {
+    } 
+     else {
         personenDiv.style.display = 'block';
         aboDiv.style.display = 'block';
         anzahlTeilnehmer.style.display = 'none';
