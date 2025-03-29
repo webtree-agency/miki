@@ -728,7 +728,7 @@ select {
 }
 
 textarea {
-    min-height: 25rem;
+    min-height: 15rem;
 }
 
 input[type="email"]:focus,
@@ -3281,35 +3281,6 @@ html.no-csstransitions .home-content__main {
 .contact-content .btn {
     margin-top: 3.6rem;
 }
-.contact-content input::-webkit-input-placeholder,
-.contact-content select::-webkit-input-placeholder,
-.contact-content textarea::-webkit-input-placeholder {
-    color: #4f4f4f;
-}
-
-.contact-content input:-moz-placeholder,
-.contact-content select:-moz-placeholder,
-.contact-content textarea:-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 18- */
-}
-
-.contact-content input::-moz-placeholder,
-.contact-content select::-moz-placeholder,
-.contact-content textarea::-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 19+ */
-}
-
-.contact-content input:-ms-input-placeholder,
-.contact-content select:-ms-input-placeholder,
-.contact-content textarea:-ms-input-placeholder {
-    color: #4f4f4f;
-}
-
-.contact-content input.placeholder,
-.contact-content select.placeholder,
-.contact-content textarea.placeholder {
-    color: #4f4f4f !important;
-}
 .contact-primary, .contact-secondary {
     float: left;
     padding: 0 5rem;
@@ -3326,9 +3297,7 @@ html.no-csstransitions .home-content__main {
 .contact-secondary {
     width: 35%;
 }
-.select-text option {
-    color: black !important; /* Farbe des Platzhalters */
-}
+
 .contact-secondary::before {
     content: "";
     display: block;
@@ -3402,6 +3371,110 @@ html.no-csstransitions .home-content__main {
     font-size: 1.2rem;
 }
 
+/* Additional styles for the improved contact form */
+.form-group {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.form-group:last-child {
+    border-bottom: none;
+}
+
+.form-group h4 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.contact-content select {
+    height: 3.6rem;
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contact-content select option {
+    background-color: #121212;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-content input[type="text"],
+.contact-content input[type="email"],
+.contact-content input[type="tel"],
+.contact-content input[type="number"],
+.contact-content textarea,
+.contact-content select {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-content input:focus,
+.contact-content textarea:focus,
+.contact-content select:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    outline: none;
+}
+
+.contact-content label {
+    display: block;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    position: relative;
+    left: 0;
+    right: auto;
+    background: transparent;
+    padding: 0;
+}
+
+.contact-content label::after {
+    display: none;
+}
+
+.contact-content select {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    height: auto;
+    min-height: 4.8rem;
+    color: var(--dark-grey) !important;
+}
+
+.contact-content select option,
+.contact-content select:invalid,
+.contact-content select option:first-child {
+   color: var(--light-grey) !important;
+}
+
+.contact-content select::-ms-value {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-content select:focus {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+
+/* Responsive adjustments */
+@media only screen and (max-width: 800px) {
+    .contact-primary,
+    .contact-secondary {
+        float: none;
+        width: 100%;
+        padding: 0 2rem;
+    }
+    
+    .contact-secondary {
+        margin-top: 3rem;
+    }
+    
+    .contact-secondary::before {
+        display: none;
+    }
+}
 
 /* form loader
  * ----------------------------------------------- */
