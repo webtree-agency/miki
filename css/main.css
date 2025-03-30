@@ -961,6 +961,23 @@ button.btn--white.active {
     background: var(--white) !important;
     color: var(--black) !important;
 }
+.btn--gold-camp {
+    background: transparent !important;
+    border: 0.2rem solid var(--secondary-gold) !important;
+    color: var(--secondary-gold)!important;
+    width: 250px;
+}
+
+.btn--gold-camp:hover {
+    background: var(--secondary-gold) !important;
+    color: var(--white) !important;
+}
+
+.btn--gold-camp.active {
+    background: var(--secondary-gold) !important;
+    color:  var(--black) !important;
+}
+
 
 .btn--grey, button.btn--grey {
     background: transparent !important;
