@@ -975,7 +975,7 @@ button.btn--white.active {
 
 .btn--gold-camp.active {
     background: var(--secondary-gold) !important;
-    color:  var(--black) !important;
+    color:  var(--white) !important;
 }
 
 
