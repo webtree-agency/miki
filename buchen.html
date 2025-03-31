@@ -181,6 +181,20 @@
                   <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Min. 5 Teilnehmer" class="full-width" min="5">
                </div>
             </div>
+            <!-- Training Selection -->
+            <div class="form-group">
+               <h4>Spielerinformationen</h4>
+               <div class="form-field">
+                  <input name="Spieler Name" type="text" id="Spieler Name" placeholder="Name des Spielers" minlength="2" class="full-width" required>
+                  <label for="trikot grösse">Trikot Grösse</label>
+                  <select name="Tshirt Grösse" id="Tshirt Grösse" class="full-width select-text" required onchange="toggleOptions()">
+                     <option value="" disabled selected>Bitte wählen...</option>
+                     <option value="Futsal-Training">S</option>
+                     <option value="Rasen-Training">M</option>
+                     <option value="Geburtstag-Special">L</option>
+                  </select>
+               </div>
+            </div>
 
             <!-- Additional Message -->
             <div class="form-group">
