@@ -653,6 +653,49 @@
             </div>
          </div>
       </div>
+      <div id="popup" class="popup">
+         <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
+         <h3>Talentcamp ab 7. Mai</h3>
+         <div class="home-content__buttons popup-div">
+            <a class="btn btn--gold-full" href="buchen.html">
+            Jetzt anmelden
+            </a>
+            <a class="btn btn--grey">
+               Mehr Infos
+               </a>
+            <!-- <a id="hide-popup" class="btn btn--grey">
+            Verbergen
+            </a> -->
+         </div>
+      </div>
+      <script>
+         document.addEventListener('DOMContentLoaded', (event) => {
+            const isPopupHidden = localStorage.getItem('hidePopup') === 'true';
+         
+            const showPopup = () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+            };
+         
+            const closePopup = () => {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'none';
+            };
+         
+            if (!isPopupHidden) {
+                setTimeout(showPopup, 10000); 
+            }
+         
+            document.getElementById('close-popup').addEventListener('click', () => {
+                closePopup();
+            });
+         
+            document.getElementById('hide-popup').addEventListener('click', () => {
+                closePopup();
+                localStorage.setItem('hidePopup', 'true');
+            });
+         });
+      </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
