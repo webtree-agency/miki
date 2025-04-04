@@ -3,10 +3,10 @@
    <head>
       <meta charset="utf-8">
       <title>Angebot | Amzilegacyfootballtraining.ch</title>
-      <meta name="keywords" content="Fussballtraining, Futsal-Training, Rasen-Training, Kombi-Training, Fussball-Camp, Sporttraining, Gruppentraining, Einzeltraining, Sporthalle Uerikon, Sporttraining Zürich, Premium-Training, Jugendfussball, Fussball-Abo, Sportangebote, Sportcamp, Geburtstags-Event, Kindergeburtstage, Sportveranstaltung, Fussballtrainer, Training für Kinder, Training für Jugendliche, Sporthalle Moritzberg, Fussball-Training buchen, Fussball-Workshops, Fussballkurse, Zürich, Stäfa, Hombrechtikon, Rabatte Fussball, Sportangebote für Gruppen">
-      <meta name="description" content="Erstklassige Fussball-Trainings in Zürich, Stäfa und Hombrechtikon: Futsal, Rasen, Kombi und Camp-Training für alle Altersgruppen. Ideal für Kindergeburtstage mit Rabatten und exklusiven Aktionen. Jetzt kostenloses Ersttraining buchen!">
+      <meta name="keywords" content="Fussballtraining, Hallentraining, Rasen-Training, Kombi-Training, Fussball-Camp, Sporttraining, Gruppentraining, Einzeltraining, Sporthalle Uerikon, Sporttraining Zürich, Premium-Training, Jugendfussball, Fussball-Abo, Sportangebote, Sportcamp, Geburtstags-Event, Kindergeburtstage, Sportveranstaltung, Fussballtrainer, Training für Kinder, Training für Jugendliche, Sporthalle Moritzberg, Fussball-Training buchen, Fussball-Workshops, Fussballkurse, Zürich, Stäfa, Hombrechtikon, Rabatte Fussball, Sportangebote für Gruppen">
+      <meta name="description" content="Erstklassige Fussball-Trainings in Zürich, Stäfa und Hombrechtikon: Hallentraining, Rasen, Kombi und Camp-Training für alle Altersgruppen. Ideal für Kindergeburtstage mit Rabatten und exklusiven Aktionen. Jetzt kostenloses Ersttraining buchen!">
       <meta property="og:title" content="Angebot | Amzilegacyfootballtraining.ch">
-      <meta property="og:description" content="Erstklassige Fussball-Trainings in Zürich, Stäfa und Hombrechtikon: Futsal, Rasen, Kombi und Camp-Training für alle Altersgruppen. Ideal für Kindergeburtstage mit Rabatten und exklusiven Aktionen. Jetzt kostenloses Ersttraining buchen!">
+      <meta property="og:description" content="Erstklassige Fussball-Trainings in Zürich, Stäfa und Hombrechtikon: Hallentraining, Rasen, Kombi und Camp-Training für alle Altersgruppen. Ideal für Kindergeburtstage mit Rabatten und exklusiven Aktionen. Jetzt kostenloses Ersttraining buchen!">
       <meta property="og:image" content="https://amzilegacyfootballtraining.ch/images/miki/google-logo.png">
       <meta property="og:url" content="https://amzilegacyfootballtraining.ch/angebot.html">
       <meta property="og:type" content="website">
@@ -99,17 +99,17 @@
                   </div>
                </div>
                <div class="btn-container align-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                  <button class="btn btn--white max" onclick="showPricing('futsal')">Futsal-Training</button>
+                  <button class="btn btn--white max" onclick="showPricing('hallentraining')">Hallentraining</button>
                   <button class="btn btn--white max" onclick="showPricing('rasen')">Rasen-Training</button>
                   <button class="btn btn--gold-camp max" onclick="showPricing('talentcamp')">Talentcamp</button>
                   <button class="btn btn--white max" onclick="showPricing('camp')">Geburtstag-Special</button> 
                </div>
                <div class="pricing-container pricing-container-background">
                   <div class="pricing-row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                     <div class="pricing-col" id="futsal-card">
+                     <div class="pricing-col" id="hallentraining-card">
                         <div class="wrap-price">
                            <div>
-                              <h3 class="service-title">Futsal-Training</h3>
+                              <h3 class="service-title">Hallentraining</h3>
                               <h5 class="location-service"><i class="fas fa-map-marker-alt"></i> Sporthalle Uerikon / Moritzberg</h5>
                               <h5 class="price-reduction font-italic">Dauer 60 Minuten</h5>
                               <h5 class="price-reduction"><i class="fa-solid fa-futbol"></i> Limitierte Anzahl und nur samstags von 8:00 bis 12:00 Uhr.</h5>
@@ -375,14 +375,14 @@ function showPricing(pricingType) {
    
    var backgroundSection = document.querySelector('.background-section');
    var backgroundImages = {
-      futsal: '/images/halle-bg.webp',
+      hallentraining: '/images/halle-bg.webp',
       rasen: '/images/rasen-bg.webp',
       talentcamp: '/images/amzilegacygallery/amzi-family.webp',
       camp: '/images/amzilegacygallery/sprints-black-white.webp',
    };
    
    var backgroundImagesMobile = {
-      futsal: '/images/halle-bg-handy.webp',
+      hallentraining: '/images/halle-bg-handy.webp',
       rasen: '/images/rasen-bg-handy.webp',
       talentcamp: '/images/amzilegacygallery/amzi-family-phone.webp',
       camp: '/images/amzilegacygallery/sprints-black-white.webp',
@@ -406,9 +406,9 @@ window.onload = function() {
    const urlParams = new URLSearchParams(window.location.search);
    const filterParam = urlParams.get('filter');
    
-   const initialPricingType = ['futsal', 'rasen', 'talentcamp', 'camp'].includes(filterParam) 
+   const initialPricingType = ['hallentraining', 'rasen', 'talentcamp', 'camp'].includes(filterParam) 
       ? filterParam 
-      : 'futsal';
+      : 'hallentraining';
    
    showPricing(initialPricingType);
    
