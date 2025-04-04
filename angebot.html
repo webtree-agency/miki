@@ -192,7 +192,7 @@
                      <div class="pricing-col" id="talentcamp-card">
                         <div class="wrap-price">
                            <div>
-                              <h3 class="service-title">Talentcamp</h3>
+                              <h3 class="service-title">Talentcamp ab 7. Mai</h3>
                               <h5 class="location-service"><i class="fas fa-map-marker-alt"></i> Frohberg in Stäfa</h5>
                               <h5 class="price-reduction font-italic">Verfügbar ab 7 Mai</h5>
                               <h5 class="price-reduction"><i class="fa-solid fa-clock"></i> Jeden Mittwoch 13:00 bis 16:00 Uhr</h5>
@@ -347,63 +347,76 @@
          </div>
       </div>
       <script>
-      function showPricing(pricingType) {
-         var cards = document.querySelectorAll('.pricing-col');
-         cards.forEach(function(card) {
-            card.style.display = 'none';
-         });
+function showPricing(pricingType) {
+   const urlParams = new URLSearchParams(window.location.search);
+   
+   urlParams.set('filter', pricingType);
+   
+   history.pushState(null, '', '?' + urlParams.toString());
 
-         var selectedCard = document.getElementById(pricingType + '-card');
-         if (selectedCard) {
-            selectedCard.style.display = 'block';
-         }
+   var cards = document.querySelectorAll('.pricing-col');
+   cards.forEach(function(card) {
+      card.style.display = 'none';
+   });
 
-         var buttons = document.querySelectorAll('.btn--white, .btn--gold-camp');
-         buttons.forEach(function(button) {
-         if (button.getAttribute('onclick') === `showPricing('${pricingType}')`) {
-                  button.classList.add('active');
-            } else {
-                  button.classList.remove('active');
-            }
-         });
-         
-         var backgroundSection = document.querySelector('.background-section');
-         var backgroundImages = {
-         futsal: '/images/halle-bg.webp',
-         rasen: '/images/rasen-bg.webp',
-         talentcamp: '/images/amzilegacygallery/amzi-family.webp',
-         camp: '/images/amzilegacygallery/sprints-black-white.webp',
-         };
-         
-         var backgroundImagesMobile = {
-         futsal: '/images/halle-bg-handy.webp',
-         rasen: '/images/rasen-bg-handy.webp',
-         talentcamp: '/images/amzilegacygallery/amzi-family-phone.webp',
-         camp: '/images/amzilegacygallery/sprints-black-white.webp',
-         };
-         
-         function updateBackgroundImage() {
-         var windowWidth = window.innerWidth;
-         var images = windowWidth >= 768 ? backgroundImages : backgroundImagesMobile;
-         
-         if (images[pricingType]) {
-            backgroundSection.style.backgroundImage = 'url(' + images[pricingType] + ')';
-         }
-         }
-         
-         updateBackgroundImage();
-         
-         window.addEventListener('resize', updateBackgroundImage);
-         }
-         
+   var selectedCard = document.getElementById(pricingType + '-card');
+   if (selectedCard) {
+      selectedCard.style.display = 'block';
+   }
 
-         window.onload = function() {
-             showPricing('futsal');
-             var futsalButton = document.querySelector('button[data-type="futsal"]');
-             if (futsalButton) {
-               futsalButton.classList.add('active');
-             }
-         };
+   var buttons = document.querySelectorAll('.btn--white, .btn--gold-camp');
+   buttons.forEach(function(button) {
+      if (button.getAttribute('onclick') === `showPricing('${pricingType}')`) {
+         button.classList.add('active');
+      } else {
+         button.classList.remove('active');
+      }
+   });
+   
+   var backgroundSection = document.querySelector('.background-section');
+   var backgroundImages = {
+      futsal: '/images/halle-bg.webp',
+      rasen: '/images/rasen-bg.webp',
+      talentcamp: '/images/amzilegacygallery/amzi-family.webp',
+      camp: '/images/amzilegacygallery/sprints-black-white.webp',
+   };
+   
+   var backgroundImagesMobile = {
+      futsal: '/images/halle-bg-handy.webp',
+      rasen: '/images/rasen-bg-handy.webp',
+      talentcamp: '/images/amzilegacygallery/amzi-family-phone.webp',
+      camp: '/images/amzilegacygallery/sprints-black-white.webp',
+   };
+   
+   function updateBackgroundImage() {
+      var windowWidth = window.innerWidth;
+      var images = windowWidth >= 768 ? backgroundImages : backgroundImagesMobile;
+      
+      if (images[pricingType]) {
+         backgroundSection.style.backgroundImage = 'url(' + images[pricingType] + ')';
+      }
+   }
+   
+   updateBackgroundImage();
+   
+   window.addEventListener('resize', updateBackgroundImage);
+}
+
+window.onload = function() {
+   const urlParams = new URLSearchParams(window.location.search);
+   const filterParam = urlParams.get('filter');
+   
+   const initialPricingType = ['futsal', 'rasen', 'talentcamp', 'camp'].includes(filterParam) 
+      ? filterParam 
+      : 'futsal';
+   
+   showPricing(initialPricingType);
+   
+   var initialButton = document.querySelector(`button[onclick="showPricing('${initialPricingType}')"]`);
+   if (initialButton) {
+      initialButton.classList.add('active');
+   }
+};
       </script>
             <div id="popup" class="popup">
                <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
