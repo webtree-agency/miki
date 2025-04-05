@@ -449,6 +449,76 @@
   document.addEventListener("DOMContentLoaded", () => {
     const currentYear = new Date().getFullYear();
     document.getElementById('current-year').textContent = currentYear;
+  });// JavaScript für den Trikot-Slider
+  document.addEventListener('DOMContentLoaded', function() {
+      const sliderImages = document.querySelectorAll('.slider-image');
+      const dots = document.querySelectorAll('.dot');
+      const prevButton = document.querySelector('.slider-prev');
+      const nextButton = document.querySelector('.slider-next');
+      
+      let currentIndex = 0;
+      const totalSlides = sliderImages.length;
+      
+      // Funktion zum Anzeigen eines bestimmten Slides
+      function showSlide(index) {
+          // Aktuelle Klassen entfernen
+          sliderImages.forEach(image => image.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+          
+          // Neuen aktiven Slide setzen
+          currentIndex = (index + totalSlides) % totalSlides;
+          sliderImages[currentIndex].classList.add('active');
+          dots[currentIndex].classList.add('active');
+      }
+      
+      // Event-Listener für Dot-Klicks
+      dots.forEach(dot => {
+          dot.addEventListener('click', function() {
+              const slideIndex = parseInt(this.getAttribute('data-index'));
+              showSlide(slideIndex);
+          });
+      });
+      
+      // Event-Listener für Prev/Next-Buttons
+      prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+      nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+      
+      // Automatische Rotation alle 5 Sekunden
+      let sliderInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+      
+      // Pause bei Mauszeiger über dem Slider
+      const sliderContainer = document.querySelector('.jersey-slider');
+      sliderContainer.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+      sliderContainer.addEventListener('mouseleave', () => {
+          clearInterval(sliderInterval);
+          sliderInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+      });
+      
+      // Touch-Events für mobile Geräte
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      sliderContainer.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+      }, false);
+      
+      sliderContainer.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].clientX;
+          handleSwipe();
+      }, false);
+      
+      function handleSwipe() {
+          if (touchEndX < touchStartX) {
+              // Nach links swipen (nächster Slide)
+              showSlide(currentIndex + 1);
+          } else if (touchEndX > touchStartX) {
+              // Nach rechts swipen (vorheriger Slide)
+              showSlide(currentIndex - 1);
+          }
+      }
+      
+      // Initialisierung des ersten Slides
+      showSlide(0);
   });
 
         
