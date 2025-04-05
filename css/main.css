@@ -1905,6 +1905,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         background-position: center !important;
         width: 100% !important;
     }
+    #talentcover {
+        background: url('../images/amzilegacygallery/trikots-cover-phone.png') !important;
+          background-size: cover !important;
+          background-position: center !important;
+          width: 100% !important;
+      }
   }
   
 
