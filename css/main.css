@@ -4387,6 +4387,10 @@ footer .row {
     max-width: 800px; /* Maximale Breite des Sliders */
     width: 100%;
 }
+.custom-splide-talentcamp {
+    max-width: 500px;
+    width: 100%;
+}
 
 .custom-splide-track {
     display: flex;
@@ -4407,6 +4411,13 @@ footer .row {
     }
     .custom-splide .splide__slide img {
         width: 90%;
+    }
+    .custom-splide-talentcamp .splide__slide {
+        display: flex;
+        justify-content: center;
+    }
+    .custom-splide-talentcamp .splide__slide img {
+        width:70%;
     }
 }
 /* Hauptstile für die Talent-Sektion */
