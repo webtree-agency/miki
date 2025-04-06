@@ -4431,7 +4431,6 @@ footer .row {
 /* Hauptstile für die Talent-Sektion */
 .talent-section {
     position: relative;
-    padding-bottom: 3rem;
 }
 
 /* Split-Hero mit Bild und Text nebeneinander */
@@ -4536,13 +4535,12 @@ footer .row {
     color: var(--white);
 }
 
-/* Feature-Icons in einer Reihe */
 .talent-features-row {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1140px;
-    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1.5rem;
+    max-width: 1140px;
+    margin: 4rem auto 4rem;
     padding: 0 1rem;
 }
 
@@ -4584,7 +4582,6 @@ footer .row {
     margin: 0;
 }
 
-/* Info-Box Styling - Bleibt unverändert */
 .talent-info-box {
     background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.85));
     max-width: 1140px;
@@ -4649,6 +4646,10 @@ footer .row {
 
 /* Responsive Anpassungen */
 @media screen and (max-width: 992px) {
+    .talent-info-box {
+        border: none;
+        margin: 0 1rem 0 1rem; 
+    }
     .split-content {
         padding: 3rem;
     }
