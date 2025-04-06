@@ -3012,7 +3012,7 @@ html.no-csstransitions .home-content__main {
 
 
 /* ------------------------------------------------------------------- 
- * ## testimonials
+ * ##slider quotes
  * ------------------------------------------------------------------- */
 .clients-testimonials {
     margin-top: 4.2rem;
@@ -3101,6 +3101,173 @@ html.no-csstransitions .home-content__main {
     margin-top: -0.6px;
 }
 
+/* Final Clean Testimonials CSS with improved mobile responsiveness */
+
+.clean-testimonial {
+    text-align: center;
+    padding: 30px 25px;
+    margin: 10px auto;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: var(--black);
+    margin-bottom: 20px;
+    position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  .testimonial-text::before {
+    content: "";
+    color: var(--primary-gold);
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    opacity: 0.3;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .author-name {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+  
+  .author-role {
+    font-family: "montserrat-light", sans-serif;
+    font-size: 1.4rem;
+    color: var(--normal-grey);
+  }
+  
+  /* Rating Summary */
+  .rating-summary {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .rating-container {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .rating-value {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+    margin-right: 10px;
+  }
+  
+  .rating-stars {
+    display: flex;
+    margin: 0 10px;
+  }
+  
+  .rating-stars i {
+    color: var(--primary-gold);
+    margin-right: 2px;
+  }
+  
+  .rating-count {
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.4rem;
+    color: var(--normal-grey);
+  }
+  
+  /* Make sure Splide slides are contained */
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    .clean-testimonial {
+      padding: 25px 20px;
+      margin: 5px auto;
+    }
+  
+    .testimonial-text {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+    
+    .testimonial-text::before {
+      font-size: 50px;
+      left: -5px;
+      top: -15px;
+    }
+    
+    .author-name {
+      font-size: 1.5rem;
+    }
+    
+    .author-role {
+      font-size: 1.3rem;
+    }
+    
+    .rating-container {
+      padding: 8px 15px;
+    }
+    
+    .rating-value {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .clean-testimonial {
+      padding: 20px 15px;
+    }
+  
+    .testimonial-text {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+    
+    .testimonial-text::before {
+      font-size: 40px;
+      top: -10px;
+    }
+    
+    .author-name {
+      font-size: 1.4rem;
+    }
+    
+    .author-role {
+      font-size: 1.2rem;
+    }
+    
+    .rating-value {
+      font-size: 2.2rem;
+      margin-right: 5px;
+    }
+    
+    .rating-stars {
+      margin: 0 5px;
+    }
+  }
+  .splide__pagination__page.is-active {
+    background-color: var(--primary-gold) !important;
+  }
 
 /* ------------------------------------------------------------------- 
  * responsive:
