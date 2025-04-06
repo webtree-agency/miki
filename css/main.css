@@ -4816,10 +4816,13 @@ footer .row {
   background-color: white;
   margin-bottom: 2rem;
 }
+.table-header {
+    color: var(--white);
+}
 
 .group-table thead {
   background-color: var(--primary-gold);
-  color: white;
+  color: var(--white);
 }
 
 .group-table th,
@@ -4849,7 +4852,7 @@ footer .row {
 /* Karten-Ansicht für mobile Geräte */
 .group-cards-container {
   display: none;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .group-card {
@@ -4910,11 +4913,6 @@ footer .row {
   margin: 0;
 }
 
-.register-button-container {
-  text-align: center;
-  margin: 2.5rem 0;
-}
-
 /* Media Queries für Responsiveness */
 @media screen and (max-width: 992px) {
   .group-table th,
@@ -4939,14 +4937,6 @@ footer .row {
     grid-template-columns: 1fr;
   }
   
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .age-badge {
-    margin-top: 0.5rem;
-  }
 }
 /* Hauptstile für die Jersey-Sektion */
 .jersey-showcase {
