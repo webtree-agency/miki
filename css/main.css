@@ -5115,13 +5115,15 @@ footer .row {
 }
 
 .jersey-cta {
-    text-align: center;
+    text-align: left;
 }
 
-/* Media Query für Mobilgeräte */
 @media screen and (max-width: 768px) {
     .jersey-content {
         flex-direction: column;
+    }
+    .jersey-cta {
+        text-align: center;
     }
     
     .slider-images {
