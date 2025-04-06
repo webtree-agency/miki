@@ -3835,6 +3835,7 @@ footer .row {
 }
 
 
+
 /* ------------------------------------------------------------------- 
  * ## go to top
  * ------------------------------------------------------------------- */
@@ -3910,6 +3911,7 @@ footer .row {
     }
     .footer-bottom {
         padding-bottom: .6rem;
+        margin-top: 0;;
     }
     .footer-bottom .copyright span {
         display: block;
@@ -4423,7 +4425,7 @@ footer .row {
         justify-content: center;
     }
     .custom-splide-talentcamp .splide__slide img {
-        width:70%;
+        width:90%;
     }
 }
 /* Hauptstile für die Talent-Sektion */
