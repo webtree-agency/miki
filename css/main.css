@@ -5357,3 +5357,45 @@ footer .row {
         padding: 1.5rem;
     }
 }
+/* Video Section */
+/* Training Video Section Styles */
+.s-training-video {
+    background-color: var(--black);
+    color: var(--white);
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
+    position: relative;
+ }
+ 
+ .s-training-video .section-header.has-bottom-sep::before {
+    background-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ .training-video-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--primary-gold);
+ }
+ 
+ .training-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+ }
+ 
+ .video-caption {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: var(--white);
+ }
