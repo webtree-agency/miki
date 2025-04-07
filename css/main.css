@@ -5394,11 +5394,3 @@ footer .row {
     object-fit: cover;
  }
  
- .video-caption {
-    text-align: center;
-    max-width: 800px;
-    margin: 3rem auto 0;
-    font-size: 1.8rem;
-    line-height: 1.7;
-    color: var(--white);
- }
