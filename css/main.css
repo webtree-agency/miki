@@ -1900,7 +1900,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 @media (max-width: 768px) {
     #home {
-      background: url('../images/footballpitch-cover-phone.png') !important;
+      background: url('../images/footballpitch-cover-phone.webp') !important;
         background-size: cover !important;
         background-position: center !important;
         width: 100% !important;
