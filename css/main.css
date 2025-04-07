@@ -5356,6 +5356,9 @@ footer .row {
     .jersey-included-box {
         padding: 1.5rem;
     }
+    .training-video-wrapper {
+        max-width: 350px !important;
+    }
 }
 /* Video Section */
 /* Training Video Section Styles */
