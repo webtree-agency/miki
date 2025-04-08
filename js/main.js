@@ -19,6 +19,84 @@
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
+    var clCookieBanner = function() {
+        // Cookie functions
+        function setCookie(name, value, days) {
+            var expires = '';
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = '; expires=' + date.toUTCString();
+            }
+            document.cookie = name + '=' + (value || '') + expires + '; path=/';
+        }
+        
+        function getCookie(name) {
+            var nameEQ = name + '=';
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        // Check if cookie consent has been set
+        if (getCookie('cookieConsent') === null) {
+            $('#cookie-banner').fadeIn();
+        }
+        
+        // Accept cookies
+        $(document).on('click', '#accept-cookies', function() {
+            setCookie('cookieConsent', 'accepted', cfg.cookieExpiry);
+            $('#cookie-banner').fadeOut();
+            
+            // Now that cookies are accepted, show the popup with some delay
+            setTimeout(function() {
+                clPopup();
+            }, 2000);
+        });
+        
+        // Decline cookies
+        $(document).on('click', '#decline-cookies', function() {
+            setCookie('cookieConsent', 'declined', cfg.cookieExpiry);
+            $('#cookie-banner').fadeOut();
+            
+            // Show popup even if cookies declined
+            setTimeout(function() {
+                clPopup();
+            }, 2000);
+        });
+        
+        // If cookie consent is already given, prepare to show popup
+        if (getCookie('cookieConsent') !== null) {
+            setTimeout(function() {
+                clPopup();
+            }, cfg.popupDelay);
+        }
+    };
+    
+    var clPopup = function() {
+        // Check if popup should be hidden based on localStorage
+        var isPopupHidden = localStorage.getItem('hidePopup') === 'true';
+        
+        if (!isPopupHidden) {
+            $('#popup').fadeIn().addClass('popup-visible');
+        }
+        
+        // Handle close button click
+        $(document).on('click', '#close-popup', function() {
+            $('#popup').fadeOut();
+            // Don't permanently hide popup when just closed
+        });
+        
+        // Handle "Don't show again" button if it exists
+        $(document).on('click', '#hide-popup', function() {
+            $('#popup').fadeOut();
+            localStorage.setItem('hidePopup', 'true');
+        });
+    };
 
    /* Preloader
     * -------------------------------------------------- */
@@ -444,6 +522,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        clCookieBanner();
 
     })();
   document.addEventListener("DOMContentLoaded", () => {
