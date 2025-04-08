@@ -21,7 +21,6 @@
       <script src="js/modernizr.js"></script>
       <link rel="shortcut icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="icon" href="svg/favicon.svg" type="image/x-icon">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    </head>
    <body id="top">
@@ -352,14 +351,12 @@
                </div>
             </div>
             <div class="row jersey-content">
-               <div class="custom-splide-container">
-                  <div id="splide" class="splide custom-splide-talentcamp">
-                     <div class="splide__track custom-splide-track">
-                        <ul class="splide__list">
-                           <li class="splide__slide"><img src="images/amzilegacygallery/trikots-sitzend.webp" alt="Trikots sitzend" loading="lazy"></li>
-                           <li class="splide__slide"><img src="images/amzilegacygallery/trikots-stehend.webp" alt="Trikots stehend" loading="lazy"></li>
-                        </ul>
-                     </div>
+               <div class="col-six tab-full training-video-container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <div class="training-video-wrapper">
+                     <video controls poster="images/promotion-reel-cover.webp" class="training-video" preload="none" muted>
+                        <source src="videos/promotion-reel.mp4" type="video/mp4">
+                        Dein Browser unterstützt keine Videos.
+                     </video>
                   </div>
                </div>
                <!-- Trikot-Beschreibung -->
@@ -634,16 +631,7 @@
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
-      <script>
-         document.addEventListener('DOMContentLoaded', function () {
-            var splide = new Splide( '.splide', {
-               type  : 'fade',
-               rewind: true,
-               } );
-         
-         splide.mount();         });
-      </script>
+
       <script src="js/wow.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
    </body>
 </html>
