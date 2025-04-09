@@ -5542,3 +5542,32 @@ footer .row {
  .new-tag-navbar {
     background-color: var(--primary-gold); color: white; font-size: 0.6em; padding: 4px 8px; vertical-align: top; margin-left: 5px;
  }
+
+ /* Goldene Tabellen-Styling */
+.gold-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .gold-table th {
+    background-color: var(--primary-gold);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-weight: bold;
+  }
+
+  
+  .gold-table td {
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+
+  .schedule-button {
+    border: 0.2rem solid white;
+  }
