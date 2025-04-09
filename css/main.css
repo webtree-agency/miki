@@ -5530,3 +5530,15 @@ footer .row {
     object-fit: cover;
  }
  
+ .new-tag {
+    display: inline-block; 
+    background-color: var(--primary-gold); 
+    color: white; 
+    font-size: 0.4em; 
+    padding: 4px 8px; 
+    vertical-align: top;
+ }
+
+ .new-tag-navbar {
+    background-color: var(--primary-gold); color: white; font-size: 0.6em; padding: 4px 8px; vertical-align: top; margin-left: 5px;
+ }
