@@ -861,13 +861,6 @@ textarea {
 
 /* Misc Helper Styles
  * -------------------------------------- */
-.is-hidden {
-    display: none;
-}
-
-.is-invisible {
-    visibility: hidden;
-}
 
 .antialiased {
     -webkit-font-smoothing: antialiased;
