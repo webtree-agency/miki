@@ -4761,8 +4761,8 @@ footer .row {
 }
 
 .custom-splide .splide__slide img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 90vh
 }
 
 /* Media query for mobile devices */
@@ -4773,13 +4773,7 @@ footer .row {
     }
     .custom-splide .splide__slide img {
         width: 90%;
-    }
-    .custom-splide-talentcamp .splide__slide {
-        display: flex;
-        justify-content: center;
-    }
-    .custom-splide-talentcamp .splide__slide img {
-        width:90%;
+        height: auto;
     }
 }
 /* Hauptstile für die Talent-Sektion */
