@@ -1906,7 +1906,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         width: 100% !important;
     }
     #talentcover {
-        background: url('../images/amzilegacygallery/trikot-cover-phone.webp') !important;
+        background: url('../images/trikot-cover-phone.webp') !important;
           background-size: cover !important;
           background-position: center !important;
           width: 100% !important;
@@ -4626,7 +4626,7 @@ footer .row {
     padding: 10px 20px;
     text-align: center;
     overflow-x: auto;
-    padding: 0; /* Remove any padding */
+    padding: 0; 
 }
 
 .service-pricing {
@@ -4636,13 +4636,13 @@ footer .row {
 }
 
 .pricing-table-container {
-    overflow-x: auto; /* Ensures horizontal scrolling */
-    margin: 0; /* Remove any margins */
+    overflow-x: auto; 
+    margin: 0;
 }
 
 .pricing-table {
     width: 100%;
-    min-width: 860px; /* Ensures table is at least 1000px wide */
+    min-width: 860px; 
     border-collapse: collapse;
     margin-bottom: 50px;
     table-layout: fixed;
@@ -4722,7 +4722,6 @@ footer .row {
     padding-bottom: 12px;
 }
 
-/* AGB */
 
 .agb-link {
     color: var(--black);
@@ -4738,7 +4737,6 @@ footer .row {
 .w-100 {
     width: 100%;
 }
-/* Splide */
 .custom-splide-container {
     display: flex;
     justify-content: center;
@@ -4746,7 +4744,7 @@ footer .row {
 }
 
 .custom-splide {
-    max-width: 800px; /* Maximale Breite des Sliders */
+    max-width: 800px; 
     width: 100%;
 }
 .custom-splide-talentcamp {
