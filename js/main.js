@@ -487,12 +487,121 @@
             }
         });
     };
+    /* Form Functions
+ * ------------------------------------------------------ */
+var clFormOptions = function() {
+    
+    function updateFormOptions() {
+        const angebot = document.getElementById('gewähltes Angebot').value;
+        const standortSelect = document.getElementById('Standort');
+        const regularTrainingOptions = document.getElementById('regular-training-options');
+        const birthdaySpecialOptions = document.getElementById('birthday-special-options');
+        const talentcampOptions = document.getElementById('talentcamp-options');
+        
+        // Get form fields that need toggling required attribute
+        const anzahlPersonen = document.getElementById('Anzahl Personen');
+        const gewähltesAbo = document.getElementById('gewähltes Abo');
+        const terminwunsch = document.getElementById('Terminwunsch');
+        const geburtstagPersonen = document.getElementById('geburtstag-personen');
+        
+        // Reset all sections first
+        regularTrainingOptions.style.display = 'none';
+        birthdaySpecialOptions.style.display = 'none';
+        talentcampOptions.style.display = 'none';
+        
+        // Always disable Standort first
+        standortSelect.disabled = true;
+        
+        if (angebot === 'Hallen-Training') {
+            standortSelect.value = 'Hombrechtikon';
+            regularTrainingOptions.style.display = 'block';
+            
+            // Set required fields
+            anzahlPersonen.setAttribute('required', 'true');
+            gewähltesAbo.setAttribute('required', 'true');
+            terminwunsch.removeAttribute('required');
+            geburtstagPersonen.removeAttribute('required');
+        } 
+        else if (angebot === 'Rasen-Training') {
+            // Rasen-Training is always in Stäfa
+            standortSelect.value = 'Stäfa';
+            regularTrainingOptions.style.display = 'block';
+            
+            // Set required fields
+            anzahlPersonen.setAttribute('required', 'true');
+            gewähltesAbo.setAttribute('required', 'true');
+            terminwunsch.removeAttribute('required');
+            geburtstagPersonen.removeAttribute('required');
+        }
+        else if (angebot === 'Talent-Camp') {
+            // Talentcamp is always in Stäfa and is a fixed 10er abo
+            standortSelect.value = 'Stäfa';
+            talentcampOptions.style.display = 'block';
+            
+            // Remove required fields for training options
+            anzahlPersonen.removeAttribute('required');
+            gewähltesAbo.removeAttribute('required');
+            terminwunsch.removeAttribute('required');
+            geburtstagPersonen.removeAttribute('required');
+        }
+        else if (angebot === 'Geburtstag-Special') {
+            // For Geburtstag-Special, show location selection
+            standortSelect.disabled = false;
+            standortSelect.value = '';  // Reset the selection
+            birthdaySpecialOptions.style.display = 'block';
+            
+            // Set required fields
+            anzahlPersonen.removeAttribute('required');
+            gewähltesAbo.removeAttribute('required');
+            terminwunsch.setAttribute('required', 'true');
+            geburtstagPersonen.setAttribute('required', 'true');
+        } 
+        else {
+            // Default state when no option is selected
+            standortSelect.value = '';
+            standortSelect.disabled = false;
+        }
+    }
+    
+    // Initialize form and form submission
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add event listener to the form select
+        var angebotSelect = document.getElementById('gewähltes Angebot');
+        if (angebotSelect) {
+            angebotSelect.addEventListener('change', updateFormOptions);
+            // Initialize form options
+            updateFormOptions();
+        }
+        
+        // Setup form submission
+        var form = document.getElementById("contactFormBuchen");
+        if (form) {
+            form.onsubmit = function(event) {
+                event.preventDefault();
+                var formData = new FormData(form);
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", form.action, true);
+                xhr.send(formData);
+                
+                xhr.onload = function(e) {
+                    if (xhr.status === 200) {
+                        window.location.href = 'erfolg.html';
+                        form.reset();  
+                    } else {
+                        window.alert("Ein Fehler ist aufgetreten, bitte versuche es erneut!");
+                    }
+                };
+            };
+        }
+    });
+};
+
+
 
 
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-        
         clPreloader();
         clOffCanvas();
         clPhotoswipe();
@@ -506,6 +615,7 @@
         clAjaxChimp();
         clBackToTop();
         clCookieBanner();
+        clFormOptions();
 
     })();
   document.addEventListener("DOMContentLoaded", () => {

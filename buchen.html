@@ -89,273 +89,166 @@
             </li>
          </ul>
       </section>
-<!-- CONTACT FORM SECTION -->
-<section id="contact" class="s-contact">
-   <div class="buchen__line"></div>
-   <div class="row section-header wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-aos="fade-up">
-      <div class="col-full">
-         <h3 class="subhead subhead--dark">Buchen</h3>
-         <h1 class="display-2 display-2--light">Entscheide dich für ein Angebot!</h1>
-      </div>
-   </div>
-   <div class="row contact-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-aos="fade-up">
-      <div class="contact-primary">
-         <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
-            <!-- Personal Information -->
-            <div class="form-group">
-               <h4>Persönliche Angaben</h4>
-               <div class="form-field">
-                  <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
-               </div>
-               <div class="form-field">
-                  <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
-               </div>
-               <div class="form-field">
-                  <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
-               </div>
+      <!-- CONTACT FORM SECTION -->
+      <section id="contact" class="s-contact">
+         <div class="buchen__line"></div>
+         <div class="row section-header wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-aos="fade-up">
+            <div class="col-full">
+               <h3 class="subhead subhead--dark">Buchen</h3>
+               <h1 class="display-2 display-2--light">Entscheide dich für ein Angebot!</h1>
             </div>
-
-            <!-- Training Selection -->
-            <div class="form-group">
-               <h4>Training Auswahl</h4>
-               <div class="form-field">
-                  <label for="gewähltes Angebot">Trainingsart</label>
-                  <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="updateFormOptions()">
-                     <option value="" disabled selected>Bitte wählen...</option>
-                     <option value="Hallentraining">Hallentraining</option>
-                     <option value="Rasen-Training">Rasen-Training</option>
-                     <option value="Talent-Camp">Talentcamp</option>
-                     <option value="Geburtstag-Special">Geburtstag-Special</option>
-                  </select>
-               </div>
-               
-               <div class="form-field">
-                  <label for="Standort">Standort</label>
-                  <select name="Standort" id="Standort" class="full-width select-text" required disabled>
-                     <option value="" disabled selected>Bitte wählen...</option>
-                     <option value="Stäfa">Stäfa</option>
-                     <option value="Hombrechtikon">Moritzberg Hombrechtikon</option>
-                  </select>
-               </div>
-            </div>
-
-            <!-- Regular Training Options -->
-            <div class="form-group" id="regular-training-options">
-               <h4>Trainingsoptionen</h4>
-               <div class="form-field" id="personen-div">
-                  <label for="Anzahl Personen">Anzahl Personen</label>
-                  <select name="Anzahl Personen" id="Anzahl Personen" class="full-width select-text" required>
-                     <option value="" disabled selected>Bitte wählen...</option>
-                     <option value="Einzeltraining">Einzeltraining</option>
-                     <option value="Training zu zweit">Training zu zweit</option>
-                     <option value="Gruppentraining">Gruppentraining (3-6)</option>
-                  </select>
-               </div>
-               <div class="form-field" id="abo-div">
-                  <label for="gewähltes Abo">Abo</label>
-                  <select name="gewähltes Abo" id="gewähltes Abo" class="full-width select-text" required>
-                     <option value="" disabled selected>Bitte wählen...</option>
-                     <option value="Einmaliges-Training">Einmaliges-Training</option>
-                     <option value="6er Abo">6er Abo</option>
-                     <option value="10er Abo">10er Abo</option>
-                     <option value="20er Abo">20er Abo</option>
-                  </select>
-               </div>
-            </div>
-
-            <!-- Birthday Special Options -->
-            <div class="form-group" id="birthday-special-options" style="display: none;">
-               <h4>Geburtstag Special</h4>
-               <div class="form-field" id="terminwunsch-geburtstag">
-                  <label for="Terminwunsch">Wunschtermin</label>
-                  <input 
-                     name="Terminwunsch" 
-                     type="text" 
-                     placeholder="z.B. Samstag 01.01.2024 09:00" 
-                     id="Terminwunsch" 
-                     class="full-width" 
-                     pattern="^[A-Za-zäöüÄÖÜss]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
-                     title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00">
-               </div>
-               <div class="form-field" id="teilnehmer-geburtstag">
-                  <label for="geburtstag-personen">Anzahl Teilnehmer</label>
-                  <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Min. 5 Teilnehmer" class="full-width" min="5">
-               </div>
-            </div>
-
-            <!-- Talentcamp Options -->
-            <div class="form-group" id="talentcamp-options" style="display: none;">
-               <h4>Talentcamp Info</h4>
-               <div class="form-field">
-                  <p class="talentcamp-info">Das Talentcamp ist ein 10er Abo und findet in Stäfa statt.</p>
-               </div>
-            </div>
-
-            <!-- Player Information -->
-            <div class="form-group" id="player-info">
-               <h4>Spielerinformationen</h4>
-               <div class="form-field">
-                  <input name="Spieler Name" type="text" id="Spieler Name" placeholder="Name des Spielers" minlength="2" class="full-width" required>
-               </div>
-               <div class="form-field">
-                  <label for="trikot-groesse">Trikot Grösse</label>
-                  <select name="Trikot Grösse" id="trikot-groesse" class="full-width select-text" required>
-                     <option value="" disabled selected>Bitte wählen...</option>
-                     <option value="Grösse-S">S</option>
-                     <option value="Grösse-M">M</option>
-                     <option value="Grösse-L">L</option>
-                     <option value="Grösse-XL">XL</option>
-                  </select>
-               </div>
-            </div>
-
-            <!-- Additional Message -->
-            <div class="form-group">
-               <h4>Zusätzliche Informationen</h4>
-               <div class="form-field">
-                  <textarea name="Nachricht" id="Nachricht" placeholder="Hast du noch Fragen oder Anmerkungen?" rows="5" class="full-width"></textarea>
-               </div>
-            </div>
-
-            <button type="submit" class="full-width btn--primary">Jetzt Buchen</button>
-         </form>
-      </div>
-      <div class="contact-secondary">
-         <div class="contact-info">
-            <h3 class="h6 hide-on-fullwidth">Kontakt Info</h3>
-            <div class="cinfo">
-               <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
-               <p>
-                  Stäfa (Rasen-Training, Talentcamp)<br>
-                  Moritzberg Hombrechtikon (Hallentraining)
-               </p>
-            </div>
-            <div class="cinfo">
-               <h5><i class="fas fa-envelope"></i> E-Mail</h5>
-               <p>
-                  info@amzilegacyfootballtraining.ch<br>
-               </p>
-            </div>
-            <div class="cinfo">
-               <h5><i class="fas fa-phone"></i> Telefon</h5>
-               <p>
-                  +41 78 917 64 36
-               </p>
-            </div>
-            <ul class="contact-social">
-               <li>
-                  <a href="https://www.instagram.com/amzifootballtraining/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-               </li>
-               <li>
-                  <a href="https://www.tiktok.com/@amzifootballtraining" target="_blank"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
-               </li>
-               <li>
-                  <a href="https://wa.me/+41789176436" target="_blank"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-               </li>
-            </ul>
          </div>
-      </div>
-   </div>
-</section>
-
-<script>
-function updateFormOptions() {
-    const angebot = document.getElementById('gewähltes Angebot').value;
-    const standortSelect = document.getElementById('Standort');
-    const regularTrainingOptions = document.getElementById('regular-training-options');
-    const birthdaySpecialOptions = document.getElementById('birthday-special-options');
-    const talentcampOptions = document.getElementById('talentcamp-options');
-    
-    // Get form fields that need toggling required attribute
-    const anzahlPersonen = document.getElementById('Anzahl Personen');
-    const gewähltesAbo = document.getElementById('gewähltes Abo');
-    const terminwunsch = document.getElementById('Terminwunsch');
-    const geburtstagPersonen = document.getElementById('geburtstag-personen');
-    
-    // Reset all sections first
-    regularTrainingOptions.style.display = 'none';
-    birthdaySpecialOptions.style.display = 'none';
-    talentcampOptions.style.display = 'none';
-    
-    // Always disable Standort first
-    standortSelect.disabled = true;
-    
-    if (angebot === 'Hallentraining') {
-        // Hallentraining is always in Moritzberg Hombrechtikon
-        standortSelect.value = 'Hombrechtikon';
-        regularTrainingOptions.style.display = 'block';
-        
-        // Set required fields
-        anzahlPersonen.setAttribute('required', 'true');
-        gewähltesAbo.setAttribute('required', 'true');
-        terminwunsch.removeAttribute('required');
-        geburtstagPersonen.removeAttribute('required');
-    } 
-    else if (angebot === 'Rasen-Training') {
-        // Rasen-Training is always in Stäfa
-        standortSelect.value = 'Stäfa';
-        regularTrainingOptions.style.display = 'block';
-        
-        // Set required fields
-        anzahlPersonen.setAttribute('required', 'true');
-        gewähltesAbo.setAttribute('required', 'true');
-        terminwunsch.removeAttribute('required');
-        geburtstagPersonen.removeAttribute('required');
-    }
-    else if (angebot === 'Talent-Camp') {
-        // Talentcamp is always in Stäfa and is a fixed 10er abo
-        standortSelect.value = 'Stäfa';
-        talentcampOptions.style.display = 'block';
-        
-        // Remove required fields for training options
-        anzahlPersonen.removeAttribute('required');
-        gewähltesAbo.removeAttribute('required');
-        terminwunsch.removeAttribute('required');
-        geburtstagPersonen.removeAttribute('required');
-    }
-    else if (angebot === 'Geburtstag-Special') {
-        // For Geburtstag-Special, show location selection
-        standortSelect.disabled = false;
-        standortSelect.value = '';  // Reset the selection
-        birthdaySpecialOptions.style.display = 'block';
-        
-        // Set required fields
-        anzahlPersonen.removeAttribute('required');
-        gewähltesAbo.removeAttribute('required');
-        terminwunsch.setAttribute('required', 'true');
-        geburtstagPersonen.setAttribute('required', 'true');
-    } 
-    else {
-        // Default state when no option is selected
-        standortSelect.value = '';
-        standortSelect.disabled = false;
-    }
-}
-
-// Initialize form state when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    updateFormOptions();
-    
-    // Setup form submission
-    var form = document.getElementById("contactFormBuchen");
-    form.onsubmit = function(event) {
-        event.preventDefault();
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", form.action, true);
-        xhr.send(formData);
-        
-        xhr.onload = function(e) {
-            if (xhr.status === 200) {
-                window.location.href = 'erfolg.html';
-                form.reset();  
-            } else {
-                window.alert("Ein Fehler ist aufgetreten, bitte versuche es erneut!");
-            }
-        };
-    };
-});
-</script>
+         <div class="row contact-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-aos="fade-up">
+            <div class="contact-primary">
+               <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
+                  <!-- Personal Information -->
+                  <div class="form-group">
+                     <h4>Persönliche Angaben</h4>
+                     <div class="form-field">
+                        <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
+                     </div>
+                     <div class="form-field">
+                        <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
+                     </div>
+                     <div class="form-field">
+                        <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
+                     </div>
+                  </div>
+                  <!-- Training Selection -->
+                  <div class="form-group">
+                     <h4>Training Auswahl</h4>
+                     <div class="form-field">
+                        <label for="gewähltes Angebot">Trainingsart</label>
+                        <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="updateFormOptions()">
+                           <option value="" disabled selected>Bitte wählen...</option>
+                           <option value="Hallen-Training">Hallen-Training</option>
+                           <option value="Rasen-Training">Rasen-Training</option>
+                           <option value="Talent-Camp">Talentcamp</option>
+                           <option value="Geburtstag-Special">Geburtstag-Special</option>
+                        </select>
+                     </div>
+                     <div class="form-field">
+                        <label for="Standort">Standort</label>
+                        <select name="Standort" id="Standort" class="full-width select-text" required disabled>
+                           <option value="" disabled selected>Bitte wählen...</option>
+                           <option value="Stäfa">Stäfa</option>
+                           <option value="Hombrechtikon">Moritzberg Hombrechtikon</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- Regular Training Options -->
+                  <div class="form-group" id="regular-training-options">
+                     <h4>Trainingsoptionen</h4>
+                     <div class="form-field" id="personen-div">
+                        <label for="Anzahl Personen">Anzahl Personen</label>
+                        <select name="Anzahl Personen" id="Anzahl Personen" class="full-width select-text" required>
+                           <option value="" disabled selected>Bitte wählen...</option>
+                           <option value="Einzeltraining">Einzeltraining</option>
+                           <option value="Training zu zweit">Training zu zweit</option>
+                           <option value="Gruppentraining">Gruppentraining (3-6)</option>
+                        </select>
+                     </div>
+                     <div class="form-field" id="abo-div">
+                        <label for="gewähltes Abo">Abo</label>
+                        <select name="gewähltes Abo" id="gewähltes Abo" class="full-width select-text" required>
+                           <option value="" disabled selected>Bitte wählen...</option>
+                           <option value="Einmaliges-Training">Einmaliges-Training</option>
+                           <option value="6er Abo">6er Abo</option>
+                           <option value="10er Abo">10er Abo</option>
+                           <option value="20er Abo">20er Abo</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- Birthday Special Options -->
+                  <div class="form-group" id="birthday-special-options" style="display: none;">
+                     <h4>Geburtstag Special</h4>
+                     <div class="form-field" id="terminwunsch-geburtstag">
+                        <label for="Terminwunsch">Wunschtermin</label>
+                        <input 
+                           name="Terminwunsch" 
+                           type="text" 
+                           placeholder="z.B. Samstag 01.01.2024 09:00" 
+                           id="Terminwunsch" 
+                           class="full-width" 
+                           pattern="^[A-Za-zäöüÄÖÜss]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
+                           title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00">
+                     </div>
+                     <div class="form-field" id="teilnehmer-geburtstag">
+                        <label for="geburtstag-personen">Anzahl Teilnehmer</label>
+                        <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Min. 5 Teilnehmer" class="full-width" min="5">
+                     </div>
+                  </div>
+                  <!-- Talentcamp Options -->
+                  <div class="form-group" id="talentcamp-options" style="display: none;">
+                     <h4>Talentcamp Info</h4>
+                     <div class="form-field">
+                        <p class="talentcamp-info">Das Talentcamp ist ein 10er Abo und findet in Stäfa statt.</p>
+                     </div>
+                  </div>
+                  <!-- Player Information -->
+                  <div class="form-group" id="player-info">
+                     <h4>Spielerinformationen</h4>
+                     <div class="form-field">
+                        <input name="Spieler Name" type="text" id="Spieler Name" placeholder="Name des Spielers" minlength="2" class="full-width" required>
+                     </div>
+                     <div class="form-field">
+                        <label for="trikot-groesse">Trikot Grösse</label>
+                        <select name="Trikot Grösse" id="trikot-groesse" class="full-width select-text" required>
+                           <option value="" disabled selected>Bitte wählen...</option>
+                           <option value="Grösse-S">S</option>
+                           <option value="Grösse-M">M</option>
+                           <option value="Grösse-L">L</option>
+                           <option value="Grösse-XL">XL</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- Additional Message -->
+                  <div class="form-group">
+                     <h4>Zusätzliche Informationen</h4>
+                     <div class="form-field">
+                        <textarea name="Nachricht" id="Nachricht" placeholder="Hast du noch Fragen oder Anmerkungen?" rows="5" class="full-width"></textarea>
+                     </div>
+                  </div>
+                  <button type="submit" class="full-width btn--primary">Jetzt Buchen</button>
+               </form>
+            </div>
+            <div class="contact-secondary">
+               <div class="contact-info">
+                  <h3 class="h6 hide-on-fullwidth">Kontakt Info</h3>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
+                     <p>
+                        Stäfa (Rasen-Training, Talentcamp)<br>
+                        Moritzberg Hombrechtikon (Hallen-Training)
+                     </p>
+                  </div>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-envelope"></i> E-Mail</h5>
+                     <p>
+                        info@amzilegacyfootballtraining.ch<br>
+                     </p>
+                  </div>
+                  <div class="cinfo">
+                     <h5><i class="fas fa-phone"></i> Telefon</h5>
+                     <p>
+                        +41 78 917 64 36
+                     </p>
+                  </div>
+                  <ul class="contact-social">
+                     <li>
+                        <a href="https://www.instagram.com/amzifootballtraining/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                     </li>
+                     <li>
+                        <a href="https://www.tiktok.com/@amzifootballtraining" target="_blank"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                     </li>
+                     <li>
+                        <a href="https://wa.me/+41789176436" target="_blank"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
       <footer>
          <div class="row footer-main">
             <div class="col-1-2 tab-full left footer-desc">
@@ -387,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="col-twelve">
                <div class="copyright">
                   <span id="current-year"></span><span> &copy; Amzi Legacy Football Training</span>
-<span>Made with ❤️ by <a href="https://webtree.ch" target="_blank">WebTree</a></span>
+                  <span>Made with ❤️ by <a href="https://webtree.ch" target="_blank">WebTree</a></span>
                </div>
                <div class="go-top">
                   <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa-solid fa-arrow-up"></i></i></a>
@@ -439,93 +332,29 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
          </div>
       </div>
-      <script>
-function toggleOptions() {
-    const angebot = document.getElementById('gewähltes Angebot').value;
-    const regularTrainingOptions = document.getElementById('regular-training-options');
-    const birthdaySpecialOptions = document.getElementById('birthday-special-options');
-    
-    // Get form fields that need toggling required attribute
-    const anzahlPersonen = document.getElementById('Anzahl Personen');
-    const gewähltesAbo = document.getElementById('gewähltes Abo');
-    const terminwunsch = document.getElementById('Terminwunsch');
-    const geburtstagPersonen = document.getElementById('geburtstag-personen');
-    
-    if (angebot === 'Geburtstag-Special') {
-        // Show birthday options, hide regular training options
-        regularTrainingOptions.style.display = 'none';
-        birthdaySpecialOptions.style.display = 'block';
-        
-        // Toggle required attributes
-        anzahlPersonen.removeAttribute('required');
-        gewähltesAbo.removeAttribute('required');
-        terminwunsch.setAttribute('required', 'true');
-        geburtstagPersonen.setAttribute('required', 'true');
-    } else if (angebot) { // Only if a valid option is selected
-        // Show regular training options, hide birthday options
-        regularTrainingOptions.style.display = 'block';
-        birthdaySpecialOptions.style.display = 'none';
-        
-        // Toggle required attributes
-        anzahlPersonen.setAttribute('required', 'true');
-        gewähltesAbo.setAttribute('required', 'true');
-        terminwunsch.removeAttribute('required');
-        geburtstagPersonen.removeAttribute('required');
-    } else {
-        // Default state when no option is selected
-        regularTrainingOptions.style.display = 'block';
-        birthdaySpecialOptions.style.display = 'none';
-    }
-}
-
-// Initialize form state when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    toggleOptions();
-    
-    // Setup form submission
-    var form = document.getElementById("contactFormBuchen");
-    form.onsubmit = function(event) {
-        event.preventDefault();
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", form.action, true);
-        xhr.send(formData);
-        
-        xhr.onload = function(e) {
-            if (xhr.status === 200) {
-                window.location.href = 'erfolg.html';
-                form.reset();  
-            } else {
-                window.alert("Ein Fehler ist aufgetreten, bitte versuche es erneut!");
-            }
-        };
-    };
-});
-      </script> 
-                  <div id="cookie-banner" class="cookie-banner">
-                     <div class="cookie-content">
-                        <div class="cookie-text">
-                           <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. Durch die Nutzung der Website stimmen Sie der Verwendung von Cookies gemäss der <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
-                        </div>
-                        <div class="cookie-buttons">
-                           <button id="accept-cookies" class="btn btn--gold-full">Akzeptieren</button>
-                           <button id="decline-cookies" class="btn btn--grey">Ablehnen</button>
-                        </div>
-                     </div>
-                  </div>
-            
-                  <!-- Event Popup -->
-                  <div id="popup" class="popup">
-                     <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
-                     <div class="popup-content">
-                        <h3>Talentcamp ab 14. Mai 2025</h3>
-                        <p>Melde dich jetzt an für das exklusive Talentcamp und trainiere mit den Besten!</p>
-                        <div class="popup-buttons">
-                           <a class="btn btn--gold-full" href="buchen.html">Jetzt anmelden</a>
-                           <a href="talentcamp.html" class="btn btn--grey">Mehr Infos</a>
-                        </div>
-                     </div>
-                  </div>
+      <div id="cookie-banner" class="cookie-banner">
+         <div class="cookie-content">
+            <div class="cookie-text">
+               <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. Durch die Nutzung der Website stimmen Sie der Verwendung von Cookies gemäss der <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
+            </div>
+            <div class="cookie-buttons">
+               <button id="accept-cookies" class="btn btn--gold-full">Akzeptieren</button>
+               <button id="decline-cookies" class="btn btn--grey">Ablehnen</button>
+            </div>
+         </div>
+      </div>
+      <!-- Event Popup -->
+      <div id="popup" class="popup">
+         <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
+         <div class="popup-content">
+            <h3>Talentcamp ab 14. Mai 2025</h3>
+            <p>Melde dich jetzt an für das exklusive Talentcamp und trainiere mit den Besten!</p>
+            <div class="popup-buttons">
+               <a class="btn btn--gold-full" href="buchen.html">Jetzt anmelden</a>
+               <a href="talentcamp.html" class="btn btn--grey">Mehr Infos</a>
+            </div>
+         </div>
+      </div>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
