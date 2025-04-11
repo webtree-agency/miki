@@ -3195,6 +3195,30 @@ html.no-csstransitions .home-content__main {
 .contact-social li:last-child {
     margin: 0;
 }
+.talentcamp-info {
+    background-color: rgba(156, 131, 33, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #9c8321;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #9c8321;
+}
+
+#Standort:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
 
 .message-warning, 
 .message-success {

@@ -120,7 +120,7 @@
                <h4>Training Auswahl</h4>
                <div class="form-field">
                   <label for="gewähltes Angebot">Trainingsart</label>
-                  <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="toggleOptions()">
+                  <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="updateFormOptions()">
                      <option value="" disabled selected>Bitte wählen...</option>
                      <option value="Hallentraining">Hallentraining</option>
                      <option value="Rasen-Training">Rasen-Training</option>
@@ -131,10 +131,10 @@
                
                <div class="form-field">
                   <label for="Standort">Standort</label>
-                  <select name="Standort" id="Standort" class="full-width select-text" required>
+                  <select name="Standort" id="Standort" class="full-width select-text" required disabled>
                      <option value="" disabled selected>Bitte wählen...</option>
                      <option value="Stäfa">Stäfa</option>
-                     <option value="Hombrechtikon">Hombrechtikon</option>
+                     <option value="Hombrechtikon">Moritzberg Hombrechtikon</option>
                   </select>
                </div>
             </div>
@@ -182,17 +182,29 @@
                   <input type="number" name="Anzahl Teilnehmer" id="geburtstag-personen" placeholder="Min. 5 Teilnehmer" class="full-width" min="5">
                </div>
             </div>
-            <!-- Training Selection -->
-            <div class="form-group">
+
+            <!-- Talentcamp Options -->
+            <div class="form-group" id="talentcamp-options" style="display: none;">
+               <h4>Talentcamp Info</h4>
+               <div class="form-field">
+                  <p class="talentcamp-info">Das Talentcamp ist ein 10er Abo und findet in Stäfa statt.</p>
+               </div>
+            </div>
+
+            <!-- Player Information -->
+            <div class="form-group" id="player-info">
                <h4>Spielerinformationen</h4>
                <div class="form-field">
                   <input name="Spieler Name" type="text" id="Spieler Name" placeholder="Name des Spielers" minlength="2" class="full-width" required>
-                  <label for="trikot grösse">Trikot Grösse</label>
-                  <select name="Tshirt Grösse" id="Tshirt Grösse" class="full-width select-text" required onchange="toggleOptions()">
+               </div>
+               <div class="form-field">
+                  <label for="trikot-groesse">Trikot Grösse</label>
+                  <select name="Trikot Grösse" id="trikot-groesse" class="full-width select-text" required>
                      <option value="" disabled selected>Bitte wählen...</option>
                      <option value="Grösse-S">S</option>
                      <option value="Grösse-M">M</option>
                      <option value="Grösse-L">L</option>
+                     <option value="Grösse-XL">XL</option>
                   </select>
                </div>
             </div>
@@ -214,8 +226,8 @@
             <div class="cinfo">
                <h5><i class="fas fa-map-marker-alt"></i> Trainingsmöglichkeiten</h5>
                <p>
-                  Stäfa<br>
-                  Hombrechtikon
+                  Stäfa (Rasen-Training, Talentcamp)<br>
+                  Moritzberg Hombrechtikon (Hallentraining)
                </p>
             </div>
             <div class="cinfo">
@@ -245,6 +257,105 @@
       </div>
    </div>
 </section>
+
+<script>
+function updateFormOptions() {
+    const angebot = document.getElementById('gewähltes Angebot').value;
+    const standortSelect = document.getElementById('Standort');
+    const regularTrainingOptions = document.getElementById('regular-training-options');
+    const birthdaySpecialOptions = document.getElementById('birthday-special-options');
+    const talentcampOptions = document.getElementById('talentcamp-options');
+    
+    // Get form fields that need toggling required attribute
+    const anzahlPersonen = document.getElementById('Anzahl Personen');
+    const gewähltesAbo = document.getElementById('gewähltes Abo');
+    const terminwunsch = document.getElementById('Terminwunsch');
+    const geburtstagPersonen = document.getElementById('geburtstag-personen');
+    
+    // Reset all sections first
+    regularTrainingOptions.style.display = 'none';
+    birthdaySpecialOptions.style.display = 'none';
+    talentcampOptions.style.display = 'none';
+    
+    // Always disable Standort first
+    standortSelect.disabled = true;
+    
+    if (angebot === 'Hallentraining') {
+        // Hallentraining is always in Moritzberg Hombrechtikon
+        standortSelect.value = 'Hombrechtikon';
+        regularTrainingOptions.style.display = 'block';
+        
+        // Set required fields
+        anzahlPersonen.setAttribute('required', 'true');
+        gewähltesAbo.setAttribute('required', 'true');
+        terminwunsch.removeAttribute('required');
+        geburtstagPersonen.removeAttribute('required');
+    } 
+    else if (angebot === 'Rasen-Training') {
+        // Rasen-Training is always in Stäfa
+        standortSelect.value = 'Stäfa';
+        regularTrainingOptions.style.display = 'block';
+        
+        // Set required fields
+        anzahlPersonen.setAttribute('required', 'true');
+        gewähltesAbo.setAttribute('required', 'true');
+        terminwunsch.removeAttribute('required');
+        geburtstagPersonen.removeAttribute('required');
+    }
+    else if (angebot === 'Talent-Camp') {
+        // Talentcamp is always in Stäfa and is a fixed 10er abo
+        standortSelect.value = 'Stäfa';
+        talentcampOptions.style.display = 'block';
+        
+        // Remove required fields for training options
+        anzahlPersonen.removeAttribute('required');
+        gewähltesAbo.removeAttribute('required');
+        terminwunsch.removeAttribute('required');
+        geburtstagPersonen.removeAttribute('required');
+    }
+    else if (angebot === 'Geburtstag-Special') {
+        // For Geburtstag-Special, show location selection
+        standortSelect.disabled = false;
+        standortSelect.value = '';  // Reset the selection
+        birthdaySpecialOptions.style.display = 'block';
+        
+        // Set required fields
+        anzahlPersonen.removeAttribute('required');
+        gewähltesAbo.removeAttribute('required');
+        terminwunsch.setAttribute('required', 'true');
+        geburtstagPersonen.setAttribute('required', 'true');
+    } 
+    else {
+        // Default state when no option is selected
+        standortSelect.value = '';
+        standortSelect.disabled = false;
+    }
+}
+
+// Initialize form state when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateFormOptions();
+    
+    // Setup form submission
+    var form = document.getElementById("contactFormBuchen");
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action, true);
+        xhr.send(formData);
+        
+        xhr.onload = function(e) {
+            if (xhr.status === 200) {
+                window.location.href = 'erfolg.html';
+                form.reset();  
+            } else {
+                window.alert("Ein Fehler ist aufgetreten, bitte versuche es erneut!");
+            }
+        };
+    };
+});
+</script>
       <footer>
          <div class="row footer-main">
             <div class="col-1-2 tab-full left footer-desc">
