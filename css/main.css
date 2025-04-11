@@ -3184,12 +3184,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-social li a {
-    color: var(--white);
+    color: var(--primary-gold);
 }
 
 .contact-social li a:hover, 
 .contact-social li a:focus {
-    color: var(--primary-gold);
+    color: var(--white);
 }
 
 .contact-social li:last-child {
