@@ -4377,7 +4377,7 @@ footer .row {
 
 .custom-splide .splide__slide img {
     width: auto;
-    height: 90vh
+    max-height: 80vh
 }
 
 /* Media query for mobile devices */
