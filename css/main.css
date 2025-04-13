@@ -5250,3 +5250,578 @@ footer .row {
   .schedule-button {
     border: 0.2rem solid white;
   }
+
+  /* Fongue */
+.training-toggle-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 20px 0;
+   background-color: #0E0E0E;
+   position: sticky;
+   top: 0;
+   z-index: 500;
+}
+
+.training-toggle-wrapper {
+   display: flex;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+   max-width: 90%;
+}
+
+.training-toggle-btn {
+   flex: 1;
+   padding: 15px 25px;
+   font-family: "montserrat-semibold", sans-serif;
+   font-size: 1.6rem;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   white-space: nowrap;
+}
+
+#miki-toggle {
+   background-color: var(--primary-gold);
+   color: white;
+}
+
+#fongue-toggle {
+   background-color: #111;
+   color: white;
+   border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.training-toggle-btn.active {
+   background-color: var(--primary-gold);
+   color: white;
+}
+
+.training-toggle-btn:not(.active) {
+   background-color: #222;
+   color: #ccc;
+}
+
+.training-toggle-btn:hover:not(.active) {
+   background-color: #333;
+   color: white;
+}
+
+@media (max-width: 768px) {
+   .training-toggle-wrapper {
+      flex-direction: column;
+      width: 90%;
+   }
+   
+   .training-toggle-btn {
+      padding: 12px 15px;
+      font-size: 1.4rem;
+   }
+   
+   #fongue-toggle {
+      border-left: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+   }
+}
+
+/* Section Display Control */
+.miki-section {
+   display: block;
+}
+
+.fongue-section {
+   display: none;
+}
+
+body.show-fongue .miki-section {
+   display: none;
+}
+
+body.show-fongue .fongue-section {
+   display: block;
+}
+  /* Hero */
+  .fongue-hero-image {
+     background-image: url('../images/fongue.webp');
+     background-size: cover;
+     background-position: center;
+     min-height: 400px;
+  }
+  .talent-benefits li .fa-bolt {
+     color: #d4af37;
+  }
+  
+  .promo-code-banner {
+     background: linear-gradient(135deg, #000 0%, #222 100%);
+     border: 2px solid #d4af37;
+     padding: 15px;
+     margin: 20px 0;
+     border-radius: 8px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .promo-code {
+     display: flex;
+     flex-direction: column;
+  }
+  
+  .promo-label {
+     font-size: 1.5rem;
+     color: #d4af37;
+     margin-bottom: 5px;
+  }
+  
+  .promo-value {
+     font-family: "montserrat-bold", sans-serif;
+     font-size: 2.2rem;
+     color: white;
+     letter-spacing: 1px;
+  }
+  
+  .promo-discount {
+     background-color: #d4af37;
+     color: black;
+     font-family: "montserrat-bold", sans-serif;
+     padding: 8px 15px;
+     border-radius: 4px;
+     font-size: 1.6rem;
+  }
+  
+  .fongue-btn {
+     background-color: #d4af37;
+     border-color: #d4af37;
+  }
+  
+  .fongue-btn:hover {
+     background-color: #c09d2d;
+     border-color: #c09d2d;
+  }
+  
+  .fongue-info-box .info-box-header {
+     background: linear-gradient(90deg, #000 0%, #222 100%);
+  }
+  
+  .fongue-info-box .info-box-header i {
+     color: #d4af37;
+  }
+  
+  @media (max-width: 768px) {
+     .promo-code-banner {
+        flex-direction: column;
+        align-items: flex-start;
+     }
+     
+     .promo-discount {
+        margin-top: 10px;
+        align-self: flex-start;
+     }
+  }
+/* About */
+      /* Neu gestaltete Fongue About Section */
+      .fongue-profile-container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 30px;
+      }
+      
+      .fongue-main-profile {
+         display: flex;
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+         overflow: hidden;
+         margin-bottom: 40px;
+      }
+      
+      .profile-image-container {
+         flex: 0 0 45%;
+         position: relative;
+         overflow: hidden;
+      }
+      
+      .profile-image {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+         border-right: 5px solid #d4af37;
+      }
+      
+      .profile-intro {
+         flex: 0 0 55%;
+         padding: 40px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+      
+      .profile-tagline {
+         font-family: "montserrat-semibold", sans-serif;
+         font-size: 2.2rem;
+         color: #333;
+         margin-bottom: 20px;
+         line-height: 1.3;
+      }
+      
+      .profile-summary {
+         font-size: 1.6rem;
+         line-height: 1.6;
+         color: #666;
+         margin-bottom: 25px;
+      }
+      
+      .philosophy-quote {
+         background: linear-gradient(135deg, #f8f8f8 0%, #eaeaea 100%);
+         padding: 8px;
+         border-radius: 8px;
+         position: relative;
+         margin-top: auto;
+      }
+      
+      .philosophy-quote i.fa-quote-left {
+         position: absolute;
+         top: 15px;
+         left: 15px;
+         color: #d4af37;
+         font-size: 2rem;
+         opacity: 0.5;
+      }
+      
+      .philosophy-quote i.fa-quote-right {
+         position: absolute;
+         bottom: 15px;
+         right: 15px;
+         color: #d4af37;
+         font-size: 2rem;
+         opacity: 0.5;
+      }
+      
+      .philosophy-quote p {
+         font-family: "montserrat-medium", sans-serif;
+         font-size: 1.8rem;
+         color: #333;
+         text-align: center;
+         margin: 0;
+         padding: 0 30px;
+         font-style: italic;
+      }
+      
+      .fongue-stats-container {
+         margin-bottom: 40px;
+      }
+      
+      .statistics-row {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 40px;
+         flex-wrap: wrap;
+      }
+      
+      .stat-item {
+         flex: 1;
+         min-width: 150px;
+         background: linear-gradient(135deg, #111 0%, #333 100%);
+         padding: 25px 15px;
+         text-align: center;
+         border-radius: 8px;
+         color: white;
+         margin: 0 10px;
+         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+         position: relative;
+         overflow: hidden;
+      }
+      
+      .stat-icon {
+         position: absolute;
+         top: -20px;
+         right: -20px;
+         font-size: 6rem;
+         color: rgba(212, 175, 55, 0.1);
+         transform: rotate(15deg);
+      }
+      
+      .stat-value {
+         font-family: "montserrat-bold", sans-serif;
+         font-size: 3.6rem;
+         color: #d4af37;
+         margin-bottom: 5px;
+         position: relative;
+         z-index: 2;
+      }
+      
+      .stat-label {
+         font-size: 1.4rem;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         position: relative;
+         z-index: 2;
+      }
+      
+      .achievements-container {
+         background-color: #fff;
+         border-radius: 10px;
+         padding: 30px;
+         box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      }
+      
+      .achievements-title {
+         text-align: center;
+         color: #333;
+         font-size: 2.2rem;
+         margin-bottom: 30px;
+         position: relative;
+         padding-bottom: 15px;
+      }
+      
+      .achievements-title::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 60px;
+         height: 3px;
+         background-color: #d4af37;
+      }
+      
+      .achievements-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px;
+      }
+      
+      .achievement-card {
+         display: flex;
+         align-items: center;
+         padding: 20px;
+         background: linear-gradient(135deg, #f8f8f8 0%, #eaeaea 100%);
+         border-radius: 8px;
+         transition: transform 0.3s ease;
+      }
+      
+      .achievement-card:hover {
+         transform: translateY(-5px);
+      }
+      
+      .achievement-icon {
+         color: #d4af37;
+         font-size: 2.4rem;
+         margin-right: 15px;
+      }
+      
+      .achievement-content h4 {
+         margin: 0 0 5px 0;
+         font-size: 1.6rem;
+         color: #333;
+      }
+      
+      .achievement-content p {
+         margin: 0;
+         font-size: 1.4rem;
+         color: #666;
+      }
+      
+      /* Responsive */
+      @media (max-width: 992px) {
+         .fongue-main-profile {
+            flex-direction: column;
+         }
+         
+         .profile-image-container {
+            flex: 0 0 auto;
+         }
+         
+         .profile-image {
+            border-right: none;
+            border-bottom: 5px solid #d4af37;
+            max-height: 400px;
+         }
+         
+         .profile-intro {
+            flex: 0 0 auto;
+         }
+         
+         .statistics-row {
+            flex-wrap: wrap;
+         }
+         
+         .stat-item {
+            flex: 1 0 40%;
+            margin-bottom: 20px;
+         }
+         
+         .achievements-grid {
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+      
+      @media (max-width: 768px) {
+         .stat-item {
+            flex: 1 0 100%;
+            margin: 0 0 15px 0;
+         }
+         
+         .achievements-grid {
+            grid-template-columns: 1fr;
+         }
+         
+         .profile-tagline {
+            font-size: 1.8rem;
+         }
+      }
+
+/* Fongue Video Section */
+
+.program-title {
+   color: white;
+   font-size: 2.8rem;
+   margin-top: 2rem;
+   margin-bottom: 30px;
+   position: relative;
+   padding-bottom: 15px;
+}
+
+.program-title:after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 80px;
+   height: 3px;
+   background-color: #d4af37;
+}
+
+.program-phases {
+   margin-bottom: 40px;
+}
+
+.phase {
+   background: rgba(255,255,255,0.1);
+   padding: 20px;
+   border-radius: 8px;
+   margin-bottom: 20px;
+}
+
+.phase-header {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.phase-number {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40px;
+   height: 40px;
+   background-color: #d4af37;
+   color: black;
+   font-family: "montserrat-bold", sans-serif;
+   font-size: 2rem;
+   border-radius: 50%;
+   margin-right: 15px;
+}
+
+.phase h3 {
+   color: white;
+   margin: 0;
+   font-size: 2rem;
+}
+
+.phase p {
+   color: rgba(255,255,255,0.8);
+   margin: 0;
+}
+
+.program-price {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+}
+
+.regular-price {
+   font-size: 1.8rem;
+   color: rgba(255,255,255,0.6);
+   text-decoration: line-through;
+}
+
+.discount-price {
+   font-size: 2.4rem;
+   color: #d4af37;
+   font-family: "montserrat-bold", sans-serif;
+}
+
+.program-cta .btn {
+   margin-top: 10px;
+   width: 100%;
+}
+
+@media (max-width: 768px) {
+   .phase {
+      padding: 15px;
+   }
+   
+   .phase-number {
+      width: 30px;
+      height: 30px;
+      font-size: 1.6rem;
+   }
+   
+   .phase h3 {
+      font-size: 1.7rem;
+   }
+}
+
+/* Fongue FAQ */
+.final-cta-box {
+   background: linear-gradient(135deg, #000 0%, #222 100%);
+   padding: 40px;
+   border-radius: 10px;
+   color: white;
+   text-align: center;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+   border: 2px solid #d4af37;
+   margin-bottom: 50px;
+}
+
+.final-cta-box h3 {
+   color: white;
+   font-size: 2.4rem;
+   margin-top: 0;
+   margin-bottom: 15px;
+}
+
+.final-cta-box p {
+   color: rgba(255,255,255,0.8);
+   font-size: 1.8rem;
+   margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+   .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   
+   .results-statistics {
+      padding: 0 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .testimonial-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+   
+   .results-statistics {
+      flex-direction: column;
+   }
+   
+   .stat-result {
+      margin: 10px 0;
+   }
+}

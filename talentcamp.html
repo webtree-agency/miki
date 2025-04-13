@@ -96,7 +96,35 @@
             </li>
          </ul>
       </section>
-      <section id="what" class="s-about talent-section">
+      
+<!-- Neue Toggle-Buttons für die Umschaltung zwischen Talentcamp und Fongue-Training -->
+<div class="training-toggle-container">
+   <div class="training-toggle-wrapper">
+      <button id="miki-toggle" class="training-toggle-btn active">Amzi Talentcamp</button>
+      <button id="fongue-toggle" class="training-toggle-btn">Rolf Fongue Speed Training</button>
+   </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   const mikiToggle = document.getElementById('miki-toggle');
+   const fongueToggle = document.getElementById('fongue-toggle');
+   
+   mikiToggle.addEventListener('click', function() {
+      document.body.classList.remove('show-fongue');
+      mikiToggle.classList.add('active');
+      fongueToggle.classList.remove('active');
+   });
+   
+   fongueToggle.addEventListener('click', function() {
+      document.body.classList.add('show-fongue');
+      fongueToggle.classList.add('active');
+      mikiToggle.classList.remove('active');
+   });
+});
+</script>
+<!-- Miki -->
+      <section id="what" class="s-about talent-section miki-section">
          <div class="about__line"></div>
          <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
             <div class="col-full">
@@ -179,7 +207,103 @@
             </div>
          </div>
       </section>
-      <section id='services' class="s-services">
+      <!-- Fongue -->
+      <section id="fongue-hero" class="s-about talent-section fongue-section">
+         <div class="about__line"></div>
+         <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-full">
+               <h3 class="subhead subhead--dark">Exklusives Angebot</h3>
+               <h1 class="display-2 display-2--light">Speed Training mit Rolf Fongué</h1>
+            </div>
+         </div>
+         <div class="talent-split-hero wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="split-image fongue-hero-image">
+               <!-- Hintergrundbild wird per CSS eingefügt -->
+            </div>
+            <div class="split-content">
+               
+               <div class="talent-badge">3-Monats Elite Programm</div>
+               <div class="talent-badge">Sprintlegende</div>
+               <h2>Entwickle explosive Schnelligkeit & Beschleunigung</h2>
+               <ul class="talent-benefits">
+                  <li><i class="fa fa-bolt"></i> 3-facher Schweizermeister (100 m Sprint)</li>
+                  <li><i class="fa fa-bolt"></i> 2 Jahre Training mit Usain Bolt (Jamaika)</li>
+                  <li><i class="fa fa-bolt"></i> Individuelles Feedback vom Top-Athleten</li>
+                  <li><i class="fa fa-bolt"></i> Körpertraining speziell für Fussballer</li>
+               </ul>
+               <div class="promo-code-banner">
+                  <div class="promo-code">
+                     <span class="promo-label">Exklusiver Code:</span>
+                     <span class="promo-value">AmziFootball10</span>
+                  </div>
+                  <span class="promo-discount">10% RABATT</span>
+               </div>
+               <div class="talent-actions">
+                  <a href="https://rolffongue.com/kontakt/" target="_blank" class="btn btn--primary fongue-btn">Jetzt buchen</a>
+                  <a href="#fongue-video" class="btn btn--stroke-inverted smoothscroll">Video ansehen</a>
+               </div>
+            </div>
+         </div>
+         <div class="talent-features-row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <i class="fa fa-stopwatch"></i>
+               </div>
+               <h3>Reaktion</h3>
+            </div>
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <i class="fa fa-running"></i>
+               </div>
+               <h3>Kraft</h3>
+            </div>
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <i class="fa fa-bolt"></i>
+               </div>
+               <h3>Fokus</h3>
+            </div>
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <i class="fa fa-tachometer-alt"></i>
+               </div>
+               <h3>Körper</h3>
+            </div>
+         </div>
+         
+         <div class="talent-info-box fongue-info-box wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+            <div class="info-box-header">
+               <i class="fa fa-bolt"></i>
+               <h3>Das Wichtigste auf einen Blick</h3>
+            </div>
+            <div class="info-box-content">
+               <div class="info-item">
+                  <i class="fa fa-calendar-check"></i>
+                  <div>
+                     <h4>Dauer & Format</h4>
+                     <p>3-monatiges Intensivprogramm | Zürich</p>
+                  </div>
+               </div>
+               <div class="info-item">
+                  <i class="fa fa-clock"></i>
+                  <div>
+                     <h4>Trainingseinheiten</h4>
+                     <p>Wird im Erstgespräch definiert</p>
+                  </div>
+               </div>
+               <div class="info-item">
+                  <i class="fa fa-trophy"></i>
+                  <div>
+                     <h4>Coaching-Qualität</h4>
+                     <p>Training mit echtem Profi</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+<!-- Miki -->
+      <section id='services' class="s-services miki-section">
          <div class="row section-header has-bottom-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
             <div class="col-full">
                <h3 class="subhead">Das Angebot</h3>
@@ -341,8 +465,108 @@
             window.addEventListener('resize', checkTableResponsive);
          </script>
       </section>
-      <!-- Neugestaltete Trikot-Sektion mit Slider -->
-      <section id='works' class="s-works jersey-showcase">
+      <section id="fongue-about" class="s-services fongue-section">
+         <div class="row section-header has-bottom-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-full">
+               <h3 class="subhead">Über Rolf Fongué</h3>
+               <h1 class="display-2">Schweizer Elite-Sprinter & Coach</h1>
+            </div>
+         </div>
+         
+         <div class="fongue-profile-container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <!-- Hauptprofil-Box -->
+            <div class="fongue-main-profile">
+               <div class="profile-image-container">
+                  <img src="images/fongue-trainiert.webp" alt="Rolf Fongué Elite Speed Trainer" class="profile-image">
+               </div>
+               
+               <div class="profile-intro">
+                  <p class="profile-tagline">Dreifacher Schweizermeister im 100m Sprint & Elite-Coach</p>
+                  <p class="profile-summary">Geboren 1987, trainierte Rolf zwei Jahre mit Usain Bolt in Jamaika und entwickelte einzigartige Trainingsmethoden zur Optimierung von Schnelligkeit, Kraft und Körperbeherrschung.</p>
+                  
+                  <div class="philosophy-quote">
+                     <i class="fa fa-quote-left"></i>
+                     <p>Der mentale Teil einer Trainingseinheit ist der Wichtigste.</p>
+                     <i class="fa fa-quote-right"></i>
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Statistiken und Erfolge -->
+            <div class="fongue-stats-container">
+               <div class="statistics-row">
+                  <div class="stat-item">
+                     <div class="stat-icon">
+                        <i class="fa fa-trophy"></i>
+                     </div>
+                     <div class="stat-value">3x</div>
+                     <div class="stat-label">Schweizermeister</div>
+                  </div>
+                  
+                  <div class="stat-item">
+                     <div class="stat-icon">
+                        <i class="fa fa-running"></i>
+                     </div>
+                     <div class="stat-value">100m</div>
+                     <div class="stat-label">Sprint-Spezialist</div>
+                  </div>
+                  
+                  <div class="stat-item">
+                     <div class="stat-icon">
+                        <i class="fa fa-plane"></i>
+                     </div>
+                     <div class="stat-value">2</div>
+                     <div class="stat-label">Jahre in Jamaika</div>
+                  </div>
+                  
+                  <div class="stat-item">
+                     <div class="stat-icon">
+                        <i class="fa fa-users"></i>
+                     </div>
+                     <div class="stat-value">10+</div>
+                     <div class="stat-label">Fussballprofis</div>
+                  </div>
+               </div>
+               
+               <div class="achievements-container">
+                  <h3 class="achievements-title">Elite Klienten & Erfahrungen</h3>
+                  <div class="achievements-grid">
+                     <div class="achievement-card">
+                        <div class="achievement-icon">
+                           <i class="fa fa-bolt"></i>
+                        </div>
+                        <div class="achievement-content">
+                           <h4>Usain Bolt</h4>
+                           <p>Ehemaliger Trainingspartner</p>
+                        </div>
+                     </div>
+                     
+                     <div class="achievement-card">
+                        <div class="achievement-icon">
+                           <i class="fa fa-stopwatch"></i>
+                        </div>
+                        <div class="achievement-content">
+                           <h4>Schweizer 4x100m Staffel</h4>
+                           <p>Sprinttechnik</p>
+                        </div>
+                     </div>
+                     
+                     <div class="achievement-card">
+                        <div class="achievement-icon">
+                           <i class="fa fa-medal"></i>
+                        </div>
+                        <div class="achievement-content">
+                           <h4>Noah Okafor</h4>
+                           <p>Schnelligkeitstraining</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Miki -->
+      <section id='works' class="s-works jersey-showcase miki-section">
          <div class="intro-wrap">
             <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                <div class="col-full">
@@ -401,7 +625,67 @@
             </div>
          </div>
       </section>
-      <section id="faq" class="s-clients">
+      <!-- Fongue -->
+      <section id="fongue-video" class="s-works jersey-showcase fongue-section">
+         <div class="intro-wrap">
+            <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+               <div class="col-full">
+                  <h3 class="subhead">Ergebnisse, die sprechen</h3>
+                  <h1 class="display-2 display-2--light">So sieht das Training aus</h1>
+               </div>
+            </div>
+            <div class="row jersey-content">
+               <div class="col-six tab-full training-video-container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <div class="training-video-wrapper">
+                     <video controls poster="images/fongue-cover-video.webp" class="training-video" preload="none">
+                        <source src="videos/fongue-training.MP4" type="video/mp4">
+                        Dein Browser unterstützt keine Videos.
+                     </video>
+                  </div>
+               </div>
+               
+               <div class="col-six tab-full program-details wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <h2 class="program-title">Das 3-Monats Elite-Programm</h2>
+                  
+                  <div class="program-phases">
+                     <div class="phase">
+                        <div class="phase-header">
+                           <span class="phase-number">1</span>
+                           <h3>Kennenlerngespräch</h3>
+                        </div>
+                        <p>Ziele, Motivation und Ist-Zustand werden gemeinsam besprochen.</p>
+                     </div>
+                     
+                     <div class="phase">
+                        <div class="phase-header">
+                           <span class="phase-number">2</span>
+                           <h3>Analyse</h3>
+                        </div>
+                        <p>Präzise Messung von Reaktion, Kraft und Bewegung – die Grundlage für dein persönliches Trainingsprogramm.</p>
+                     </div>
+                     
+                     <div class="phase">
+                        <div class="phase-header">
+                           <span class="phase-number">3</span>
+                           <h3>Trainingsstart</h3>
+                        </div>
+                        <p>In drei Phasen zur Höchstleistung: Technik, Fundament und maximale Explosivität.</p>
+                     </div>
+                  </div>
+                  
+                  <div class="program-cta">
+                     <div class="program-price">
+                        <span class="regular-price">CHF 1'500</span>
+                        <span class="discount-price">CHF 1'350 mit Code: AmziFootball10</span>
+                     </div>
+                     <a href="https://www.extern-link-zu-fongue.ch" target="_blank" class="btn btn--primary">Jetzt anmelden</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Miki -->
+      <section id="faq" class="s-clients miki-section">
          <div class="row section-header has-bottom-sep dark-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
             <div class="col-full">
                <h3 class="subhead subhead--gold">Fragen & Antworten</h3>
@@ -520,6 +804,67 @@
               });
             });
          </script>
+      </section>
+      <section id="fongue-faq" class="s-clients fongue-section">
+         <div class="row section-header has-bottom-sep dark-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-full">
+               <h3 class="subhead subhead--gold">Häufige Fragen</h3>
+               <h1 class="display-2 display-2--dark">Speed Training mit Rolf Fongue</h1>
+            </div>
+         </div>
+         
+         <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-full">
+               <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                  <!-- FAQ Item 1 -->
+                  <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                     <div class="faq-question" style="background-color: var(--white); padding: 18px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="margin: 0; color: var(--black); font-size: 1.8rem;">Welche Voraussetzungen brauche ich, um ein Programm bei dir zu starten?</h4>
+                        <i class="fa fa-chevron-down" style="color: #d4af37; transition: transform 0.3s;"></i>
+                     </div>
+                     <div class="faq-answer" style="background-color: #f9f9f9; padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                        <div style="padding: 20px 0;">
+                           <p>Alles, was du brauchst, ist die Entschlossenheit, deine Grenzen zu überwinden! Unser Speed-Coaching-Programm ist für alle Levels des Fussballs geeignet. Egal, ob du ein erfahrener Athlet oder Einsteiger bist – wir passen das Programm an deine Bedürfnisse an. Alles, was du tun musst, ist den ersten Schritt zu machen und dich für eine transformative Reise anzumelden. Deine Entschlossenheit ist der Schlüssel, und wir sind hier, um dich auf jedem Schritt des Weges zu unterstützen!</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- FAQ Item 2 -->
+                  <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                     <div class="faq-question" style="background-color: var(--white); padding: 18px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="margin: 0; color: var(--black); font-size: 1.8rem;">Wie lange dauert das Programm mit wie viel Zeitaufwand?</h4>
+                        <i class="fa fa-chevron-down" style="color: #d4af37; transition: transform 0.3s;"></i>
+                     </div>
+                     <div class="faq-answer" style="background-color: #f9f9f9; padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                        <div style="padding: 20px 0;">
+                           <p>Die Dauer des Programms variiert, aber typischerweise empfehlen wir eine mehrwöchige Teilnahme für optimale Ergebnisse. Die Häufigkeit des Trainings hängt von deinem individuellen Zeitplan und Fitnesslevel ab, wobei wir Empfehlungen für eine effektive Trainingsfrequenz geben.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- FAQ Item 3 -->
+                  <div class="faq-item" style="margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                     <div class="faq-question" style="background-color: var(--white); padding: 18px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h4 style="margin: 0; color: var(--black); font-size: 1.8rem;">Ist das Programm für Anfänger geeignet oder nur für erfahrene Läufer?</h4>
+                        <i class="fa fa-chevron-down" style="color: #d4af37; transition: transform 0.3s;"></i>
+                     </div>
+                     <div class="faq-answer" style="background-color: #f9f9f9; padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                        <div style="padding: 20px 0;">
+                           <p>Unser Speed Coaching Program ist für alle Levels geeignet. Wir wählen für dich ein passendes Programm aus, um deine Höchstleistung zu steigern.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div style="text-align: center; margin-top: 40px;">
+                  <div class="final-cta-box">
+                     <h3>Bereit, deine Schnelligkeit aufs nächste Level zu bringen?</h3>
+                     <p>Buche jetzt mit der Nachricht <strong>AMZIFOOTBALL10</strong> erhältst du <strong>10% Rabatt</strong>!</p>                     
+                     <a href="https://www.extern-link-zu-fongue.ch" target="_blank" class="btn btn--primary">Buchen</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
       <div id="cookie-banner" class="cookie-banner">
          <div class="cookie-content">
