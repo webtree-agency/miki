@@ -121,8 +121,10 @@
                         <label for="gewähltes Angebot">Trainingsart</label>
                         <select name="gewähltes Angebot" id="gewähltes Angebot" class="full-width select-text" required onchange="updateFormOptions()">
                            <option value="" disabled selected>Bitte wählen...</option>
-                           <option value="Hallen-Training">Hallen-Training</option>
-                           <option value="Rasen-Training">Rasen-Training</option>
+                           <!-- <option value="Hallen-Training">Hallen-Training</option>
+                           <option value="Rasen-Training">Rasen-Training</option> -->
+                           <option value="Hallen-Training" disabled>Hallen-Training (ausgebucht)</option>
+                           <option value="Rasen-Training" disabled>Rasen-Training (ausgebucht)</option>
                            <option value="Talent-Camp">Talentcamp</option>
                            <option value="Geburtstag-Special">Geburtstag-Special</option>
                         </select>
