@@ -104,24 +104,6 @@
             </div>
          </div>
       </div>
-      <script>
-         document.addEventListener('DOMContentLoaded', function() {
-           const mikiToggle = document.getElementById('miki-toggle');
-           const fongueToggle = document.getElementById('fongue-toggle');
-           
-           mikiToggle.addEventListener('click', function() {
-             document.body.classList.remove('show-fongue');
-             mikiToggle.classList.add('active');
-             fongueToggle.classList.remove('active');
-           });
-           
-           fongueToggle.addEventListener('click', function() {
-             document.body.classList.add('show-fongue');
-             fongueToggle.classList.add('active');
-             mikiToggle.classList.remove('active');
-           });
-         });
-      </script>
       <!-- Miki -->
       <section id="what" class="s-about talent-section miki-section">
          <div class="about__line"></div>
@@ -917,6 +899,45 @@
             </div>
          </div>
       </div>
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+         const mikiToggle = document.getElementById('miki-toggle');
+         const fongueToggle = document.getElementById('fongue-toggle');
+         
+         const urlParams = new URLSearchParams(window.location.search);
+         const view = urlParams.get('view');
+         
+         if (view === 'fongue') {
+            document.body.classList.add('show-fongue');
+            fongueToggle.classList.add('active');
+            mikiToggle.classList.remove('active');
+         } else {
+            document.body.classList.remove('show-fongue');
+            mikiToggle.classList.add('active');
+            fongueToggle.classList.remove('active');
+         }
+         
+         mikiToggle.addEventListener('click', function() {
+            document.body.classList.remove('show-fongue');
+            mikiToggle.classList.add('active');
+            fongueToggle.classList.remove('active');
+            
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.set('view', 'miki');
+            window.history.pushState({}, '', newUrl);
+         });
+         
+         fongueToggle.addEventListener('click', function() {
+            document.body.classList.add('show-fongue');
+            fongueToggle.classList.add('active');
+            mikiToggle.classList.remove('active');
+            
+            const newUrl = new URL(window.location);
+            newUrl.searchParams.set('view', 'fongue');
+            window.history.pushState({}, '', newUrl);
+         });
+         });
+      </script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
