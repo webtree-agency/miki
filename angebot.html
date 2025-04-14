@@ -100,7 +100,7 @@
                   </div>
                </div>
                <div class="btn-container align-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                  <button class="btn btn--white max" onclick="showPricing('hallentraining')">Hallen-Training</button>
+                  <button class="btn btn--white max badge-small" onclick="showPricing('hallentraining')">Hallen-Training</button>
                   <button class="btn btn--white max" onclick="showPricing('rasen')">Rasen-Training</button>
                   <button class="btn btn--gold-camp max" onclick="showPricing('talentcamp')">Talentcamp</button>
                   <button class="btn btn--white max" onclick="showPricing('camp')">Geburtstag-Special</button> 
@@ -111,9 +111,12 @@
                       <div class="wrap-price">
                         <div>
                           <h3 class="service-title">Hallen-Training</h3>
+                          <div class="sold-out-badge">
+                           <span>Ausgebucht</span>
+                         </div>
                           <h5 class="location-service"><i class="fas fa-map-marker-alt"></i> Sporthalle Uerikon / Moritzberg</h5>
                           <h5 class="price-reduction font-italic">Dauer 60 Minuten</h5>
-                          <h5 class="price-reduction"><i class="fa-solid fa-futbol"></i> Limitierte Anzahl - vorerst AUSGEBUCHT</h5>
+                          <h5 class="price-reduction"><i class="fa-solid fa-futbol"></i> Limitierte Anzahl und nur samstags von 8:00 bis 12:00 Uhr.</h5>
                           <h5 class="service-pricing"><i class="fa-solid fa-shirt"></i> 1x konstenloses Trikot für jedes Abo (schwarz/weiss)</h5>
                           <div class="pricing-table-container">
                             <table class="pricing-table gold-table">
@@ -145,7 +148,8 @@
                             </table>
                           </div>
                           <i class="info-pricing">Scroll nach links, um weitere Details zu sehen!</i>
-                          <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a>
+                          <!-- <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a> -->
+                          <button class="btn btn--gold-full schedule-button disabled" disabled>Ausgebucht</button>
                         </div>
                       </div>
                     </div>
@@ -154,9 +158,11 @@
                       <div class="wrap-price">
                         <div>
                           <h3 class="service-title">Rasen-Training</h3>
+                          <div class="sold-out-badge">
+                           <span>Ausgebucht</span>
+                         </div>
                           <h5 class="location-service"><i class="fas fa-map-marker-alt"></i> Stäfa / Moritzberg / Frohberg</h5>
                           <h5 class="price-reduction font-italic">Dauer 60 Minuten</h5>
-                          <h5 class="price-reduction"><i class="fa-solid fa-futbol"></i> Limitierte Anzahl - vorerst AUSGEBUCHT</h5>
                           <h5 class="service-pricing"><i class="fa-solid fa-shirt"></i> 1x konstenloses Trikot für jedes Abo (schwarz/weiss)</h5>
                           <div class="pricing-table-container">
                             <table class="pricing-table gold-table">
@@ -189,7 +195,8 @@
                             </table>
                           </div>
                           <i class="info-pricing">Scroll nach links, um weitere Details zu sehen!</i>
-                          <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a>
+                          <!-- <a href="buchen.html" class="btn btn--gold-full schedule-button">jetzt buchen</a> -->
+                          <button class="btn btn--gold-full schedule-button disabled" disabled>Ausgebucht</button>
                         </div>
                       </div>
                     </div>
@@ -438,7 +445,7 @@ window.onload = function() {
 
       <!-- Event Popup -->
       <div id="popup" class="popup">
-         <a id="hide-popup" class="close"><i class="fas fa-xmark"></i></a>
+         <span id="close-popup" class="close"><i class="fas fa-xmark"></i></span>
          <div class="popup-content">
             <h3>Talentcamp ab 14. Mai 2025</h3>
             <p>Melde dich jetzt an für das exklusive Talentcamp und trainiere mit den Besten!</p>
