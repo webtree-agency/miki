@@ -971,6 +971,9 @@ button.btn--white.active {
     background: var(--white) !important;
     color: var(--black) !important;
 }
+button.btn.talentcamp-selector {
+    width: 250px;
+}
 .btn--gold-camp {
     background: transparent !important;
     border: 0.2rem solid var(--secondary-gold) !important;
@@ -2900,6 +2903,9 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 480px) {
+    button.btn.talentcamp-selector {
+        width: 100%;
+    }
     .clean-testimonial {
         padding: 35px;
         margin: 0 auto;
