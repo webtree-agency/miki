@@ -5256,7 +5256,7 @@ footer .row {
     width: 100%;
     position: relative;
     z-index: 100;
-    padding: 15px 0;
+    padding: 27px 0 15px 0;
   }
   
   .training-toggle-container {
@@ -5297,7 +5297,7 @@ body.show-fongue .fongue-section {
 }
   /* Hero */
   .fongue-hero-image {
-     background-image: url('../images/fongue.webp');
+     background-image: url('../images/miki-fongue-kooperation.webp');
      background-size: cover;
      background-position: center;
      min-height: 400px;
