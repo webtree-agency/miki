@@ -571,55 +571,86 @@
                </div>
             </div>
             <div class="row jersey-content">
-            <!-- Ersetze den problematischen Video-Block mit diesem Code -->
-            <div class="col-six tab-full training-video-container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-               <div class="training-video-wrapper" style="position: relative;">
-               <!-- Video-Element bleibt identisch -->
-               <video poster="images/fongue-cover-video.webp" class="training-video" preload="none" muted>
-                  <source src="videos/fongue-training.mp4" type="video/mp4">
-                  Dein Browser unterstützt keine Videos.
-               </video>
-               
-               <!-- Link mit Play-Button in der Mitte -->
-               <a href="videos/fongue-training.mp4" target="_blank" style="
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  z-index: 10;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  background: transparent;
-                  cursor: pointer;
-                  text-decoration: none;
-               ">
-                  <!-- Play-Button im Design der Seite -->
-                  <div style="
-                     width: 80px;
-                     height: 80px;
-                     border-radius: 50%;
-                     background-color: rgba(0, 0, 0, 0.6);
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                     transition: background-color 0.3s ease;
-                  " onmouseover="this.style.backgroundColor='rgba(0, 0, 0, 0.8)'" 
-                     onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.6)'">
-                     <!-- Play-Icon -->
-                     <div style="
-                     width: 0;
-                     height: 0;
-                     border-style: solid;
-                     border-width: 15px 0 15px 25px;
-                     border-color: transparent transparent transparent #fff;
-                     margin-left: 5px;
-                     "></div>
+               <div class="col-six tab-full training-video-container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <div class="training-video-wrapper">
+                     <video controls poster="images/fongue-cover-video.webp" class="training-video" preload="auto" muted>
+                        <source src="videos/fongue-training.mp4" type="video/mp4">
+                        Dein Browser unterstützt keine Videos.
+                     </video>
                   </div>
-               </a>
+                  <script>
+                     document.addEventListener('DOMContentLoaded', function() {
+  // Finde das Fongue-Video
+  const fongueVideo = document.querySelector('.training-video-wrapper video[poster="images/fongue-cover-video.webp"]');
+  
+  if (fongueVideo) {
+    // Originale Attribute speichern
+    const originalControls = fongueVideo.hasAttribute('controls');
+    const originalMuted = fongueVideo.hasAttribute('muted');
+    const originalPreload = fongueVideo.getAttribute('preload');
+    
+    // Event-Listener hinzufügen, der vor dem Abspielen das Video neu lädt
+    fongueVideo.addEventListener('play', function(e) {
+      // Verhindern, dass das Event erneut ausgelöst wird
+      if (!fongueVideo.dataset.loaded) {
+        e.preventDefault();
+        
+        // Als geladen markieren, damit wir diesen Code nicht erneut ausführen
+        fongueVideo.dataset.loaded = 'true';
+        
+        // Quellpfad überprüfen
+        const videoSource = fongueVideo.querySelector('source');
+        const videoPath = videoSource.getAttribute('src');
+        
+        console.log('Video wird neu geladen:', videoPath);
+        
+        // Video explizit neu laden
+        fongueVideo.load();
+        
+        // Kurze Verzögerung, dann abspielen
+        setTimeout(() => {
+          fongueVideo.play().catch(error => {
+            console.error('Fehler beim Abspielen des Videos:', error);
+          });
+        }, 100);
+      }
+    }, { once: true }); // Event nur einmal auslösen
+    
+    // Füge einen Klick-Event-Listener zum Video-Container hinzu
+    const videoWrapper = fongueVideo.closest('.training-video-wrapper');
+    if (videoWrapper) {
+      videoWrapper.addEventListener('click', function(e) {
+        // Prüfen, ob das Video bereit ist
+        if (fongueVideo.readyState === 0) {
+          e.preventDefault();
+          
+          // Video laden
+          fongueVideo.load();
+          
+          // Nach kurzer Verzögerung abspielen
+          setTimeout(() => {
+            try {
+              fongueVideo.play();
+            } catch (error) {
+              console.error('Fehler beim Abspielen des Videos:', error);
+            }
+          }, 100);
+        }
+      });
+    }
+    
+    // Fehlerbehandlung
+    fongueVideo.addEventListener('error', function(e) {
+      console.error('Video-Fehler:', fongueVideo.error);
+      // Versuche das Video neu zu laden
+      setTimeout(() => {
+        fongueVideo.load();
+      }, 500);
+    });
+  }
+});
+                  </script>
                </div>
-            </div>
                <div class="col-six tab-full program-details wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                   <h2 class="program-title">Das 3-Monats Elite-Programm</h2>
                   <div class="program-phases">
