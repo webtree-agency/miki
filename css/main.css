@@ -5264,6 +5264,16 @@ footer .row {
     vertical-align: top;
  }
 
+ .ausgebucht-badge-phone {
+    display: inline-block; 
+    background-color: var(--black); 
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem; 
+    padding: 4px 8px; 
+    vertical-align: middle;
+ }
+
  .new-tag-navbar {
     background-color: var(--primary-gold); color: white; font-size: 0.6em; padding: 4px 8px; vertical-align: top; margin-left: 5px;
  }
