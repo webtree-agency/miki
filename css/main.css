@@ -4919,6 +4919,33 @@ footer .row {
   transform: translateY(-5px);
 }
 
+.ausgebucht-badge {
+    display: inline-block;
+    background-color: #9c8321;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+  
+  .ausgebucht-row {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  .ausgebucht-row::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #9c8321;
+  }
+
 .card-header {
   background-color: var(--primary-gold);
   color: var(--white);
