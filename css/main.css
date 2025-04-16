@@ -69,6 +69,7 @@
     --normal-grey: #757575;
     --dark-grey: #555555;
     --black: #0E0E0E;
+    --red: #bc0000;
  }
 html {
     font-size: 10px;
@@ -4908,16 +4909,57 @@ footer .row {
 }
 
 .group-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .group-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Ausgebucht-Styling */
+  .ausgebucht-card {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .diagonal-ribbon {
+    position: absolute;
+    width: 200%;
+    top: 70px;
+    left: -24%;
+    text-align: center;
+    line-height: 40px;
+    background-color: var(--red);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(45deg);
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
 
-.group-card:hover {
-  transform: translateY(-5px);
-}
+  
+  /* Card-Inhalte sollten über dem Grauschleier liegen */
+  .ausgebucht-card .card-header,
+  .ausgebucht-card .card-body {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Für kleinere Bildschirme Anpassungen vornehmen */
+  @media (max-width: 480px) {
+    .diagonal-ribbon {
+      line-height: 30px;
+      top: 50px;
+    }
+  }
 
 .ausgebucht-badge {
     display: inline-block;
@@ -5355,7 +5397,7 @@ body.show-fongue .fongue-section {
   .fongue-hero-image {
      background-image: url('../images/miki-fongue-kooperation.webp');
      background-size: cover;
-     background-position: center;
+     background-position: top;
      min-height: 400px;
   }
   .talent-benefits li .fa-bolt {
@@ -5458,6 +5500,7 @@ body.show-fongue .fongue-section {
          height: 100%;
          object-fit: cover;
          display: block;
+         object-position: top;
          border-right: 5px solid #d4af37;
       }
       
@@ -5858,15 +5901,3 @@ body.show-fongue .fongue-section {
     z-index: 1;
   }
   
-  .sold-out-badge:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    transform: rotate(2deg);
-    z-index: 0;
-    border-radius: 5px;
-  }
