@@ -4957,7 +4957,7 @@ footer .row {
   @media (max-width: 480px) {
     .diagonal-ribbon {
       line-height: 30px;
-      top: 50px;
+      top: 80px;
     }
   }
 
