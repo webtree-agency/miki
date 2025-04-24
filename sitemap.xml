@@ -3,31 +3,36 @@
 
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/index.html</loc>
-        <lastmod>2025-03-13</lastmod>
+        <lastmod>2025-04-24</lastmod>
         <priority>1.00</priority>
     </url>
 
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/about.html</loc>
-        <lastmod>2025-02-11</lastmod>
+        <lastmod>2025-04-24</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/vision.html</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-04-24</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/angebot.html</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-04-24</lastmod>
         <priority>0.80</priority>
     </url>
 
     <url>
         <loc>https://www.amzilegacyfootballtraining.ch/buchen.html</loc>
-        <lastmod>2025-01-30</lastmod>
+        <lastmod>2025-04-24</lastmod>
         <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.amzilegacyfootballtraining.ch/talentcamp.html</loc>
+        <lastmod>2025-04-24</lastmod>
+        <priority>0.90</priority>
     </url>
 </urlset>
