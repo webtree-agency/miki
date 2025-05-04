@@ -5880,7 +5880,7 @@ body.show-fongue .fongue-section {
 }
 
 .sold-out-badge {
-    background-color: #9c8321; /* Deine Goldfarbe */
+    background-color: var(--red); /* Deine Goldfarbe */
     color: white;
     display: block;
     padding: 8px 15px;
