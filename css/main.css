@@ -2835,6 +2835,10 @@ html.no-csstransitions .home-content__main {
     background-color: var(--primary-gold) !important;
 }
 
+.custom-splide-black .splide__pagination__page.is-active {
+    background-color: var(--black) !important;
+}
+
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
     .clean-testimonial {
