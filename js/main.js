@@ -537,7 +537,7 @@
                 talentcampGruppe.removeAttribute('required');
             }
             else if (angebot === 'Talent-Camp') {
-                // Talentcamp is always in Stäfa and is a fixed 10er abo
+                // Fussballcamp is always in Stäfa and is a fixed 10er abo
                 standortSelect.value = 'Stäfa';
                 talentcampOptions.style.display = 'block';
                 
