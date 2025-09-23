@@ -102,6 +102,11 @@
             <div class="contact-primary">
                <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
                   <!-- Personal Information -->
+                      <div style="display:none;">
+                        <label for="website">Lass dieses Feld leer</label>
+                        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                     </div>
+                        <input type="hidden" id="formLoadTime" name="formLoadTime">
                   <div class="form-group">
                      <h4>Persönliche Angaben</h4>
                      <div class="form-field">
@@ -168,12 +173,10 @@
                         <label for="Terminwunsch">Wunschtermin</label>
                         <input 
                            name="Terminwunsch" 
-                           type="text" 
-                           placeholder="z.B. Samstag 01.01.2024 09:00" 
+                           type="datetime-local" 
                            id="Terminwunsch" 
-                           class="full-width" 
-                           pattern="^[A-Za-zäöüÄÖÜss]+ \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}$"
-                           title="Bitte im Format: Wochentag TT.MM.JJJJ HH:MM, z.B. Samstag 01.01.2024 09:00">
+                           class="termin-input" 
+                           required>
                      </div>
                      <div class="form-field" id="teilnehmer-geburtstag">
                         <label for="geburtstag-personen">Anzahl Teilnehmer</label>
@@ -353,7 +356,27 @@
          </div>
       </div>
       <!-- Event Popup -->
+<script>
+  document.getElementById("formLoadTime").value = Date.now();
 
+  document.getElementById("contactFormBuchen").addEventListener("submit", function(e){
+    const loadTime = parseInt(document.getElementById("formLoadTime").value, 10);
+    const now = Date.now();
+
+    if(now - loadTime < 10000){
+      e.preventDefault();
+      alert("Bitte fülle das Formular korrekt aus.");
+      return;
+    }
+
+    const honeypot = document.getElementById("website").value;
+    if(honeypot){
+      e.preventDefault();
+      alert("Spam erkannt – Formular nicht gesendet.");
+      return;
+    }
+  });
+</script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>

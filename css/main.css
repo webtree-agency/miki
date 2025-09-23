@@ -76,6 +76,15 @@ html {
     overflow-x: hidden;
 }
 
+.termin-input {
+  width: 100%;
+  padding: 12px 16px;              /* mehr Innenabstand */
+  border: 2px solid var(--primary-gold);       /* goldiger Rand */
+  background-color: transparent;       /* leicht goldiger Hintergrund */
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
 *::selection {
     background-color: var(--light-gold);
 }
