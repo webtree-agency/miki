@@ -102,10 +102,11 @@
             <div class="contact-primary">
                <form action="https://usebasin.com/f/10df9acad9fc" method="POST" name="contactForm" id="contactFormBuchen">
                   <!-- Personal Information -->
-                      <div style="display:none;">
-                        <label for="website">Lass dieses Feld leer</label>
-                        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                     <div style="display:none;">
+                     <label for="goldfield">Lass dieses Feld leer</label>
+                     <input type="text" name="_goldfield123" id="goldfield" autocomplete="off">
                      </div>
+
                         <input type="hidden" id="formLoadTime" name="formLoadTime">
                   <div class="form-group">
                      <h4>Persönliche Angaben</h4>
@@ -369,7 +370,7 @@
       return;
     }
 
-    const honeypot = document.getElementById("website").value;
+    const honeypot = document.getElementById("goldfield").value;
     if(honeypot){
       e.preventDefault();
       alert("Spam erkannt – Formular nicht gesendet.");
