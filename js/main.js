@@ -78,20 +78,20 @@
     };
     
     var clPopup = function() {
-        // Check if popup should be hidden based on localStorage
-        var isPopupHidden = localStorage.getItem('hidePopup') === 'true';
-        
-        if (!isPopupHidden) {
+        // Check if popup should be hidden for this session
+        var isPopupClosedThisSession = sessionStorage.getItem('popupClosed') === 'true';
+
+        if (!isPopupClosedThisSession) {
             $('#popup').fadeIn().addClass('popup-visible');
         }
-        
-        // Handle close button click
+
+        // Handle close button click - hide for entire session
         $(document).on('click', '#close-popup', function() {
             $('#popup').fadeOut();
-            // Don't permanently hide popup when just closed
+            sessionStorage.setItem('popupClosed', 'true');
         });
-        
-        // Handle "Don't show again" button if it exists
+
+        // Handle "Don't show again" button if it exists - hide permanently
         $(document).on('click', '#hide-popup', function() {
             $('#popup').fadeOut();
             localStorage.setItem('hidePopup', 'true');
