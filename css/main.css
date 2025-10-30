@@ -2213,6 +2213,9 @@ html.no-csstransitions .home-content__main {
     color: #010507;
     position: relative;
 }
+.talent-top-section {
+    padding-top: 6rem;
+}
 
 .s-about .section-header.has-bottom-sep::before {
     background-color: rgba(255, 255, 255, 0.25);
