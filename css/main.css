@@ -4612,8 +4612,14 @@ footer .row {
 .info-box-content {
     padding: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .info-box-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 .info-item {
