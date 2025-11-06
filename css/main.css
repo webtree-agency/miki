@@ -5307,6 +5307,29 @@ footer .row {
     border-radius: 8px;
     overflow: hidden;
  }
+
+ .player-dev-slide {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   padding-bottom: 4rem;
+ }
+
+ .player-dev-slide img {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+
+.player-dev-label {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: var(--primary-gold);
+   text-align: center;
+   margin: 0;
+   letter-spacing: 0.5px;
+ }
   .image-border-black {
     border: 3px solid var(--black);
     border-radius: 8px;

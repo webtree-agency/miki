@@ -202,7 +202,7 @@
             </a>
          </div>
       </section>
-      <section id='works' class="s-works">
+      <section id='works' class="s-works pb-0">
          <div class="intro-wrap">
             <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                <div class="col-full">
@@ -234,6 +234,54 @@
                         <li class="splide__slide"><img class="image-border-gold" src="images/new-gallery/weiss2-min.webp" alt="Junge modelt" loading="lazy"></li>
                         <li class="splide__slide"><img class="image-border-gold" src="images/new-gallery/miki-mit-2-anderen.webp" alt="Miralem Amzi mit zwei anderen" loading="lazy"></li>
                         <li class="splide__slide"><img class="image-border-gold" src="images/new-gallery/miki-mit-eleni.webp" alt="Miralem Amzi und Eleni Rittmann" loading="lazy"></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="player-development" class="s-works">
+         <div class="intro-wrap">
+            <div class="row section-header has-bottom-sep light-sep wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+               <div class="col-full">
+                  <h3 class="subhead">Spielerentwicklung</h3>
+                  <h1 class="display-2 display-2--light">Erfolgreiche Entwicklung meiner Spieler</h1>
+               </div>
+            </div>
+            <div class="custom-splide-container">
+               <div id="player-development-splide" class="splide custom-splide">
+                  <div class="splide__track custom-splide-track">
+                     <ul class="splide__list">
+                        <li class="splide__slide">
+                           <div class="player-dev-slide">
+                              <img class="image-border-gold" src="images/player-dev/francesco-footrebel.webp" alt="Spielerentwicklung von Stäfa zu FOOTREBEL" loading="lazy">
+                              <p class="player-dev-label">Von Stäfa zu FOOTREBEL</p>
+                           </div>
+                        </li>
+                        <li class="splide__slide">
+                           <div class="player-dev-slide">
+                              <img class="image-border-gold" src="images/player-dev/gelbes-trikot-kind-footrebel.webp" alt="Spielerentwicklung von Stäfa zu FOOTREBEL" loading="lazy">
+                              <p class="player-dev-label">Von Stäfa zu FOOTREBEL</p>
+                           </div>
+                        </li>
+                        <li class="splide__slide">
+                           <div class="player-dev-slide">
+                              <img class="image-border-gold" src="images/player-dev/kind-rappi-kunstrasen.webp" alt="Spielerentwicklung von Stäfa zu Rapperswil-Jona" loading="lazy">
+                              <p class="player-dev-label">Von Stäfa zu Rapperswil-Jona</p>
+                           </div>
+                        </li>
+                        <li class="splide__slide">
+                           <div class="player-dev-slide">
+                              <img class="image-border-gold" src="images/player-dev/kind-zuerich-rasen.webp" alt="Spielerentwicklung von Stäfa zu FC Zürich" loading="lazy">
+                              <p class="player-dev-label">Von Stäfa zu FC Zürich</p>
+                           </div>
+                        </li>
+                        <li class="splide__slide">
+                           <div class="player-dev-slide">
+                              <img class="image-border-gold" src="images/player-dev/zwei-frauen-fcz.webp" alt="Spielerentwicklung von Stäfa zu FC Zürich" loading="lazy">
+                              <p class="player-dev-label">Von Stäfa zu FC Zürich</p>
+                           </div>
+                        </li>
                      </ul>
                   </div>
                </div>
@@ -447,6 +495,18 @@
          </div>
       </section>
       <script>
+// Splide initialization for player development gallery
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.getElementById('player-development-splide')) {
+    var playerDevSplide = new Splide('#player-development-splide', {
+      type: 'fade',
+      rewind: true,
+    });
+
+    playerDevSplide.mount();
+  }
+});
+
 // Splide initialization for testimonials - one slide at a time, no autoplay
 document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('testimonials-splide')) {
@@ -454,10 +514,10 @@ document.addEventListener('DOMContentLoaded', function() {
       type: 'slide',
       pagination: true,
       arrows: true,
-      autoplay: false, 
+      autoplay: false,
       rewind: true,
     });
-    
+
     testimonialsSplide.mount();
   }
 });
