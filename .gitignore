@@ -1,2 +1,4 @@
 .vscode
 images/video
+.DS_Store
+**/.DS_Store
