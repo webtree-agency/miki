@@ -1526,7 +1526,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: inline-block;
 }
 
-.header-nav__social li a {
+.header-nav__social li a,
+.header-nav__social li a:visited {
     color: var(--primary-gold);
 }
 
