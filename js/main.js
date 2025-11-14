@@ -497,38 +497,51 @@
             const regularTrainingOptions = document.getElementById('regular-training-options');
             const birthdaySpecialOptions = document.getElementById('birthday-special-options');
             const talentcampOptions = document.getElementById('talentcamp-options');
-            
+
             // Get form fields that need toggling required attribute
             const anzahlPersonen = document.getElementById('Anzahl Personen');
             const gewähltesAbo = document.getElementById('gewähltes Abo');
             const terminwunsch = document.getElementById('Terminwunsch');
             const geburtstagPersonen = document.getElementById('geburtstag-personen');
             const talentcampGruppe = document.getElementById('talentcamp-gruppe');
-            
+
             // Reset all sections first
             regularTrainingOptions.style.display = 'none';
             birthdaySpecialOptions.style.display = 'none';
             talentcampOptions.style.display = 'none';
-            
+
             // Always disable Standort first
             standortSelect.disabled = true;
-            
+
+            // Helper function to update standort options
+            function updateStandortOptions(options) {
+                standortSelect.innerHTML = '<option value="" disabled selected>Bitte wählen...</option>';
+                options.forEach(function(option) {
+                    var opt = document.createElement('option');
+                    opt.value = option.value;
+                    opt.textContent = option.text;
+                    standortSelect.appendChild(opt);
+                });
+            }
+
             if (angebot === 'Hallen-Training') {
+                updateStandortOptions([{value: 'Hombrechtikon', text: 'Moritzberg'}]);
                 standortSelect.value = 'Hombrechtikon';
                 regularTrainingOptions.style.display = 'block';
-                
+
                 // Set required fields
                 anzahlPersonen.setAttribute('required', 'true');
                 gewähltesAbo.setAttribute('required', 'true');
                 terminwunsch.removeAttribute('required');
                 geburtstagPersonen.removeAttribute('required');
                 talentcampGruppe.removeAttribute('required');
-            } 
+            }
             else if (angebot === 'Rasen-Training') {
                 // Rasen-Training is always in Stäfa
+                updateStandortOptions([{value: 'Stäfa', text: 'Stäfa'}]);
                 standortSelect.value = 'Stäfa';
                 regularTrainingOptions.style.display = 'block';
-                
+
                 // Set required fields
                 anzahlPersonen.setAttribute('required', 'true');
                 gewähltesAbo.setAttribute('required', 'true');
@@ -537,13 +550,14 @@
                 talentcampGruppe.removeAttribute('required');
             }
             else if (angebot === 'Talent-Camp') {
-                // Fussballcamp is always in Stäfa and is a fixed 10er abo
+                // Fussballcamp is always in Stäfa (Frohberg)
+                updateStandortOptions([{value: 'Stäfa', text: 'Stäfa (Frohberg)'}]);
                 standortSelect.value = 'Stäfa';
                 talentcampOptions.style.display = 'block';
-                
+
                 // Set required fields for talentcamp
                 talentcampGruppe.setAttribute('required', 'true');
-                
+
                 // Remove required fields for other options
                 anzahlPersonen.removeAttribute('required');
                 gewähltesAbo.removeAttribute('required');
@@ -551,20 +565,28 @@
                 geburtstagPersonen.removeAttribute('required');
             }
             else if (angebot === 'Geburtstag-Special') {
-                // For Geburtstag-Special, show location selection
+                // For Geburtstag-Special, show both location options
+                updateStandortOptions([
+                    {value: 'Stäfa', text: 'Stäfa'},
+                    {value: 'Hombrechtikon', text: 'Moritzberg'}
+                ]);
                 standortSelect.disabled = false;
                 standortSelect.value = '';  // Reset the selection
                 birthdaySpecialOptions.style.display = 'block';
-                
+
                 // Set required fields
                 anzahlPersonen.removeAttribute('required');
                 gewähltesAbo.removeAttribute('required');
                 terminwunsch.setAttribute('required', 'true');
                 geburtstagPersonen.setAttribute('required', 'true');
                 talentcampGruppe.removeAttribute('required');
-            } 
+            }
             else {
                 // Default state when no option is selected
+                updateStandortOptions([
+                    {value: 'Stäfa', text: 'Stäfa'},
+                    {value: 'Hombrechtikon', text: 'Moritzberg'}
+                ]);
                 standortSelect.value = '';
                 standortSelect.disabled = false;
             }
