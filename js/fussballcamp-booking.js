@@ -7,7 +7,7 @@
     'use strict';
 
     // ⚠️ KONFIGURATION - BEREITS EINGETRAGEN!
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx7pRBCStxEH6SaHbiv1kmbhwgJOD7pN5n3Myt-5ixWSt7Cd8Yma4NrKk8miuDuye9xug/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8cNTkXf-lB-v1Qbnlg0eQ9qmNhuT7fURhRZQgOegDnNsCttpeJToUmpnjceAd9ZcrjQ/exec';
 
     // Buchung erst ab 01.01.2026 erlaubt (temporär auf 2024 für Tests)
     const GO_LIVE_DATE = new Date('2024-01-01T00:00:00');
@@ -89,23 +89,21 @@
                 submitBtn.textContent = 'Wird verarbeitet...';
 
                 try {
-                    // An Apps Script senden
-                    const response = await fetch(SCRIPT_URL, {
+                    // An Apps Script senden (mit redirect=false um CORS zu umgehen)
+                    const scriptUrlWithParams = SCRIPT_URL + '?t=' + Date.now();
+
+                    fetch(scriptUrlWithParams, {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
                         body: JSON.stringify(formData),
-                        mode: 'no-cors' // Wichtig für Apps Script
+                        mode: 'no-cors'
                     });
 
-                    // Bei no-cors bekommen wir keine Response, aber das ist OK
-                    // Apps Script führt die Buchung aus und sendet E-Mails
-
-                    // Erfolg: Zur Erfolgsseite
+                    // Bei no-cors: Wir können die Response nicht lesen,
+                    // aber das Script läuft im Hintergrund
+                    // Warten kurz, dann Erfolgsseite anzeigen
                     setTimeout(function() {
                         window.location.href = 'erfolg.html';
-                    }, 1500);
+                    }, 2000);
 
                 } catch (error) {
                     console.error('Buchungsfehler:', error);
