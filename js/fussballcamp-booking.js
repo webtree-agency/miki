@@ -7,10 +7,10 @@
     'use strict';
 
     // ⚠️ KONFIGURATION - BEREITS EINGETRAGEN!
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8cNTkXf-lB-v1Qbnlg0eQ9qmNhuT7fURhRZQgOegDnNsCttpeJToUmpnjceAd9ZcrjQ/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbziwlynxBlPADZm4JMwcoROVUeH_uaehp-7WFagHJYkH_WYoLKcudKZp3cCYm5VcXlkfA/exec';
 
-    // Buchung erst ab 01.01.2026 erlaubt
-    const GO_LIVE_DATE = new Date('2026-01-01T00:00:00');
+    // Buchung sofort erlaubt (für Testing)
+    const GO_LIVE_DATE = new Date('2024-01-01T00:00:00');
 
     function initBookingForm() {
         const form = document.getElementById('contactFormBuchen');
