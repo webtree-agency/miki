@@ -9,8 +9,8 @@
     // ⚠️ KONFIGURATION - BEREITS EINGETRAGEN!
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8cNTkXf-lB-v1Qbnlg0eQ9qmNhuT7fURhRZQgOegDnNsCttpeJToUmpnjceAd9ZcrjQ/exec';
 
-    // Buchung erst ab 01.01.2026 erlaubt (temporär auf 2024 für Tests)
-    const GO_LIVE_DATE = new Date('2024-01-01T00:00:00');
+    // Buchung erst ab 01.01.2026 erlaubt
+    const GO_LIVE_DATE = new Date('2026-01-01T00:00:00');
 
     function initBookingForm() {
         const form = document.getElementById('contactFormBuchen');
