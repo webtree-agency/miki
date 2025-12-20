@@ -108,16 +108,28 @@
                      </div>
 
                         <input type="hidden" id="formLoadTime" name="formLoadTime">
+                        <!-- Hidden field for slot_id (wird nur bei Fussballcamp verwendet) -->
+                        <input type="hidden" id="slot-id-hidden" name="slot_id" value="">
                   <div class="form-group">
-                     <h4>Persönliche Angaben</h4>
+                     <h4>Persönliche Angaben (Elternteil)</h4>
                      <div class="form-field">
-                        <input name="Name" type="text" id="Name" placeholder="Name" minlength="2" class="full-width" required>
+                        <input name="Name" type="text" id="Name" placeholder="Name Elternteil" minlength="2" class="full-width" required>
                      </div>
                      <div class="form-field">
                         <input name="email" type="email" id="email" placeholder="E-Mail" class="full-width" required>
                      </div>
                      <div class="form-field">
                         <input name="Telefonnummer" type="tel" id="Telefonnummer" placeholder="Telefonnummer" class="full-width" required>
+                     </div>
+                     <!-- Adresse (nur für Fussballcamp) -->
+                     <div class="form-field" id="adresse-strasse" style="display: none;">
+                        <input name="Strasse" type="text" id="Strasse" placeholder="Strasse und Hausnummer" class="full-width">
+                     </div>
+                     <div class="form-field" id="adresse-plz-ort" style="display: none;">
+                        <div style="display: flex; gap: 10px;">
+                           <input name="PLZ" type="text" id="PLZ" placeholder="PLZ" style="width: 30%;">
+                           <input name="Ort" type="text" id="Ort" placeholder="Ort" style="width: 70%;">
+                        </div>
                      </div>
                   </div>
                   <!-- Training Selection -->
@@ -131,7 +143,7 @@
                            <option value="Rasen-Training">Rasen-Training</option> -->
                            <option value="Hallen-Training" disabled>Hallen-Training (ausgebucht)</option>
                            <option value="Rasen-Training" disabled>Rasen-Training (ausgebucht)</option>
-                           <option value="Talent-Camp" disabled>Fussballcamp (Coming soon - Buchung möglich ab 7. Januar 2026)</option>
+                           <option value="Talent-Camp">Fussballcamp</option>
                            <option value="Geburtstag-Special">Geburtstag-Special</option>
                         </select>
                      </div>
@@ -193,10 +205,10 @@
                         <label for="talentcamp-gruppe">Gruppe & Uhrzeit</label>
                         <select name="Fussballcamp Gruppe" id="talentcamp-gruppe" class="full-width select-text" required>
                            <option value="" disabled selected>Bitte wählen...</option>
-                           <option value="Mädchen (Jahrgang gemischt, 08:00-09:00 Uhr)" disabled>Mädchen (Jahrgang gemischt, 08:00-09:00 Uhr) (Coming Soon)</option>
-                           <option value="Kids 1 (6-9 Jahre, 09:00-10:00 Uhr)" disabled>Kids 1 (6-9 Jahre, 09:00-10:00 Uhr) (Coming Soon)</option>
-                           <option value="Kids 2 (10-13 Jahre, 10:00-11:00 Uhr)" disabled>Kids 2 (10-13 Jahre, 10:00-11:00 Uhr) (Coming Soon)</option>
-                           <option value="Kids 3 (10-13 Jahre, 11:00-12:00 Uhr)" disabled>Kids 3 (10-13 Jahre, 11:00-12:00 Uhr) (Coming Soon)</option>
+                           <option value="maedchen_08_09">Mädchen (Jahrgang gemischt, 08:00-09:00 Uhr)</option>
+                           <option value="kids1_09_10">Kids 1 (6-9 Jahre, 09:00-10:00 Uhr)</option>
+                           <option value="kids2_10_11">Kids 2 (10-13 Jahre, 10:00-11:00 Uhr)</option>
+                           <option value="kids3_11_12">Kids 3 (10-13 Jahre, 11:00-12:00 Uhr)</option>
                         </select>
                      </div>
                   </div>
@@ -395,5 +407,9 @@
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
       <script src="js/wow.js"></script>
+
+      <!-- Fussballcamp Buchungssystem -->
+      <script src="js/slot-availability.js"></script>
+      <script src="js/fussballcamp-booking.js"></script>
    </body>
 </html>

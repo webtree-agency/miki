@@ -505,10 +505,24 @@
             const geburtstagPersonen = document.getElementById('geburtstag-personen');
             const talentcampGruppe = document.getElementById('talentcamp-gruppe');
 
+            // Address fields (nur für Fussballcamp)
+            const adresseStrasse = document.getElementById('adresse-strasse');
+            const adressePlzOrt = document.getElementById('adresse-plz-ort');
+            const strasseInput = document.getElementById('Strasse');
+            const plzInput = document.getElementById('PLZ');
+            const ortInput = document.getElementById('Ort');
+
             // Reset all sections first
             regularTrainingOptions.style.display = 'none';
             birthdaySpecialOptions.style.display = 'none';
             talentcampOptions.style.display = 'none';
+
+            // Hide address fields by default
+            if (adresseStrasse) adresseStrasse.style.display = 'none';
+            if (adressePlzOrt) adressePlzOrt.style.display = 'none';
+            if (strasseInput) strasseInput.removeAttribute('required');
+            if (plzInput) plzInput.removeAttribute('required');
+            if (ortInput) ortInput.removeAttribute('required');
 
             // Always disable Standort first
             standortSelect.disabled = true;
@@ -554,6 +568,13 @@
                 updateStandortOptions([{value: 'Stäfa', text: 'Stäfa (Frohberg)'}]);
                 standortSelect.value = 'Stäfa';
                 talentcampOptions.style.display = 'block';
+
+                // Show address fields for Fussballcamp
+                if (adresseStrasse) adresseStrasse.style.display = 'block';
+                if (adressePlzOrt) adressePlzOrt.style.display = 'block';
+                if (strasseInput) strasseInput.setAttribute('required', 'true');
+                if (plzInput) plzInput.setAttribute('required', 'true');
+                if (ortInput) ortInput.setAttribute('required', 'true');
 
                 // Set required fields for talentcamp
                 talentcampGruppe.setAttribute('required', 'true');

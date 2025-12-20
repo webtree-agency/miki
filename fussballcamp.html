@@ -441,51 +441,51 @@
                         <th class="table-header">Verfügbar</th>
                      </tr>
                   </thead>
-                  <tbody>
-                     <tr class="ausgebucht-row">
+                  <tbody id="slots-table-body">
+                     <tr data-slot-id="maedchen_08_09">
                         <td class="group-name">Mädchen
-                           <span class="ausgebucht-badge">Coming Soon</span>
+                           <span class="ausgebucht-badge" style="display:none;">Ausgebucht</span>
                         </td>
                         <td>Jahrgang gemischt</td>
                         <td>08:00 - 09:00 Uhr</td>
                         <td>180 CHF</td>
-                        <td><strong style="color: var(--primary-gold);">16 Plätze</strong></td>
+                        <td class="availability-cell"><strong style="color: var(--primary-gold);"><span class="available-count">16</span> Plätze</strong></td>
                      </tr>
-                     <tr class="ausgebucht-row">
+                     <tr data-slot-id="kids1_09_10">
                         <td class="group-name">Kids 1
-                           <span class="ausgebucht-badge">Coming Soon</span>
+                           <span class="ausgebucht-badge" style="display:none;">Ausgebucht</span>
                         </td>
                         <td>6-9 Jahre</td>
                         <td>09:00 - 10:00 Uhr</td>
                         <td>180 CHF</td>
-                        <td><strong style="color: var(--primary-gold);">16 Plätze</strong></td>
+                        <td class="availability-cell"><strong style="color: var(--primary-gold);"><span class="available-count">16</span> Plätze</strong></td>
                      </tr>
-                     <tr class="ausgebucht-row">
+                     <tr data-slot-id="kids2_10_11">
                         <td class="group-name">Kids 2
-                           <span class="ausgebucht-badge">Coming Soon</span>
+                           <span class="ausgebucht-badge" style="display:none;">Ausgebucht</span>
                         </td>
                         <td>10-13 Jahre</td>
                         <td>10:00 - 11:00 Uhr</td>
                         <td>180 CHF</td>
-                        <td><strong style="color: var(--primary-gold);">16 Plätze</strong></td>
+                        <td class="availability-cell"><strong style="color: var(--primary-gold);"><span class="available-count">16</span> Plätze</strong></td>
                      </tr>
-                     <tr class="ausgebucht-row">
+                     <tr data-slot-id="kids3_11_12">
                         <td class="group-name">Kids 3
-                           <span class="ausgebucht-badge">Coming Soon</span>
+                           <span class="ausgebucht-badge" style="display:none;">Ausgebucht</span>
                         </td>
                         <td>10-13 Jahre</td>
                         <td>11:00 - 12:00 Uhr</td>
                         <td>180 CHF</td>
-                        <td><strong style="color: var(--primary-gold);">16 Plätze</strong></td>
+                        <td class="availability-cell"><strong style="color: var(--primary-gold);"><span class="available-count">16</span> Plätze</strong></td>
                      </tr>
                   </tbody>
 
                </table>
             </div>
             <!-- Mobile-optimierte Karten-Ansicht -->
-            <div class="group-cards-container">
-               <div class="group-card limited-card">
-                  <div class="diagonal-ribbon">Coming Soon</div>
+            <div class="group-cards-container" id="slots-cards-container">
+               <div class="group-card limited-card" data-slot-id="maedchen_08_09">
+                  <div class="diagonal-ribbon" style="display:none;">Ausgebucht</div>
                   <div class="card-header">
                      <h3>Mädchen</h3>
                      <span class="age-badge">Jahrgang gemischt</span>
@@ -499,14 +499,14 @@
                         <i class="fa fa-tag"></i>
                         <p>180 CHF</p>
                      </div>
-                     <div class="card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
+                     <div class="card-info availability-card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
                         <i class="fa fa-users" style="color: var(--primary-gold);"></i>
-                        <p style="color: var(--primary-gold); font-weight: 700;">16 Plätze verfügbar</p>
+                        <p class="available-text" style="color: var(--primary-gold); font-weight: 700;"><span class="available-count">16</span> Plätze verfügbar</p>
                      </div>
                   </div>
                </div>
-               <div class="group-card limited-card">
-                  <div class="diagonal-ribbon">Coming Soon</div>
+               <div class="group-card limited-card" data-slot-id="kids1_09_10">
+                  <div class="diagonal-ribbon" style="display:none;">Ausgebucht</div>
                   <div class="card-header">
                      <h3>Kids 1</h3>
                      <span class="age-badge">6-9 Jahre</span>
@@ -520,14 +520,14 @@
                         <i class="fa fa-tag"></i>
                         <p>180 CHF</p>
                      </div>
-                     <div class="card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
+                     <div class="card-info availability-card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
                         <i class="fa fa-users" style="color: var(--primary-gold);"></i>
-                        <p style="color: var(--primary-gold); font-weight: 700;">16 Plätze verfügbar</p>
+                        <p class="available-text" style="color: var(--primary-gold); font-weight: 700;"><span class="available-count">16</span> Plätze verfügbar</p>
                      </div>
                   </div>
                </div>
-               <div class="group-card ausgebucht-card">
-                  <div class="diagonal-ribbon">Coming Soon</div>
+               <div class="group-card limited-card" data-slot-id="kids2_10_11">
+                  <div class="diagonal-ribbon" style="display:none;">Ausgebucht</div>
                   <div class="card-header">
                      <h3>Kids 2</h3>
                      <span class="age-badge">10-13 Jahre</span>
@@ -541,14 +541,14 @@
                         <i class="fa fa-tag"></i>
                         <p>180 CHF</p>
                      </div>
-                     <div class="card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
+                     <div class="card-info availability-card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
                         <i class="fa fa-users" style="color: var(--primary-gold);"></i>
-                        <p style="color: var(--primary-gold); font-weight: 700;">16 Plätze verfügbar</p>
+                        <p class="available-text" style="color: var(--primary-gold); font-weight: 700;"><span class="available-count">16</span> Plätze verfügbar</p>
                      </div>
                   </div>
                </div>
-               <div class="group-card ausgebucht-card">
-                  <div class="diagonal-ribbon">Coming Soon</div>
+               <div class="group-card limited-card" data-slot-id="kids3_11_12">
+                  <div class="diagonal-ribbon" style="display:none;">Ausgebucht</div>
                   <div class="card-header">
                      <h3>Kids 3</h3>
                      <span class="age-badge">10-13 Jahre</span>
@@ -562,16 +562,16 @@
                         <i class="fa fa-tag"></i>
                         <p>180 CHF</p>
                      </div>
-                     <div class="card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
+                     <div class="card-info availability-card-info" style="background: rgba(212, 175, 55, 0.1); padding: 0.5rem; border-radius: 5px;">
                         <i class="fa fa-users" style="color: var(--primary-gold);"></i>
-                        <p style="color: var(--primary-gold); font-weight: 700;">16 Plätze verfügbar</p>
+                        <p class="available-text" style="color: var(--primary-gold); font-weight: 700;"><span class="available-count">16</span> Plätze verfügbar</p>
                      </div>
                   </div>
                </div>
             </div>
 
             <div class="register-button-container">
-               <button class="btn btn--gold-full schedule-button disabled" disabled>Coming Soon</button>
+               <a href="buchen.html" class="btn btn--gold-full schedule-button">Jetzt Buchen</a>
             </div>
          </div>
          <!-- JavaScript für die responsive Darstellung -->
@@ -1192,5 +1192,7 @@
       <script src="js/wow.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
+      <!-- Fussballcamp Slot-Anzeige -->
+      <script src="js/fussballcamp-slots.js"></script>
    </body>
 </html>
