@@ -75,21 +75,24 @@
             const option = selectElement.querySelector(`option[value="${slotId}"]`);
 
             if (option) {
+                // Hole ursprünglichen Text ohne " - Lädt..."
+                const originalText = option.textContent.replace(' - Lädt...', '');
+
                 // Aktualisiere Text
                 if (available > 0) {
-                    option.textContent = `${slotName} - ${available} Plätze frei`;
+                    option.textContent = `${originalText} - ${available} Plätze frei`;
                     option.disabled = false;
                     option.style.color = '';
 
                     // Warnung bei wenigen Plätzen
                     if (available <= 3) {
-                        option.textContent = `${slotName} - NUR NOCH ${available} Plätze!`;
+                        option.textContent = `${originalText} - NUR NOCH ${available} Plätze!`;
                         option.style.color = '#ff6b6b';
                         option.style.fontWeight = 'bold';
                     }
                 } else {
                     // Slot ist ausgebucht
-                    option.textContent = `${slotName} (AUSGEBUCHT)`;
+                    option.textContent = `${originalText} (AUSGEBUCHT)`;
                     option.disabled = true;
                     option.style.color = '#999';
                 }
