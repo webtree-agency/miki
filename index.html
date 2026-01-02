@@ -732,7 +732,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Online Buchung möglich ab 7. Januar 2026</p>
             <div class="popup-buttons">
                <!-- <a class="btn btn--gold-full" href="buchen.html">Jetzt anmelden</a> -->
-               <button class="btn btn--gold-full disabled" disabled style="cursor: not-allowed;">Coming Soon</button>
+               <a href="/buchen.html?product=fussballcamp" class="btn btn--gold-full booking-button disabled">Coming Soon</a>
                <a href="fussballcamp.html" class="btn btn--grey">Mehr Infos</a>
             </div>
          </div>
@@ -754,5 +754,26 @@ document.addEventListener('DOMContentLoaded', function() {
       </script>
       <script src="js/wow.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+      <!-- Fussballcamp Booking Activation Script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // TEST: Aktivierungsdatum: 2. Januar 2026, 11:45 Uhr
+            const activationDate = new Date('2026-01-02T11:45:00');
+            const now = new Date();
+
+            // Prüfen ob das Aktivierungsdatum erreicht ist
+            if (now >= activationDate) {
+               // Nur Fussballcamp Booking Buttons aktivieren
+               const bookingButtons = document.querySelectorAll('.booking-button');
+               bookingButtons.forEach(button => {
+                  button.classList.remove('disabled');
+                  button.removeAttribute('disabled');
+                  button.removeAttribute('style');
+                  button.textContent = 'Jetzt buchen';
+               });
+            }
+         });
+      </script>
    </body>
 </html>

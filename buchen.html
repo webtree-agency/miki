@@ -143,7 +143,7 @@
                            <option value="Rasen-Training">Rasen-Training</option> -->
                            <option value="Hallen-Training" disabled>Hallen-Training (ausgebucht)</option>
                            <option value="Rasen-Training" disabled>Rasen-Training (ausgebucht)</option>
-                           <option value="Talent-Camp" disabled>Fussballcamp (ausgebucht)</option>
+                           <option value="Talent-Camp" class="fussballcamp-option" disabled>Fussballcamp (Coming Soon)</option>
                            <option value="Geburtstag-Special">Geburtstag-Special</option>
                         </select>
                      </div>
@@ -412,5 +412,24 @@
       <!-- Fussballcamp Buchungssystem -->
       <script src="js/slot-availability.js?v=3.0"></script>
       <script src="js/fussballcamp-booking.js?v=3.0"></script>
+
+      <!-- Fussballcamp Booking Activation Script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // TEST: Aktivierungsdatum: 2. Januar 2026, 11:45 Uhr
+            const activationDate = new Date('2026-01-02T11:45:00');
+            const now = new Date();
+
+            // Prüfen ob das Aktivierungsdatum erreicht ist
+            if (now >= activationDate) {
+               // Fussballcamp Option im Dropdown aktivieren
+               const fussballcampOption = document.querySelector('.fussballcamp-option');
+               if (fussballcampOption) {
+                  fussballcampOption.removeAttribute('disabled');
+                  fussballcampOption.textContent = 'Fussballcamp';
+               }
+            }
+         });
+      </script>
    </body>
 </html>

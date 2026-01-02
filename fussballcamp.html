@@ -73,7 +73,7 @@
                   <a href="#what" class="btn btn--white smoothscroll">
                   Was ist das Fussballcamp?
                   </a>
-                  <a href="#services" class="btn btn--gold-full schedule-button smoothscroll disabled">Coming Soon</a>
+                  <a href="#services" class="btn btn--gold-full schedule-button smoothscroll booking-button disabled">Coming Soon</a>
                </div>
             </div>
             <div class="home-content__scroll">
@@ -160,7 +160,7 @@
                   </p>
 
                   <p style="font-size: 1.6rem; color: var(--primary-gold); margin: 1.5rem 0; line-height: 1.4;">
-                  <strong>Trainingsablauf:</strong> Die Gruppe wird geteilt – eine Hälfte trainiert mit Miralem Amzi, während die andere mit Adnan Jashari trainiert. Nach 30 Minuten wird gewechselt.                  </p>
+                  <strong>Trainingsablauf:</strong> Die Gruppe wird geteilt – eine Hälfte trainiert mit Miralem Amzi, während die andere mit Adnan Jashari trainiert. Danach wird gewechselt.                  </p>
 
                   <a href="#services" class="btn btn--stroke-inverted smoothscroll">Jetzt nichts verpassen</a>
                </div>
@@ -329,7 +329,7 @@
                   <span class="promo-discount">10% RABATT</span>
                </div>
                <div class="talent-actions">
-                  <a href="https://rolffongue.com/kontakt/" target="_blank" class="btn btn--primary disabled fongue-btn">Coming Soon</a>
+                  <a href="https://rolffongue.com/kontakt/" target="_blank" class="btn btn--primary fongue-btn">Jetzt buchen</a>
                   <a href="#fongue-video" class="btn btn--stroke-inverted smoothscroll">Video ansehen</a>
                </div>
             </div>
@@ -571,7 +571,7 @@
             </div>
 
             <div class="register-button-container">
-               <a href="/buchen.html?product=fussballcamp" class="btn btn--gold-full disabled schedule-button">Coming Soon</a>
+               <a href="/buchen.html?product=fussballcamp" class="btn btn--gold-full schedule-button booking-button disabled">Coming Soon</a>
             </div>
          </div>
          <!-- JavaScript für die responsive Darstellung -->
@@ -1033,7 +1033,7 @@
             <p>Online Buchung möglich ab 7. Januar 2026</p>
             <div class="popup-buttons">
                <!-- <a class="btn btn--gold-full" href="buchen.html">Jetzt anmelden</a> -->
-               <button class="btn btn--gold-full disabled" disabled style="cursor: not-allowed;">Coming Soon</button>
+               <a href="/buchen.html?product=fussballcamp" class="btn btn--gold-full schedule-button booking-button disabled">Coming Soon</a>
                <a href="fussballcamp.html" class="btn btn--grey">Mehr Infos</a>
             </div>
          </div>
@@ -1194,5 +1194,24 @@
 
       <!-- Fussballcamp Slot-Anzeige -->
       <script src="js/fussballcamp-slots.js"></script>
+
+      <!-- Fussballcamp Booking Activation Script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // TEST: Aktivierungsdatum: 2. Januar 2026, 11:45 Uhr
+            const activationDate = new Date('2026-01-02T11:45:00');
+            const now = new Date();
+
+            // Prüfen ob das Aktivierungsdatum erreicht ist
+            if (now >= activationDate) {
+               // Nur Fussballcamp Booking Buttons aktivieren (NICHT Fongue!)
+               const bookingButtons = document.querySelectorAll('.booking-button');
+               bookingButtons.forEach(button => {
+                  button.classList.remove('disabled');
+                  button.textContent = 'Jetzt buchen';
+               });
+            }
+         });
+      </script>
    </body>
 </html>
