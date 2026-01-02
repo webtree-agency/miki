@@ -10,7 +10,7 @@
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwo_tDLsJBgkNRWk0klIRiVAt4xQlGx2pdXnKkX0ihTj9yR-Empb5N9bgBeUXvk8hNAcg/exec';
 
     // Buchung erlaubt ab 02.01.2026 11:52 Uhr (Test) - später auf 06.01.2026 00:00 ändern
-    const GO_LIVE_DATE = new Date('2026-01-02T11:52:00');
+    const GO_LIVE_DATE = new Date('2026-01-02T12:10:00');
 
     function initBookingForm() {
         const form = document.getElementById('contactFormBuchen');
