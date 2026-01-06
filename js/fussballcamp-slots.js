@@ -15,7 +15,9 @@
      */
     async function loadSlotData() {
         try {
-            const response = await fetch(SHEETS_API_URL);
+            // Cache-Buster um immer aktuelle Daten zu laden
+            const cacheBuster = `&_t=${Date.now()}`;
+            const response = await fetch(SHEETS_API_URL + cacheBuster);
 
             if (!response.ok) {
                 console.error('Fehler beim Laden der Slot-Daten:', response.status);
@@ -51,8 +53,13 @@
             return;
         }
 
-        // Iteriere durch alle Slots (skip header row)
-        for (let i = 1; i < slotData.length; i++) {
+        // Prüfe ob erste Zeile ein Header ist oder Daten enthält
+        const firstRow = slotData[0];
+        const hasHeader = firstRow && (firstRow[0] === 'slot_id' || firstRow[0] === 'Slot ID');
+        const startIndex = hasHeader ? 1 : 0;
+
+        // Iteriere durch alle Slots
+        for (let i = startIndex; i < slotData.length; i++) {
             const row = slotData[i];
             const slotId = row[0];           // A: slot_id
             const slotName = row[1];         // B: slot_name
@@ -66,8 +73,6 @@
             // Update Karte (Mobile)
             updateCard(slotId, available);
         }
-
-        console.log('✅ Slot-Anzeige aktualisiert:', new Date().toLocaleTimeString());
     }
 
     /**
