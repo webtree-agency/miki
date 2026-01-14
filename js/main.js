@@ -563,6 +563,19 @@
                 geburtstagPersonen.removeAttribute('required');
                 talentcampGruppe.removeAttribute('required');
             }
+            else if (angebot === 'Indoor-Fussball') {
+                // Indoor-Fussball is always in Padelwerk Lachen
+                updateStandortOptions([{value: 'Lachen', text: 'Padelwerk Lachen'}]);
+                standortSelect.value = 'Lachen';
+                regularTrainingOptions.style.display = 'block';
+
+                // Set required fields
+                anzahlPersonen.setAttribute('required', 'true');
+                gewähltesAbo.setAttribute('required', 'true');
+                terminwunsch.removeAttribute('required');
+                geburtstagPersonen.removeAttribute('required');
+                talentcampGruppe.removeAttribute('required');
+            }
             else if (angebot === 'Talent-Camp') {
                 // Fussballcamp is always in Stäfa (Frohberg)
                 updateStandortOptions([{value: 'Stäfa', text: 'Stäfa (Frohberg)'}]);

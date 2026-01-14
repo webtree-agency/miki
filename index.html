@@ -26,6 +26,24 @@
       <link rel="icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="stylesheet" href="css/animated.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+         .new-tag {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: white;
+            font-size: 0.4em;
+            padding: 4px 8px;
+            vertical-align: top;
+         }
+         .new-tag-navbar {
+            background-color: var(--primary-gold);
+            color: white;
+            font-size: 0.6em;
+            padding: 4px 8px;
+            vertical-align: top;
+            margin-left: 5px;
+         }
+      </style>
       <!-- Strukturierte Daten für Google (Logo) -->
       <script type="application/ld+json">
       {
@@ -71,7 +89,8 @@
                <h3>Navigation</h3>
                <ul class="header-nav__list">
                   <li class="current"><a class="smoothscroll"  href="#home">Home</a></li>
-                  <li><a href="fussballcamp.html">Fussballcamp 
+                  <li><a href="fussballcamp.html">Fussballcamp</a></li>
+                  <li><a href="indoor-fussball.html">Indoor-Fussball <span class="new-tag-navbar">NEU</span></a></li>
                   <li><a href="angebot.html">Angebot / Preise</a></li>
                   <li><a href="buchen.html">Buchen</a></li>
                   <li><a href="about.html">Meine Geschichte</a></li>
@@ -211,7 +230,16 @@
                </div>
                <div class="service-text">
                   <h3 class="h2">Fussballcamp</h3>
-                  <p>Rasentraining in kleinen Gruppen – stärkt den Teamgeist, fördert die Technik und bringt Tempo ins Spiel.</p>                  
+                  <p>Rasentraining in kleinen Gruppen – stärkt den Teamgeist, fördert die Technik und bringt Tempo ins Spiel.</p>
+               </div>
+            </div>
+            <div class="col-block service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+               <div class="service-icon">
+                  <img class="fussball-icon" src="svg/fussball-gold.svg" alt="Fussball Icon">
+               </div>
+               <div class="service-text">
+                  <h3 class="h2">Indoor-Fussball <span class="new-tag">NEU</span></h3>
+                  <p>Wetterunabhängiges Training im Padelwerk Lachen. Jeden Sonntag Einzel- und Gruppentraining für alle Levels.</p>
                </div>
             </div>
             <div class="col-block service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
