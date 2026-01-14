@@ -564,9 +564,9 @@
                 talentcampGruppe.removeAttribute('required');
             }
             else if (angebot === 'Indoor-Fussball') {
-                // Indoor-Fussball is always in Padelwerk Lachen
-                updateStandortOptions([{value: 'Lachen', text: 'Padelwerk Lachen'}]);
-                standortSelect.value = 'Lachen';
+                // Indoor-Fussball is always in Padelwerk Bubikon
+                updateStandortOptions([{value: 'Bubikon', text: 'Padelwerk Bubikon'}]);
+                standortSelect.value = 'Bubikon';
                 regularTrainingOptions.style.display = 'block';
 
                 // Set required fields
