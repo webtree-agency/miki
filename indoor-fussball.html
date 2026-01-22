@@ -98,6 +98,21 @@
             margin-left: 5px;
          }
 
+         /* Indoor Slider - Hochformat auf Desktop */
+         .indoor-slider img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border: 3px solid var(--primary-gold);
+            border-radius: 8px;
+         }
+
+         @media screen and (max-width: 768px) {
+            .indoor-slider img {
+               height: 500px;
+            }
+         }
+
          /* Platztypen Grid & Cards */
          .platz-grid {
             display: grid;
@@ -338,13 +353,13 @@
                      <div class="splide__track">
                         <ul class="splide__list">
                            <li class="splide__slide">
-                              <img src="images/indoor/indoor-training-2.webp" alt="Indoor Training Padelwerk" style="width: 100%; height: 500px; object-fit: cover; border: 3px solid var(--primary-gold); border-radius: 8px;">
+                              <img src="images/indoor/indoor-training-2.webp" alt="Indoor Training Padelwerk">
                            </li>
                            <li class="splide__slide">
-                              <img src="images/indoor/indoor-training-3.webp" alt="Fussball Training Indoor" style="width: 100%; height: 500px; object-fit: cover; border: 3px solid var(--primary-gold); border-radius: 8px;">
+                              <img src="images/indoor/indoor-training-3.webp" alt="Fussball Training Indoor">
                            </li>
                            <li class="splide__slide">
-                              <img src="images/indoor/indoor-training-4.webp" alt="Indoor Fussballhalle" style="width: 100%; height: 500px; object-fit: cover; border: 3px solid var(--primary-gold); border-radius: 8px;">
+                              <img src="images/indoor/indoor-training-4.webp" alt="Indoor Fussballhalle">
                            </li>
                         </ul>
                      </div>
