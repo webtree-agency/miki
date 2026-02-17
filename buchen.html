@@ -154,10 +154,13 @@
                            <option value="Rasen-Training">Rasen-Training</option> -->
                            <option value="Hallen-Training" disabled>Hallen-Training (ausgebucht)</option>
                            <option value="Rasen-Training" disabled>Rasen-Training (ausgebucht)</option>
-                           <option value="Indoor-Fussball" disabled>Indoor-Fussball (ausgebucht)</option>
+                           <option value="Indoor-Fussball">Indoor-Fussball</option>
                            <option value="Talent-Camp" class="fussballcamp-option" disabled>Fussballcamp (Coming Soon)</option>
                            <option value="Geburtstag-Special">Geburtstag-Special</option>
                         </select>
+                        <p id="indoor-hinweis" style="display: none; margin-top: 1rem; padding: 1.2rem; background: rgba(193, 167, 81, 0.15); border-left: 3px solid var(--primary-gold); font-size: 1.5rem; color: var(--primary-gold);">
+                           <i class="fa fa-info-circle"></i> Bis 31. März 2026 ausgebucht, danach nach Absprache möglich. Bitte gewünschtes Datum in der Nachricht vermerken.
+                        </p>
                      </div>
                      <div class="form-field">
                         <label for="Standort">Standort</label>
@@ -428,6 +431,17 @@
                if (fussballcampOption) {
                   fussballcampOption.removeAttribute('disabled');
                   fussballcampOption.textContent = 'Fussballcamp';
+               }
+            }
+
+            // URL-Parameter auslesen und Angebot vorauswählen
+            const urlParams = new URLSearchParams(window.location.search);
+            const product = urlParams.get('product');
+            if (product === 'indoor-fussball') {
+               const angebotSelect = document.getElementById('gewähltes Angebot');
+               if (angebotSelect) {
+                  angebotSelect.value = 'Indoor-Fussball';
+                  angebotSelect.dispatchEvent(new Event('change'));
                }
             }
          });

@@ -512,10 +512,14 @@
             const plzInput = document.getElementById('PLZ');
             const ortInput = document.getElementById('Ort');
 
+            // Indoor-Fussball Hinweis
+            var indoorHinweis = document.getElementById('indoor-hinweis');
+
             // Reset all sections first
             regularTrainingOptions.style.display = 'none';
             birthdaySpecialOptions.style.display = 'none';
             talentcampOptions.style.display = 'none';
+            if (indoorHinweis) indoorHinweis.style.display = 'none';
 
             // Hide address fields by default
             if (adresseStrasse) adresseStrasse.style.display = 'none';
@@ -568,6 +572,7 @@
                 updateStandortOptions([{value: 'Bubikon', text: 'Padelwerk Bubikon'}]);
                 standortSelect.value = 'Bubikon';
                 regularTrainingOptions.style.display = 'block';
+                if (indoorHinweis) indoorHinweis.style.display = 'block';
 
                 // Set required fields
                 anzahlPersonen.setAttribute('required', 'true');
