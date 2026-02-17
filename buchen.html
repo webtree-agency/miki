@@ -437,10 +437,17 @@
             // URL-Parameter auslesen und Angebot vorauswählen
             const urlParams = new URLSearchParams(window.location.search);
             const product = urlParams.get('product');
-            if (product === 'indoor-fussball') {
+            const productMap = {
+               'indoor-fussball': 'Indoor-Fussball',
+               'fussballcamp': 'Talent-Camp',
+               'hallen-training': 'Hallen-Training',
+               'rasen-training': 'Rasen-Training',
+               'geburtstag': 'Geburtstag-Special'
+            };
+            if (product && productMap[product]) {
                const angebotSelect = document.getElementById('gewähltes Angebot');
                if (angebotSelect) {
-                  angebotSelect.value = 'Indoor-Fussball';
+                  angebotSelect.value = productMap[product];
                   angebotSelect.dispatchEvent(new Event('change'));
                }
             }
