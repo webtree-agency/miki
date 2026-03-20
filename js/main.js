@@ -51,52 +51,15 @@
         $(document).on('click', '#accept-cookies', function() {
             setCookie('cookieConsent', 'accepted', cfg.cookieExpiry);
             $('#cookie-banner').fadeOut();
-            
-            // Now that cookies are accepted, show the popup with some delay
-            setTimeout(function() {
-                clPopup();
-            }, 2000);
         });
-        
+
         // Decline cookies
         $(document).on('click', '#decline-cookies', function() {
             setCookie('cookieConsent', 'declined', cfg.cookieExpiry);
             $('#cookie-banner').fadeOut();
-            
-            // Show popup even if cookies declined
-            setTimeout(function() {
-                clPopup();
-            }, 2000);
         });
-        
-        // If cookie consent is already given, prepare to show popup
-        if (getCookie('cookieConsent') !== null) {
-            setTimeout(function() {
-                clPopup();
-            }, cfg.popupDelay);
-        }
     };
     
-    var clPopup = function() {
-        // Check if popup should be hidden for this session
-        var isPopupClosedThisSession = sessionStorage.getItem('popupClosed') === 'true';
-
-        if (!isPopupClosedThisSession) {
-            $('#popup').fadeIn().addClass('popup-visible');
-        }
-
-        // Handle close button click - hide for entire session
-        $(document).on('click', '#close-popup', function() {
-            $('#popup').fadeOut();
-            sessionStorage.setItem('popupClosed', 'true');
-        });
-
-        // Handle "Don't show again" button if it exists - hide permanently
-        $(document).on('click', '#hide-popup', function() {
-            $('#popup').fadeOut();
-            localStorage.setItem('hidePopup', 'true');
-        });
-    };
 
    /* Preloader
     * -------------------------------------------------- */
