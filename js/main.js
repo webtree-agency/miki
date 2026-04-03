@@ -567,10 +567,10 @@
                 geburtstagPersonen.removeAttribute('required');
             }
             else if (angebot === 'Geburtstag-Special') {
-                // For Geburtstag-Special, show both location options
+                // For Geburtstag-Special, show location options
                 updateStandortOptions([
-                    {value: 'Stäfa', text: 'Stäfa'},
-                    {value: 'Hombrechtikon', text: 'Moritzberg'}
+                    {value: 'Hombrechtikon', text: 'Moritzberg'},
+                    {value: 'Bubikon', text: 'Padelwerk Bubikon'}
                 ]);
                 standortSelect.disabled = false;
                 standortSelect.value = '';  // Reset the selection
