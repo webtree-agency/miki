@@ -155,7 +155,7 @@
                            <option value="Hallen-Training" disabled>Hallen-Training (ausgebucht bis 31.05.2026)</option>
                            <option value="Rasen-Training" disabled>Rasen-Training (ausgebucht bis 31.05.2026)</option>
                            <option value="Indoor-Fussball">Indoor-Fussball</option>
-                           <option value="Talent-Camp" class="fussballcamp-option" disabled>Fussballcamp (Coming Soon)</option>
+                           <option value="Talent-Camp" class="fussballcamp-option" disabled>Fussballcamp (ausgebucht)</option>
                            <option value="Geburtstag-Special">Geburtstag-Special</option>
                         </select>
                         <p id="indoor-hinweis" style="display: none; margin-top: 1rem; padding: 1.2rem; background: rgba(193, 167, 81, 0.15); border-left: 3px solid var(--primary-gold); font-size: 1.5rem; color: var(--primary-gold);">
@@ -415,23 +415,9 @@
       <script src="js/slot-availability.js?v=3.0"></script>
       <script src="js/fussballcamp-booking.js?v=3.0"></script>
 
-      <!-- Fussballcamp Booking Activation Script -->
+      <!-- URL-Parameter Vorauswahl -->
       <script>
          document.addEventListener('DOMContentLoaded', function() {
-            // Aktivierungsdatum: 6. Januar 2026, 00:00 Uhr
-            const activationDate = new Date('2026-01-06T00:00:00');
-            const now = new Date();
-
-            // Prüfen ob das Aktivierungsdatum erreicht ist
-            if (now >= activationDate) {
-               // Fussballcamp Option im Dropdown aktivieren
-               const fussballcampOption = document.querySelector('.fussballcamp-option');
-               if (fussballcampOption) {
-                  fussballcampOption.removeAttribute('disabled');
-                  fussballcampOption.textContent = 'Fussballcamp';
-               }
-            }
-
             // URL-Parameter auslesen und Angebot vorauswählen
             const urlParams = new URLSearchParams(window.location.search);
             const product = urlParams.get('product');
