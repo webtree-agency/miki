@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.amzilegacyfootballtraining.ch/sitemap.xml
+Disallow: /erfolg.html
+Disallow: /datenschutz.html
+Disallow: /impressum.html
 
-User-agent: BadBot
-Disallow: /
+Sitemap: https://www.amzilegacyfootballtraining.ch/sitemap.xml
