@@ -18,10 +18,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const payload = await getPayload({ config })
   const home = await payload.findGlobal({ slug: 'home-page' })
   return {
-    title: home?.seo?.title || 'Professionelles Fussballtraining für Deinen Erfolg!',
+    title:
+      home?.seo?.title ||
+      'Professionelles Fussballtraining für Deinen Erfolg! | Amzilegacyfootballtraining.ch',
     description:
       home?.seo?.description ||
-      'Exklusives Fussballtraining auf Rasen und in der Halle. Individuelle Einzel- und Gruppentrainings.',
+      'Erstklassige Fussballtrainings in Stäfa auf dem Frohberg, in Uerikon in der Halle sowie in Bubikon in der Fussball-Indoor-Halle. Werde Teil von Amzi Legacy und erlebe professionelles Fussballtraining mit Leidenschaft, Qualität und Herz.',
     alternates: { canonical: 'https://www.amzilegacyfootballtraining.ch/' },
   }
 }
@@ -45,8 +47,43 @@ export default async function HomePage() {
     ? `https://wa.me/${settings.kontakt.whatsappNumber.replace(/[^+\d]/g, '')}`
     : ''
 
+  const sportsActivityLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsActivityLocation',
+    name: 'Amzi Legacy Football Training',
+    alternateName: 'MIKI Fussballschule',
+    url: 'https://www.amzilegacyfootballtraining.ch/',
+    logo: 'https://www.amzilegacyfootballtraining.ch/images/miki/google-logo.png',
+    image: 'https://www.amzilegacyfootballtraining.ch/images/miki/google-logo.png',
+    description:
+      'Professionelles Fussballtraining auf Rasen und in der Halle. Individuelle Einzel- und Gruppentrainings für Anfänger und Fortgeschrittene.',
+    telephone: '+41789176436',
+    email: 'info@amzilegacyfootballtraining.ch',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Stäfa',
+      addressRegion: 'ZH',
+      postalCode: '8712',
+      addressCountry: 'CH',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 47.2442,
+      longitude: 8.7261,
+    },
+    sameAs: [
+      'https://www.instagram.com/amzifootballtraining/',
+      'https://www.tiktok.com/@amzifootballtraining',
+    ],
+  }
+
   return (
     <>
+      <Script
+        id="ld-sports-activity"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sportsActivityLd) }}
+      />
       <section
         id="home"
         className="s-home target-section"

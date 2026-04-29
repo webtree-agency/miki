@@ -4,7 +4,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import BuchenForm from './BuchenForm'
 
-type AngebotOption = { wert: string; label: string }
+type AngebotOption = { wert: string; label: string; deaktiviert?: boolean }
 type GruppenOption = { slotId: string; name: string; zeit?: string | null }
 
 export async function generateMetadata(): Promise<Metadata> {

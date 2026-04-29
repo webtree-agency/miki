@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-type AngebotOption = { wert: string; label: string }
+type AngebotOption = { wert: string; label: string; deaktiviert?: boolean }
 type GruppenOption = { slotId: string; name: string; zeit?: string }
 
 type Props = {
@@ -123,15 +123,15 @@ export default function BuchenForm({ angeboteOptions, gruppen, campAusgebucht }:
             </option>
             {angeboteOptions.map((opt) => {
               const isCamp = opt.wert === 'Talent-Camp'
+              const disabled = !!opt.deaktiviert || (isCamp && campAusgebucht)
               return (
                 <option
                   key={opt.wert}
                   value={opt.wert}
                   className={isCamp ? 'fussballcamp-option' : undefined}
-                  disabled={isCamp && campAusgebucht}
+                  disabled={disabled}
                 >
                   {opt.label}
-                  {isCamp && campAusgebucht ? ' (ausgebucht)' : ''}
                 </option>
               )
             })}
