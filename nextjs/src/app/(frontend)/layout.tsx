@@ -7,12 +7,10 @@ import { Scripts } from '@/components/Scripts'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Amzi Legacy Football Training',
-    template: '%s | Amzi Legacy Football Training',
-  },
+  title: 'Amzi Legacy Football Training',
   description:
     'Erstklassige Fussballtrainings in Stäfa, Uerikon und Bubikon. Werde Teil von Amzi Legacy.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.amzilegacyfootballtraining.ch'),
 }
 
 export default function FrontendLayout({ children }: { children: React.ReactNode }) {
