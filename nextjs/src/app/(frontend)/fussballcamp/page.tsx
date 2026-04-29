@@ -57,6 +57,51 @@ export default async function FussballcampPage() {
     ? (camp!.gruppen as Gruppe[])
     : FALLBACK_GRUPPEN
 
+  const sportsEventLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsEvent',
+    name: 'Amzi Legacy Fussballcamp 2026',
+    description:
+      'Exklusives Fussballcamp für junge Fussballspieler – verschiedene Altersgruppen und spezielle Trainingseinheiten in der Sportanlage Frohberg, Stäfa.',
+    startDate: '2026-04-27',
+    endDate: '2026-05-01',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: 'Sportanlage Frohberg',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Stäfa',
+        addressRegion: 'ZH',
+        postalCode: '8712',
+        addressCountry: 'CH',
+      },
+    },
+    image: 'https://www.amzilegacyfootballtraining.ch/images/miki/google-logo-og.png',
+    organizer: {
+      '@type': 'Organization',
+      name: 'Amzi Legacy Football Training',
+      url: 'https://www.amzilegacyfootballtraining.ch/',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://www.amzilegacyfootballtraining.ch/fussballcamp',
+      availability: ausgebucht ? 'https://schema.org/SoldOut' : 'https://schema.org/InStock',
+      priceCurrency: 'CHF',
+      validFrom: '2025-10-01',
+    },
+  }
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.amzilegacyfootballtraining.ch/' },
+      { '@type': 'ListItem', position: 2, name: 'Fussballcamp', item: 'https://www.amzilegacyfootballtraining.ch/fussballcamp' },
+    ],
+  }
+
   return (
     <>
       <section
@@ -1649,6 +1694,18 @@ export default async function FussballcampPage() {
 
       {/* Live-Slot-Verfügbarkeit aus Google Sheet */}
       <Script src="/js/fussballcamp-slots.js" strategy="afterInteractive" />
+
+      {/* JSON-LD Strukturierte Daten */}
+      <Script
+        id="ld-sports-event"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sportsEventLd) }}
+      />
+      <Script
+        id="ld-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
     </>
   )
 }
