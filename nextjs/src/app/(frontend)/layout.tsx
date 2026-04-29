@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { CookieBanner, Preloader, Pswp } from '@/components/CookieBanner'
+import { CookieBanner, Pswp } from '@/components/CookieBanner'
 import { Popup } from '@/components/Popup'
 import { Scripts } from '@/components/Scripts'
 import './globals.css'
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function FrontendLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className="no-js">
+    <html lang="de" className="js">
       <head>
         <link rel="stylesheet" href="/css/base.css" />
         <link rel="stylesheet" href="/css/vendor.css" />
@@ -40,7 +40,6 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
         {children}
 <Footer />
         <Pswp />
-        <Preloader />
         <CookieBanner />
 <Popup />
         <Scripts />

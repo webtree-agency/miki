@@ -815,7 +815,8 @@ export default async function FussballcampPage() {
               mobileCards.style.display = 'none';
             }
           }
-          window.addEventListener('DOMContentLoaded', checkTableResponsive);
+          if (document.readyState !== 'loading') checkTableResponsive();
+          else window.addEventListener('DOMContentLoaded', checkTableResponsive);
           window.addEventListener('resize', checkTableResponsive);
         `}</Script>
       </section>
@@ -1427,9 +1428,12 @@ export default async function FussballcampPage() {
           </div>
         </div>
         <Script id="fc-faq-accordion" strategy="afterInteractive">{`
-          document.addEventListener('DOMContentLoaded', function() {
+          (function bindFaq() {
             const faqQuestions = document.querySelectorAll('.faq-question');
+            if (!faqQuestions.length) { setTimeout(bindFaq, 200); return; }
             faqQuestions.forEach(question => {
+              if (question.dataset.bound) return;
+              question.dataset.bound = '1';
               question.addEventListener('click', function() {
                 const answer = this.nextElementSibling;
                 const icon = this.querySelector('i');
@@ -1446,7 +1450,7 @@ export default async function FussballcampPage() {
                 }
               });
             });
-          });
+          })();
         `}</Script>
       </section>
 
@@ -1635,11 +1639,15 @@ export default async function FussballcampPage() {
 
       {/* Splide-Init für Galerie + Adnan-Slider */}
       <Script id="fc-splide-init" strategy="afterInteractive">{`
-        document.addEventListener('DOMContentLoaded', function () {
-          if (window.Splide && document.getElementById('splide')) {
+        (function init() {
+          if (typeof window === 'undefined') return;
+          if (!window.Splide) { setTimeout(init, 100); return; }
+          var s1 = document.getElementById('splide');
+          if (s1 && !s1.classList.contains('is-initialized')) {
             new Splide('#splide', { type: 'fade', rewind: true }).mount();
           }
-          if (window.Splide && document.getElementById('adnan-splide')) {
+          var s2 = document.getElementById('adnan-splide');
+          if (s2 && !s2.classList.contains('is-initialized')) {
             new Splide('#adnan-splide', {
               type: 'fade',
               rewind: true,
@@ -1649,15 +1657,17 @@ export default async function FussballcampPage() {
               arrows: true,
             }).mount();
           }
-        });
+        })();
       `}</Script>
 
       {/* Toggle Miki / Fongué */}
       <Script id="fc-view-toggle" strategy="afterInteractive">{`
-        document.addEventListener('DOMContentLoaded', function() {
+        (function bindToggle() {
           const mikiToggle = document.getElementById('miki-toggle');
           const fongueToggle = document.getElementById('fongue-toggle');
-          if (!mikiToggle || !fongueToggle) return;
+          if (!mikiToggle || !fongueToggle) { setTimeout(bindToggle, 200); return; }
+          if (mikiToggle.dataset.bound) return;
+          mikiToggle.dataset.bound = '1';
 
           const urlParams = new URLSearchParams(window.location.search);
           const view = urlParams.get('view');
@@ -1689,7 +1699,7 @@ export default async function FussballcampPage() {
             newUrl.searchParams.set('view', 'fongue');
             window.history.pushState({}, '', newUrl);
           });
-        });
+        })();
       `}</Script>
 
       {/* Live-Slot-Verfügbarkeit aus Google Sheet */}

@@ -270,18 +270,20 @@ export default async function HomePage() {
 
       <Script id="splide-init" strategy="afterInteractive">
         {`
-          document.addEventListener('DOMContentLoaded', function () {
-            if (window.Splide && document.getElementById('testimonials-splide')) {
-              new Splide('#testimonials-splide', {
-                type: 'slide',
-                pagination: true,
-                arrows: true,
-                autoplay: false,
-                rewind: true,
-                preloadPages: 1,
-              }).mount();
-            }
-          });
+          (function init() {
+            if (typeof window === 'undefined') return;
+            if (!window.Splide) { setTimeout(init, 100); return; }
+            var el = document.getElementById('testimonials-splide');
+            if (!el || el.classList.contains('is-initialized')) return;
+            new Splide('#testimonials-splide', {
+              type: 'slide',
+              pagination: true,
+              arrows: true,
+              autoplay: false,
+              rewind: true,
+              preloadPages: 1,
+            }).mount();
+          })();
         `}
       </Script>
     </>

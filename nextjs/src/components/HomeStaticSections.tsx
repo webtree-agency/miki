@@ -77,16 +77,18 @@ export function GallerySection() {
       </div>
       <Script id="gallery-splide" strategy="afterInteractive">
         {`
-          document.addEventListener('DOMContentLoaded', function () {
-            if (window.Splide && document.querySelector('#splide')) {
-              new Splide('#splide', {
-                type: 'fade',
-                rewind: true,
-                lazyLoad: 'nearby',
-                preloadPages: 1,
-              }).mount();
-            }
-          });
+          (function init() {
+            if (typeof window === 'undefined') return;
+            if (!window.Splide) { setTimeout(init, 100); return; }
+            var el = document.getElementById('splide');
+            if (!el || el.classList.contains('is-initialized')) return;
+            new Splide('#splide', {
+              type: 'fade',
+              rewind: true,
+              lazyLoad: 'nearby',
+              preloadPages: 1,
+            }).mount();
+          })();
         `}
       </Script>
     </section>
@@ -126,16 +128,18 @@ export function PlayerDevSection() {
       </div>
       <Script id="player-dev-splide" strategy="afterInteractive">
         {`
-          document.addEventListener('DOMContentLoaded', function () {
-            if (window.Splide && document.getElementById('player-development-splide')) {
-              new Splide('#player-development-splide', {
-                type: 'fade',
-                rewind: true,
-                lazyLoad: 'nearby',
-                preloadPages: 1,
-              }).mount();
-            }
-          });
+          (function init() {
+            if (typeof window === 'undefined') return;
+            if (!window.Splide) { setTimeout(init, 100); return; }
+            var el = document.getElementById('player-development-splide');
+            if (!el || el.classList.contains('is-initialized')) return;
+            new Splide('#player-development-splide', {
+              type: 'fade',
+              rewind: true,
+              lazyLoad: 'nearby',
+              preloadPages: 1,
+            }).mount();
+          })();
         `}
       </Script>
     </section>
