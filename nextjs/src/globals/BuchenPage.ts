@@ -9,9 +9,9 @@ export const BuchenPage: GlobalConfig = {
       type: 'group',
       name: 'hero',
       fields: [
-        { name: 'subtitle', type: 'text' },
-        { name: 'title', type: 'text', defaultValue: 'Buchen' },
-        { name: 'intro', type: 'textarea' },
+        { name: 'subtitle', type: 'text', defaultValue: '#startyourprocess' },
+        { name: 'title', type: 'text', defaultValue: 'BUCHEN' },
+        { name: 'intro', type: 'textarea', defaultValue: 'Entscheide dich für ein Angebot!' },
       ],
     },
     {

@@ -9,8 +9,8 @@ export const IndoorPage: GlobalConfig = {
       type: 'group',
       name: 'hero',
       fields: [
-        { name: 'subtitle', type: 'text' },
-        { name: 'title', type: 'text', defaultValue: 'Indoor-Fussball' },
+        { name: 'subtitle', type: 'text', defaultValue: '#DOMINATETHEGAME' },
+        { name: 'title', type: 'text', defaultValue: 'INDOOR-FUSSBALL' },
       ],
     },
     {
