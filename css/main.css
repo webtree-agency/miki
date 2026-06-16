@@ -2289,6 +2289,17 @@ html.no-csstransitions .home-content__main {
     right: 7.2rem;
     top: 0;
 }
+.about-diplom {
+    margin-top: 4rem;
+    text-align: center;
+}
+.about-diplom__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 42rem;
+    width: 100%;
+    height: auto;
+}
 .buchen__line {
     display: block;
     width: 2px;
