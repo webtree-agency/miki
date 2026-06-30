@@ -30,6 +30,9 @@
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/animated.css">
       <script src="js/modernizr.js"></script>
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+      <link rel="stylesheet" href="css/splide.min.css">
+      <script src="js/splide.min.js" defer></script>
       <link rel="shortcut icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="icon" href="svg/favicon.svg" type="image/x-icon">
       <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -42,6 +45,30 @@
             padding: 4px 8px;
             vertical-align: top;
             margin-left: 5px;
+         }
+         .footrebel-slider {
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+         }
+         .footrebel-slider .splide__slide img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            height: auto;
+            object-fit: cover;
+            object-position: center 5%;
+            border: 3px solid var(--primary-gold);
+            border-radius: 8px 8px 0 0;
+         }
+         .footrebel-slider .splide__pagination {
+            bottom: 0.5em;
+         }
+         .footrebel-slider .splide__arrow {
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0.9;
+         }
+         .footrebel-slider .splide__arrow svg {
+            fill: #fff;
          }
       </style>
       <script type="application/ld+json">
@@ -700,6 +727,41 @@
                               <div class="ag-timeline-card_arrow"></div>
                            </div>
                         </div>
+                        <div class="js-timeline_item ag-timeline_item">
+                           <div class="ag-timeline-card_box">
+                              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                 <div class="ag-timeline-card_point"></div>
+                              </div>
+                              <div class="ag-timeline-card_meta-box">
+                              </div>
+                           </div>
+                           <div class="ag-timeline-card_item wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                              <div class="ag-timeline-card_inner">
+                                 <div class="ag-timeline-card_img-box">
+                                    <div id="footrebel-splide" class="splide footrebel-slider">
+                                       <div class="splide__track">
+                                          <ul class="splide__list">
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-cover-aufstieg-26.webp" class="ag-timeline-card_img" width="640" height="360" alt="Meisterschaftsfeier Footrebel 2026" /></li>
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-team-jubeln.webp" class="ag-timeline-card_img" width="640" height="360" alt="Aufstiegsjubel mit dem Footrebel Team" /></li>
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-miki-pokal-alleine.webp" class="ag-timeline-card_img" width="640" height="360" alt="Miralem Amzi mit dem Meisterpokal" /></li>
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-pokal.webp" class="ag-timeline-card_img" width="640" height="360" alt="Der Meisterpokal der C-Promotion" /></li>
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-miki-pokal-familie.webp" class="ag-timeline-card_img" width="640" height="360" alt="Miralem Amzi feiert den Pokal mit der Familie" /></li>
+                                             <li class="splide__slide"><img src="images/foot-rebel/fr-miki-erklaeren-team.webp" class="ag-timeline-card_img" width="640" height="360" alt="Miralem Amzi bei der Matchbesprechung mit dem Team" /></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="ag-timeline-card_info">
+                                    <h4 class="year-title">Mai 2026</h4>
+                                    <h3 class="year-subtitle">Meisterschaftsfeier 2026</h3>
+                                    <div class="ag-timeline-card_desc">
+                                       <p>Aufstieg in die C-Promotion<br>10 Meisterschaftsspiele: 9 Siege, 1 Unentschieden<br>Ungeschlagene Saison</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ag-timeline-card_arrow"></div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -878,7 +940,22 @@
          
          });
          })(jQuery);
-         
+
+      </script>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            if (document.getElementById('footrebel-splide')) {
+               new Splide('#footrebel-splide', {
+                  type: 'loop',
+                  rewind: true,
+                  autoplay: true,
+                  interval: 3500,
+                  pagination: true,
+                  arrows: true,
+               }).mount();
+            }
+         });
       </script>
    </body>
 </html>
